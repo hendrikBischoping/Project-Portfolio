@@ -1,1 +1,18 @@
+<section class="technologiesSection">
+    <div class="skillSetSection">
+        <h3>Technologies</h3>
+        <div class="skillsetDescription">
+            <h2>Skillset</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, veritatis consequuntur aspernatur quasi consectetur eaque odio repellendus culpa alias at illo, quo quaerat suscipit qui eum? Suscipit reprehenderit iure dolorem?</p>
+            <button class="btn">Let`s talk!
+            </button>
+        </div>
+    </div>
+    <div class="technologies">
+        @for (tec of technologies; track $index) {
+            <img src="./../../../assets/img/technologies-img/{{ tec.name }}.png" alt="{{ tec.name }}">
+            <span>{{ tec.name }}</span>
+        }
+    </div>
+</section>
 <p>technologies works!</p>

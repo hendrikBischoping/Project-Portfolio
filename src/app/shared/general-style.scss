@@ -26,10 +26,16 @@
 /*style-variables*/
 $fontWhite: rgba(217, 217, 217, 1);
 $fontGreen: rgba(61, 207, 182, 1);
+$backgroundGrey: rgb(27, 27, 27);
 
 /*general style*/
+html {    
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0px;
+    scroll-behavior: smooth;
 }
   
 .d_none {
@@ -53,4 +59,17 @@ body {
         border: solid 2px $fontGreen;
         color: $fontGreen;
     }
+}
+
+.greenH2 {
+    margin: 0;
+    font-size: 64px;
+    font-weight: 700;
+    color: $fontGreen;
+}
+
+
+h3 {
+    font-size: 16px;
+    color: $fontGreen;
 }

@@ -1,0 +1,55 @@
+@import './../../shared/general-style.scss';
+
+.sectionCentered{
+    @include d_general(flex-start, center);
+}
+
+.whoIAmSection {
+    @include d_general(space-between, center);
+    position: relative;
+    margin: 80px 160px;
+    display: flex;
+    height: 750px;
+}
+
+.profile {
+    z-index: 1;
+    position: absolute;
+    top: 40px;
+}
+
+.profileBg {
+    position: absolute;
+    left: 40px;
+    top: 80px;
+}
+
+.whoIAmSquare {
+    height: 568px;
+    width: 568px;
+    border-radius: 32px;
+}
+
+.whoIAm {
+    position: absolute;
+    left: 740px;
+    top: 180px;
+}
+
+.aboutMe {
+    height: 500px;
+    width: 500px;
+    border: solid 1px $fontGreen;
+    padding: 32px;
+    color: $fontWhite;
+    background-color: rgba(61, 207, 182, 0.1);
+}
+td {
+    padding-bottom: 8px;
+    font-size: 16px
+}
+
+.imgTd {
+    @include d_general(center, flex-start);
+    padding: 2px 4px 0 0;
+}
