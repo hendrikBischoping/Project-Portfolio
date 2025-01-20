@@ -1,0 +1,90 @@
+@import './../../shared/general-style.scss';
+
+.a-t-f {
+    @include d_general_column(column, unset, center);
+    background-image: url('./../../../assets/img/a-t-f-img/a-t-f-background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    color: $fontWhite;
+}
+
+.mainHeadlines {
+    @include  d_general_column(column, center, center);
+    margin: 20vh 0 0 0;
+    >h2 {
+        font-size: 40px;
+        font-weight: 400;
+    }
+    >h1 {
+        font-size: 102px;
+        margin: 32px 0 32px 0;
+    }
+    >div {
+        @include d_general(space-between, center);
+        gap: 60px;
+    }
+}
+
+.socialMediaATF {
+    @include d_general_column(column, center, center);
+    position: absolute;
+    height: 300px;
+    align-self: flex-end;
+    top: 300px;
+    left: 85%;
+}
+
+.eMail {
+    position: relative;
+    transform: rotateZ(270deg);
+    top: 20px;
+}
+
+.githubIcon {
+    position: relative;
+    top: 100px;
+}
+
+.linkedInIcon {
+    position: relative;
+    top: 120px;
+}
+
+.marqueeContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: $fontGreen;
+  margin-top: 128px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 60s linear infinite;
+}
+
+.marquee span {
+  white-space: nowrap;
+  padding-right: 80px;
+  font-size: 24px;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.bulletPoint {
+  padding: 0 53px 0 16px;
+}

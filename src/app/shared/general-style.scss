@@ -1,0 +1,56 @@
+/*mixins*/
+@mixin d_general($jc, $ai){
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin d_general_column($fd, $jc, $ai){
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin anker (){
+    color: $fontWhite;
+    text-decoration: none;
+    &:hover{
+        cursor: pointer;
+        text-decoration: underline;
+        color: $fontGreen;
+    }
+}
+
+
+/*style-variables*/
+$fontWhite: rgba(217, 217, 217, 1);
+$fontGreen: rgba(61, 207, 182, 1);
+
+/*general style*/
+body {
+    margin: 0px;
+}
+  
+.d_none {
+    display: none;
+}
+
+.btnPointer {
+    cursor: pointer;
+}
+  
+.btn {
+    cursor: pointer;
+    padding: 12px 16px 12px 16px;
+    font-family: 'Fira Code';
+    font-size: 16px;
+    border: solid 2px $fontWhite;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0);
+    color: $fontWhite;
+    &:hover {
+        border: solid 2px $fontGreen;
+        color: $fontGreen;
+    }
+}

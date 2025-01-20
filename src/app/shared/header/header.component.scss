@@ -1,0 +1,44 @@
+@import './../general-style.scss';
+
+header {
+    @include d_general(center, center);
+    position: absolute;
+    background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0));
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.headerContent {
+    @include d_general(space-between, center);
+    margin: 0 160px 0 160px;
+    width: 100%;
+    max-width: 1440px;
+    >nav {
+        @include d_general(center, center);
+        gap: 24px;
+        >a {
+            @include  anker ();
+            font-size: 24px;
+        }
+    }
+}
+
+.logoSection {
+    @include d_general(center, center);
+    @include  anker ();
+    >div {
+        >p {
+            margin-top: 4px;
+            margin-bottom: 4px;
+            font-family: 'Karla';
+            font-size: 24px;
+            font-weight: 700;
+        }
+    }
+}
+
+.myLogo {
+    height: 72px;
+    width: 72px;
+}
