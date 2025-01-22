@@ -8,5 +8,29 @@ import { Component } from '@angular/core';
   styleUrl: './portfolio-projects.component.scss'
 })
 export class PortfolioProjectsComponent {
+  projectImgs: {
+    class: string;
+    visible: boolean;
+  }[] = [
+    {
+      class: 'pokédex',
+      visible: false,
+    },
+    {
+      class: 'sharkie',
+      visible: false,
+    },
+    {
+      class: 'hourglass',
+      visible: false,
+    },
+  ]
 
+  showImage(index: number){
+    if (this.projectImgs[index].visible) {
+      this.projectImgs[index].visible = false;
+    } else {
+      this.projectImgs[index].visible = true;
+    }
+  }
 }

@@ -24,12 +24,6 @@
     top: 80px;
 }
 
-.whoIAmSquare {
-    height: 568px;
-    width: 568px;
-    border-radius: 32px;
-}
-
 .whoIAm {
     position: absolute;
     left: 740px;
@@ -37,13 +31,9 @@
 }
 
 .aboutMe {
-    height: 500px;
-    width: 500px;
-    border: solid 1px $fontGreen;
-    padding: 32px;
-    color: $fontWhite;
-    background-color: rgba(61, 207, 182, 0.1);
+    @include greenSquare(500px)
 }
+
 td {
     padding-bottom: 8px;
     font-size: 16px

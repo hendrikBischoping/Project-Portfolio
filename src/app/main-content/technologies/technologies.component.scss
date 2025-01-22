@@ -1,1 +1,36 @@
 @import './../../shared/general-style.scss';
+
+.technologiesSection {
+    @include d_general(space-between, center);
+}
+
+.skillsetDescription {
+    @include greenSquare(400px);
+}
+
+.technologies {
+    @include d_general(flex-start, center);
+    max-width: 40%;
+    flex-flow: row wrap;
+}
+
+.technology {
+    @include d_general_column (column, flex-start, center);
+    width: 100px;
+    height: 120px;
+    padding: 16px;
+    text-align: center;
+    >span {
+        margin-top: 8px;
+        word-break: normal;
+        color: $fontWhite;
+    }
+    &:hover {
+        transition: transform .2s;
+        scale: 1.1;
+        overflow: hidden;
+        >span {
+            color: $fontGreen;
+        }
+    }
+}

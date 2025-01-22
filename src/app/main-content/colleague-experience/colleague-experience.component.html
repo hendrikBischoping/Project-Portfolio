@@ -1,1 +1,10 @@
-<p>colleague-experience works!</p>
+<section class="commentaries">
+    <h2>What my colleagues say about me</h2>
+    @for (commentary of commentaries; track $index) {
+        <p>{{ this.commentaries[$index].commentary }}</p>
+        <div class="commentator">
+            <hr>
+            <p>{{ this.commentaries[$index].name }} - {{ this.commentaries[$index].title }}</p>
+        </div>
+    }
+</section>

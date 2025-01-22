@@ -37,6 +37,12 @@ body {
     margin: 0px;
     scroll-behavior: smooth;
 }
+
+section {
+    padding: 80px 160px;
+    color: $fontWhite;
+    max-width: 1920px;
+}
   
 .d_none {
     display: none;
@@ -72,4 +78,19 @@ body {
 h3 {
     font-size: 16px;
     color: $fontGreen;
+}
+
+.squareDesign {
+    height: 568px;
+    width: 568px;
+    border-radius: 32px;
+}
+
+@mixin greenSquare($squareSide) {
+    height: $squareSide;
+    width: $squareSide;
+    border: solid 1px $fontGreen;
+    padding: 32px;
+    color: $fontWhite;
+    background-color: rgba(61, 207, 182, 0.1);
 }

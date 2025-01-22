@@ -1,1 +1,53 @@
-<p>portfolio-projects works!</p>
+<section class="portfolioSection">
+    <div>
+        <h3>Portfolio</h3>
+        <div class="portfolio">
+            <h2 class="greenH2">Featured Projects</h2>
+            <p>Explore a Section of all my work here - interact with the projects to see my skills in action!</p>
+            <table>
+                <tr (mouseenter)="showImage(0)" (mouseleave)="showImage(0)">
+                    <th>Pokédex</th>
+                    <td>
+                        <span>HTML</span>
+                        <span class="devide"> | </span>
+                        <span>CSS</span>
+                        <span class="devide"> | </span>
+                        <span>JavaScript</span>
+                        <span class="devide"> | </span>
+                        <span>Rest-API</span>
+                    </td>
+                </tr>
+                <tr (mouseenter)="showImage(1)" (mouseleave)="showImage(1)">
+                    <th>Sharkie</th>
+                    <td>
+                        <span>HTML</span>
+                        <span class="devide"> | </span>
+                        <span>CSS</span>
+                        <span class="devide"> | </span>
+                        <span>JavaScript</span>
+                    </td>
+                </tr>
+                <tr (mouseenter)="showImage(2)" (mouseleave)="showImage(2)">
+                    <th>Next Project</th>
+                    <td>
+                        <span>HTML</span>
+                        <span class="devide"> | </span>
+                        <span>SCSS</span>
+                        <span class="devide"> | </span>
+                        <span>Angular</span>
+                        <span class="devide"> | </span>
+                        <span>Firebase</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="showProject">
+        @for (img of projectImgs; track $index) {
+            @if (img.visible) {
+                <img class="{{img.class}}Shadow" src="./../../../assets/img/p-projects-img/imgShadow.png" alt="imageShadow">
+                <img class="{{img.class}}" src="./../../../assets/img/p-projects-img/{{img.class}}.jpg" alt="{{img.class}}">
+            }
+        }
+    </div>
+</section>

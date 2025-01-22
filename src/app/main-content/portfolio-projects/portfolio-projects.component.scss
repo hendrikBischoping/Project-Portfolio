@@ -1,1 +1,83 @@
 @import './../../shared/general-style.scss';
+
+.portfolioSection {
+    @include d_general(space-between, center)
+}
+
+.devide {
+    color: $fontGreen;
+}
+
+table {
+    width: 70%;
+    border-collapse: collapse;
+    >tr {
+        @include d_general(space-between, center);
+        border-top: solid 1px $fontGreen;
+        border-bottom: solid 1px $fontGreen;
+        padding: 0 16px 0 16px;
+        transition: 0.4s;
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(61, 207, 182, 0.2);
+        }
+    }
+
+    >td, th {
+        padding: 32px 0 32px 0;
+    }
+}
+
+p {
+    width: 40%;
+    padding: 16px 0 16px 0;
+}
+
+.showProject {
+    position: relative;
+    align-self: last baseline;
+    width: 293px;
+    margin-top: 192px;
+    height: 261px;
+}
+
+img {
+    max-width: 293px;
+    height: 192px;
+    object-fit: cover;
+    border-radius: 16px;
+    transition: 0.4s;
+}
+
+.pokédex {
+    position: absolute;
+    top: 0px;
+}
+
+.sharkie {
+    position: absolute;
+    top: 40px;
+}
+
+.hourglass {
+    position: absolute;
+    top: 80px;
+}
+
+.pokédexShadow {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.sharkieShadow {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+}
+
+.hourglassShadow {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+}
