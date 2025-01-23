@@ -1,10 +1,25 @@
 <section class="commentaries">
     <h2>What my colleagues say about me</h2>
-    @for (commentary of commentaries; track $index) {
-        <p>{{ this.commentaries[$index].commentary }}</p>
-        <div class="commentator">
-            <hr>
-            <p>{{ this.commentaries[$index].name }} - {{ this.commentaries[$index].title }}</p>
-        </div>
-    }
+    <div class="cardSection">
+        @for (commentary of commentaries; track $index) {
+            <div class="commentCard">
+                <p class="commentary">{{ this.commentaries[$index].commentary }}</p>
+                <div class="commentator">
+                    <div class="horizontalLine"></div>
+                    <p>{{ this.commentaries[$index].name }} - {{ this.commentaries[$index].title }}</p>
+                </div>
+            </div>
+        }
+    </div>
+    <div>
+        @if (!this.arrows[0].isHovered) {
+            <img src="./../../../assets/img/c-experience-img/left.png" class="arrowImg" alt="arrow-left" (mouseenter)="addHover(0)" (mouseleave)="removeHover(0)">
+        }@else {<img src="./../../../assets/img/c-experience-img/left-hover.png" class="arrowImg" alt="arrow-left" (mouseenter)="addHover(0)" (mouseleave)="removeHover(0)">}
+        @for (commentary of commentaries; track $index) {
+            <img src="" alt="">
+        }
+        @if (!this.arrows[1].isHovered) {
+            <img src="./../../../assets/img/c-experience-img/right.png" class="arrowImg" alt="arrow-right" (mouseenter)="addHover(1)" (mouseleave)="removeHover(1)">
+        }@else {<img src="./../../../assets/img/c-experience-img/right-hover.png" class="arrowImg" alt="arrow-right" (mouseenter)="addHover(1)" (mouseleave)="removeHover(1)">}
+    </div>
 </section>

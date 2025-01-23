@@ -1,2 +1,51 @@
 @import './../../shared/general-style.scss';
 
+.commentaries {
+    text-align: center;
+}
+
+h2 {
+    color: $fontGreen
+}
+
+.cardSection {
+    @include d_general(center, center)
+}
+
+.commentCard { 
+    @include d_general_column(column, space-between, unset);
+    text-align: start;
+    background-color: rgba(61, 207, 182, 0.4);
+    min-width: 400px;
+    height: 150px;
+    padding: 32px;
+    margin: 16px;
+    border: solid 1px $fontGreen;
+    border-radius: 32px;
+}
+
+.commentary {
+
+}
+
+.commentator {
+    @include d_general_column(row, space-between, center);
+}
+
+.horizontalLine{
+    border: solid 1px $fontWhite;
+    margin: 16px 16px;
+    flex-grow: 1;
+}
+p {
+    padding: 0 16px;
+    font-size: 12px;
+    font-family: 'Karla';
+}
+
+.arrowImg {
+    margin: 0 8px;
+    &:hover {
+        cursor: pointer;
+    }
+}
