@@ -34,13 +34,13 @@ export class ColleagueExperienceComponent {
       commentary: "Imagine this would be a very laudatory comment + Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quia maiores temporibus consectetur alias sed accusamus corrupti ullam, odit tempora.",
       name: "Mr. X",
       title: "friendly dude",
-      isShown: false,
+      isShown: true,
     },
     {
       commentary: "This could be another very laudatory comment + Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quia maiores temporibus consectetur alias sed accusamus corrupti ullam, odit tempora.",
       name: "You know who",
       title: "professional human",
-      isShown: true,
+      isShown: false,
     },
     {
       commentary: "This is where your very laudatory comment about me could be + Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quia maiores temporibus consectetur alias sed accusamus corrupti ullam, odit tempora.",

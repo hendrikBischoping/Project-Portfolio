@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './portfolio-projects.component.scss'
 })
 export class PortfolioProjectsComponent {
-  projectImgs: {
+  projectImgs: {                                  //bei Zeiten auslagern!
     class: string;
     visible: boolean;
   }[] = [

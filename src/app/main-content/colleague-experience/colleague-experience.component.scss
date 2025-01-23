@@ -43,9 +43,17 @@ p {
     font-family: 'Karla';
 }
 
+.navigateExperiences {
+ @include d_general(center, center)
+}
+
 .arrowImg {
     margin: 0 8px;
     &:hover {
         cursor: pointer;
     }
+} 
+
+.dot {
+    padding: 0 4px;
 }

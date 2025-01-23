@@ -11,12 +11,14 @@
             </div>
         }
     </div>
-    <div>
+    <div class="navigateExperiences">
         @if (!this.arrows[0].isHovered) {
             <img src="./../../../assets/img/c-experience-img/left.png" class="arrowImg" alt="arrow-left" (mouseenter)="addHover(0)" (mouseleave)="removeHover(0)">
         }@else {<img src="./../../../assets/img/c-experience-img/left-hover.png" class="arrowImg" alt="arrow-left" (mouseenter)="addHover(0)" (mouseleave)="removeHover(0)">}
         @for (commentary of commentaries; track $index) {
-            <img src="" alt="">
+            @if (this.commentaries[$index].isShown) {
+                <img class="dot" src="./../../../assets/img/c-experience-img/dot-green.png" alt="">
+            } @else {<img class="dot" src="./../../../assets/img/c-experience-img/dot-white.png" alt="">}
         }
         @if (!this.arrows[1].isHovered) {
             <img src="./../../../assets/img/c-experience-img/right.png" class="arrowImg" alt="arrow-right" (mouseenter)="addHover(1)" (mouseleave)="removeHover(1)">

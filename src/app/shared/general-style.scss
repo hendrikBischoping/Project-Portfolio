@@ -61,9 +61,13 @@ section {
     border-radius: 25px;
     background-color: rgba(0, 0, 0, 0);
     color: $fontWhite;
+    transition: color 0.15s;
     &:hover {
         border: solid 2px $fontGreen;
         color: $fontGreen;
+        color: rgba(0, 0, 0, 0);
+        
+        
     }
 }
 
@@ -84,6 +88,10 @@ h3 {
     height: 568px;
     width: 568px;
     border-radius: 32px;
+}
+
+#shadow-host-companion {
+    padding: 0;
 }
 
 @mixin greenSquare($squareSide) {

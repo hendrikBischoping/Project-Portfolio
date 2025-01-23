@@ -1,1 +1,115 @@
 @import './../../shared/general-style.scss';
+
+.contactMeSection {
+     @include d_general(space-between, start);
+     max-width: 1920px;
+     gap: 80px;
+}
+
+.contactMe, 
+.contactField {
+    width: 45%;
+}
+
+.textLink {
+    color: $fontGreen;
+    text-decoration: none;
+    &:hover {
+        color: $fontWhite;
+    }
+}
+
+.inputSection {
+    border-top: solid 1px $fontGreen;
+    border-bottom: solid 1px $fontGreen;
+    border-collapse: collapse;
+    ::placeholder {
+        color: $fontWhite;
+    }
+    &:hover{
+        border-top: solid 2px $fontGreen;
+        border-bottom: solid 2px $fontGreen;
+        border-collapse: collapse;
+    }
+    >input {
+        color: $fontWhite;
+        padding: 12px;
+        width: 400px;
+        background-color: rgba(255, 255, 255, 0);
+        border: none; 
+    }
+}
+
+.readPolicy {
+    @include d_general(flex-start, center);
+    font-size: 12px;
+}
+
+// input[type="checkbox"] {
+//     background-color: rgb(74, 37, 37);
+//     &:hover {
+//         background-color: $fontGreen;
+//     }
+// }
+
+
+.checkbox {
+    // Styling für die Checkbox selbst (als Wrapper, falls vorhanden)
+    // display: inline-block;
+    // position: relative;
+    cursor: pointer;
+  
+    input[type="checkbox"] {
+      // Checkbox ausblenden (optional, wenn du eigene Styles erstellen möchtest)
+      appearance: none;
+      -webkit-appearance: none;
+      position: absolute;
+      width: 0;
+      height: 0;
+      opacity: 0;
+      pointer-events: none;
+    }
+  
+    // Checkbox-Ersatz für das visuelle Styling
+    &::before {
+      content: '';
+      // display: inline-block;
+      width: 20px; // Breite der Checkbox
+      height: 20px; // Höhe der Checkbox
+      background-color: #f0f0f0; // Hintergrundfarbe der Checkbox
+      border: 2px solid #ccc; // Standard-Rand
+      border-radius: 4px; // Optional: Abgerundete Ecken
+      transition: all 0.3s ease;
+    }
+  
+    // Hover-Effekt
+    &:hover::before {
+      background-color: #e0e0e0; // Hintergrundfarbe bei Hover
+      border-color: #999; // Randfarbe bei Hover
+    }
+  
+    // Styling für den "checked"-Zustand
+    input[type="checkbox"]:checked + &::before {
+      background-color: #007bff; // Hintergrundfarbe, wenn angeklickt
+      border-color: #007bff; // Randfarbe, wenn angeklickt
+    }
+  
+    // Optional: ein Häkchen-Symbol anzeigen, wenn die Checkbox aktiv ist
+    &::after {
+      content: '';
+      position: absolute;
+      top: 4px;
+      left: 7px;
+      width: 6px;
+      height: 12px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+  
+    input[type="checkbox"]:checked + &::after {
+      opacity: 1;
+    }
+  }
