@@ -1,12 +1,21 @@
 @import './../../shared/general-style.scss';
 
 .footerSection {
-    padding: 80px 160px;
+    padding: 40px 160px;
     @include d_general(space-between, center);
+    >div {
+        >a {
+        margin: 8px;
+        @include anker()
+        }
+        >span {
+            color: $fontGreen;
+        }
+    }
 }
 
-span {
-    margin: 18px;
+p {
+    margin: 0;
 }
 
 .logoSection {
@@ -26,4 +35,8 @@ span {
 .myLogo {
     height: 72px;
     width: 72px;
+}
+
+.businesMedia {
+    @include d_general_column(column, flex-start, start)
 }

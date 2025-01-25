@@ -1,33 +1,34 @@
 @import './../../shared/general-style.scss';
 
-.sectionCentered{
-    @include d_general(flex-start, center);
-}
-
 .whoIAmSection {
-    @include d_general(space-between, center);
-    position: relative;
-    margin: 80px 160px;
-    display: flex;
-    height: 750px;
+    @include d_general(center, end);
+    gap: 200px;
 }
 
-.profile {
-    z-index: 1;
-    position: absolute;
-    top: 40px;
+.profileSection {
+    @include d_general(flex-start, start);
+    height: 700px;
 }
 
 .profileBg {
     position: absolute;
-    left: 40px;
-    top: 80px;
+    top: 1025px;
+    left: 160px;
+    transition: 0.3s ease;
+}
+
+.profile {
+    z-index: 1;
+    &:hover ~ .profileBg{
+        display: block;
+        transition: 0.3s ease;
+        top: 1045px;
+        left: 180px;
+    }
 }
 
 .whoIAm {
-    position: absolute;
-    left: 740px;
-    top: 180px;
+    @include d_general_column(column, flex-end, start);
 }
 
 .aboutMe {
