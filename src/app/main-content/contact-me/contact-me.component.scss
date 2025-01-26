@@ -20,24 +20,24 @@
 }
 
 .inputSection {
-    border-top: solid 1px $fontGreen;
-    border-bottom: solid 1px $fontGreen;
-    border-collapse: collapse;
-    ::placeholder {
-        color: $fontWhite;
-    }
-    &:hover{
-        border-top: solid 2px $fontGreen;
-        border-bottom: solid 2px $fontGreen;
-        border-collapse: collapse;
-    }
-    >input {
-        color: $fontWhite;
-        padding: 12px;
-        width: 400px;
-        background-color: rgba(255, 255, 255, 0);
-        border: none; 
-    }
+  padding: 0 16px 0 16px;
+  border-top: solid 1px $fontGreen;
+  border-bottom: solid 1px $fontGreen;
+  border-collapse: collapse;
+  transition: background-color 0.4s;
+  ::placeholder {
+      color: $fontWhite;
+  }
+  &:hover{
+    background-color: rgba(61, 207, 182, 0.2);
+  }
+  >input {
+      color: $fontWhite;
+      padding: 12px;
+      width: 400px;
+      background-color: rgba(255, 255, 255, 0);
+      border: none; 
+  }
 }
 
 .readPolicy {

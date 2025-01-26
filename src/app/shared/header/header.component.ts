@@ -36,4 +36,12 @@ removeHover(index: number){
     this.hovers[index].isHovered = false;
     }
   }
+
+  toggleVisible(index: number, index2: number){
+    if (this.hovers[index].isShown) {
+      this.hovers[index].isShown = false;
+      this.hovers[index2].isShown = true;
+    } else {this.hovers[index].isShown = true;
+      this.hovers[index2].isShown = true};
+  }  
 }

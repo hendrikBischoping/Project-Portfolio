@@ -61,13 +61,12 @@ section {
     border-radius: 25px;
     background-color: rgba(0, 0, 0, 0);
     color: $fontWhite;
-    transition: color 0.15s;
+    transition: color 0.4s;
+    transition: background-color 0.4s;
     &:hover {
         border: solid 2px $fontGreen;
         color: $fontGreen;
-        color: rgba(0, 0, 0, 0);
-        
-        
+        background-color: rgba(217, 217, 217, 0.2);        
     }
 }
 
