@@ -1,11 +1,9 @@
 <section class="footerSection">
         <div>
             <a href="#header" class="logoSection btnPointer">
-                <img class="myLogo" src="../../../assets/img/header-img/my-logo-2.png" alt="my logo">
-                <div>
-                    <p>Hendrik</p>
-                    <p>Bischoping</p>
-                </div>
+                @if (!this.logoHovered) {
+                <img src="./../../../assets/img/footer-img/logo.png" class="myLogo" alt="myLogo" (mouseenter)="addHover()" (mouseleave)="removeHover()">
+                }@else {<img src="./../../../assets/img/footer-img/logo-hover.png" class="myLogo" alt="myLogo" (mouseenter)="addHover()" (mouseleave)="removeHover()">}
             </a>
             <p>Web Developer</p><br>
             <p>Herdecke Germany</p>

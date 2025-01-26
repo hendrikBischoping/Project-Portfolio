@@ -7,6 +7,33 @@ import { Component } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
-export class HeaderComponent {
+export class HeaderComponent {  
+  hovers: {
+    isHovered: boolean;
+    isShown?: boolean;
+  }[] = [
+    {
+      isHovered: false,
+      isShown: false,
+    },
+    {
+      isHovered: false,
+      isShown: true,
+    },
+    {
+      isHovered: false,
+    },
+  ];
+  
+  addHover(index: number){
+    if (!this.hovers[index].isHovered) {
+      this.hovers[index].isHovered = true;
+  }
+}
 
+removeHover(index: number){
+  if (this.hovers[index].isHovered) {
+    this.hovers[index].isHovered = false;
+    }
+  }
 }
