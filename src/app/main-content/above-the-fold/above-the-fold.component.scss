@@ -2,7 +2,7 @@
 
 .a-t-f {
     @include d_general_column(column, unset, center);
-    background-image: url('./../../../assets/img/a-t-f-img/a-t-f-background.png');
+    background-image: url('./../../../app/shared/img/general-background.png');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;

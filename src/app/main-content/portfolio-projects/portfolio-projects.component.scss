@@ -81,3 +81,89 @@ img {
     top: 100px;
     left: 20px;
 }
+
+.overlayBg {
+    @include d_general(center,center);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.projectDetails {
+    background-image: url('./../../../app/shared/img/general-background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include d_general(space-between, top);
+    padding: 64px;
+    height: fit-content;
+    width: 1200px;
+    border: solid 1px $fontGreen;
+    border-radius: 32px;
+    gap: 64px;
+}
+
+.cardLeft {
+    flex: 4;
+    @include d_general_column(column, space-between, start);
+    >h2 {
+        margin: 0;
+        font-size: 64px;
+        font-weight: 700;
+        color: $fontWhite;
+
+    }
+    >.cardIndex {
+        margin: 0;
+        font-size: 120px;
+        font-weight: 700;
+        color: $fontGreen;
+    }
+    >p {
+        font-family: 'Karla';
+        font-size: 16px;
+        width: 100%;
+    }
+    >.tecsCard {
+        @include d_general(flex-start, center);
+        >div {
+            @include d_general(flex-start, center);
+            margin: 0 16px;
+            >img {
+                height: 32px;
+                aspect-ratio: 1/1;
+                border-radius: 0;
+                margin: 4px;
+            }
+        }
+    }
+    .cardButtons {
+        @include d_general(center, center);
+        margin: 64px 0 0 0;
+        gap: 64px;
+    }
+}
+
+.cardRight {
+    flex: 6;
+    @include d_general_column(column, space-between, end);
+    >.closeBtn,
+    .nextBtn > img {
+        height: 48px;
+        aspect-ratio: 1/1;
+    }
+    >.nextBtn {
+        @include d_general(center, center);
+        >p {
+            width: fit-content;
+            padding: 0 16px;
+        }
+    }
+    >.graphic {
+        min-width: 100%;
+        height: auto;
+    }
+}
