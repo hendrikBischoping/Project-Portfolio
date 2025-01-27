@@ -3,6 +3,7 @@
 .footerSection {
     padding: 40px 160px;
     @include d_general(space-between, center);
+    background-color: $backgroundGrey;
     >div {
         >a {
         margin: 8px;

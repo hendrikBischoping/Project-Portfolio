@@ -35,6 +35,11 @@
     align-self: flex-end;
     top: 300px;
     left: 85%;
+    >p {
+      >a {
+        @include anker();
+      }
+    }
 }
 
 .eMail {

@@ -1,0 +1,22 @@
+@import './../shared/general-style.scss';
+
+main {
+    @include d_general_column (column, center, center);
+    background-image: url('./../../app/shared/img/general-background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+    padding: 0;
+    color: $fontWhite;
+    font-family: 'Karla';
+    >h1 {
+        font-size: 40px;
+        font-weight: 400;
+    };
+    >p {
+        >a {
+            @include anker();
+        }
+    }
+}
