@@ -6,7 +6,7 @@
             <p>Explore a Section of all my work here - interact with the projects to see my skills in action!</p>
             <table>
                 @for (project of projects; track $index) {
-                    <tr (mouseenter)="showImage($index)" (mouseleave)="showImage($index)" (click)="openProjektDetails($index)">
+                    <tr (mouseenter)="showImage($index)" (mouseleave)="showImage($index)" (click)="toggleProjektDetails($index)">
                         <th>{{ project.name }}</th>
                         <td>
                             <span class="devide"> | </span>
@@ -26,8 +26,8 @@
                 <img class="{{project.class}}Shadow" src="./../../../assets/img/p-projects-img/imgShadow.png" alt="imageShadow">
                 <img class="{{project.class}}" src="./../../../assets/img/p-projects-img/{{project.class}}.jpg" alt="{{project.class}}.img">
             } @if (project.isOpened) {
-                <div class="overlayBg">
-                    <div class="projectDetails">
+                <div class="overlayBg" (click)="toggleProjektDetails($index)">
+                    <div class="projectDetails" (click)="stopBubbling($event)">
                         <div class="cardLeft">
                             <h2 class="cardIndex">{{ $index+1 }}</h2>
                             <h2>{{ project.name }}</h2>
@@ -42,14 +42,14 @@
                                 }
                             </div>
                             <div class="cardButtons">
-                                <button class="btn">GitHub</button>
-                                <button class="btn">LiveTest</button>
+                                <a href="{{ project.github }}" target="_blank" class="btn">GitHub</a>
+                                <a href="{{ project.lifetest }}" target="_blank" class="btn">LiveTest</a>
                             </div>
                         </div>
                         <div class="cardRight">
-                                <img class="closeBtn" src="./../../../assets/img/p-projects-img/close.png" alt="close">
+                                <img class="closeBtn" src="./../../../assets/img/p-projects-img/close.png" alt="close" (click)="toggleProjektDetails($index)">
                             <img class="graphic" src="./../../../assets/img/p-projects-img/{{project.class}}-card.jpg" alt="{{project.class}}.img">
-                            <div class="nextBtn"><p>Next Project</p><img src="./../../../assets/img/c-experience-img/right.png" alt=""></div>
+                            <div class="nextBtn" (click)="nextProject($index)"><p>Next Project</p><img src="./../../../assets/img/c-experience-img/right.png" alt="next"></div>
                         </div>
                     </div>
                 </div>

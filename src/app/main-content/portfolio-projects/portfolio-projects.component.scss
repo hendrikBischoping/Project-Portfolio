@@ -151,14 +151,23 @@ img {
     flex: 6;
     @include d_general_column(column, space-between, end);
     >.closeBtn,
-    .nextBtn > img {
+    .nextBtn {
+        > img {
         height: 48px;
         aspect-ratio: 1/1;
+        cursor: pointer;
+        }
+        height: 48px;
+        aspect-ratio: 1/1;
+        cursor: pointer;
+        &:hover {
+            @include anker();
+        }
     }
     >.nextBtn {
         @include d_general(center, center);
         >p {
-            width: fit-content;
+            min-width: fit-content;
             padding: 0 16px;
         }
     }

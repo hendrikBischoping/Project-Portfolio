@@ -53,12 +53,23 @@ export class PortfolioProjectsComponent {
     }
   }
   
-  openProjektDetails(index: number){
+  toggleProjektDetails(index: number){
     if (this.projects[index].isOpened) {
       this.projects[index].isOpened = false;
     } else {
       this.projects[index].isOpened = true;
       console.log(index+1+' is opened');
     }
+  }
+  nextProject(index: number){
+    let flippedIndex = index + 1;
+    if (flippedIndex >= this.projects.length) {
+      flippedIndex = 0;
+    }
+    this.toggleProjektDetails(index)
+    this.toggleProjektDetails(flippedIndex)
+  }
+  stopBubbling(event: any) {
+    event.stopPropagation();
   }
 }
