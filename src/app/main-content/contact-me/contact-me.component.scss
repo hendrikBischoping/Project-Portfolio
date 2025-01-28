@@ -31,12 +31,15 @@
   &:hover{
     background-color: rgba(61, 207, 182, 0.2);
   }
-  >input {
+  >input[type=text], [type=email], select, textarea {
       color: $fontWhite;
       padding: 12px;
       width: 400px;
       background-color: rgba(255, 255, 255, 0);
       border: none; 
+      &::placeholder {
+        color: rgba(217, 217, 217, 0.5);
+      }
   }
 }
 

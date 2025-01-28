@@ -9,23 +9,27 @@
             Need a frontend developer? <a href="tel:015780847980" class="textLink">Let`s talk!</a></p>
         </div>
     </div>
-    <div class="contactField">
+    <form class="contactField" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
         <div class="inputSection">
             <h3>What`s yout name?</h3>
-            <input type="text" placeholder="Your name goes here">
+            <input [(ngModel)]="contactData.name" name="name" type="text" placeholder="Your name goes here" required>
         </div>
         <div class="inputSection">
             <h3>What`s your email?</h3>
-            <input type="text" placeholder="youremail@email.com">
+            <input [(ngModel)]="contactData.email" name="email" type="email" placeholder="youremail@email.com" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
         </div>
         <div class="inputSection">
             <h3>How can I help you?</h3>
-            <input type="text" placeholder="Hello Hendrik, I am interested in...">
+            <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" type="text" placeholder="Hello Hendrik, I am interested in..." required></textarea>
         </div>
+        @if (!message.valid && message.touched) {
+            <span>Field is empty! Please enter a message!</span>
+        }
         <div class="readPolicy">
-            <input type="checkbox" class="checkbox">
+            <input name="checkbox" type="checkbox" class="checkbox">
             <p>I`ve read the <a href="" class="textLink">privacy polocy</a> and agree to the processing of my data as outlined.</p>
         </div>
-        <button>Say hello :D</button>
-    </div>
+        <input type="submit" value="Say hi! :)" required>
+
+    </form>
 </section>
