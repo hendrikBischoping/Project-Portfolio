@@ -12,24 +12,30 @@
     <form class="contactField" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
         <div class="inputSection">
             <h3>What`s yout name?</h3>
-            <input [(ngModel)]="contactData.name" name="name" type="text" placeholder="Your name goes here" required>
+            <input #name="ngModel" [(ngModel)]="contactData.name" name="name" type="text" placeholder="Your name goes here" required>
+            @if (!name.valid && name.touched) {
+                <br><span class="invalidInput">Field is empty! Please enter your name!</span>
+            }
         </div>
         <div class="inputSection">
             <h3>What`s your email?</h3>
-            <input [(ngModel)]="contactData.email" name="email" type="email" placeholder="youremail@email.com" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+            <input #email="ngModel" [(ngModel)]="contactData.email" name="email" type="email" placeholder="youremail@email.com" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+            @if (!email.valid && email.touched) {
+                <br><span class="invalidInput">Please enter a correct email-adress!</span>
+            }
         </div>
         <div class="inputSection">
             <h3>How can I help you?</h3>
             <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" type="text" placeholder="Hello Hendrik, I am interested in..." required></textarea>
+            @if (!message.valid && message.touched) {
+                <br><span class="invalidInput">Field is empty! Please enter a message!</span>
+            }
         </div>
-        @if (!message.valid && message.touched) {
-            <span>Field is empty! Please enter a message!</span>
-        }
         <div class="readPolicy">
             <input name="checkbox" type="checkbox" class="checkbox">
-            <p>I`ve read the <a href="" class="textLink">privacy polocy</a> and agree to the processing of my data as outlined.</p>
+            <p>I`ve read the <a href="" class="textLink">privacy policy</a> and agree to the processing of my data as outlined.</p>
         </div>
-        <input type="submit" value="Say hi! :)" required>
+        <input type="submit" value="Say hi! :D" required>
 
     </form>
 </section>

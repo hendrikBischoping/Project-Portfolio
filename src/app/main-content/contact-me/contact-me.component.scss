@@ -41,6 +41,9 @@
         color: rgba(217, 217, 217, 0.5);
       }
   }
+  >.invalidInput {
+    color: red;
+  }
 }
 
 .readPolicy {
