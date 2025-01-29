@@ -11,14 +11,15 @@
                 <img class="btnPointer" src="./../../../assets/img/header-img/btn-to-en.png" alt="switch to german" (mouseenter)="addHover(1)" (mouseleave)="removeHover(1)">
                 }@else {<img class="btnPointer" src="./../../../assets/img/header-img/btn-to-en-hover.png" alt="switch to german" (mouseenter)="addHover(1)" (mouseleave)="removeHover(1)" (click)="toggleVisible(1, 0)">}
             }
-            <a href="#about-me">About me</a>
-            <a href="#technologies">Skills</a>
-            <a href="#projects">Projects</a>
+            <a href="#about-me"><div>{{ 'header.about-me' | translate }}</div></a>
+            <a href="#technologies"><div>{{ 'header.skills' | translate }}</div></a>
+            <a href="#projects"><div>{{ 'header.projects' | translate }}</div></a>
         </nav>
         <a href="#contact" class="logoSection btnPointer">            
             @if (!this.hovers[2].isHovered) {
                 <img src="./../../../assets/img/header-img/logo.png" class="myLogo" alt="myLogo" (mouseenter)="addHover(2)" (mouseleave)="removeHover(2)">
                 }@else {<img src="./../../../assets/img/header-img/logo-hover.png" class="myLogo" alt="myLogo" (mouseenter)="addHover(2)" (mouseleave)="removeHover(2)">}
         </a>
+       <!-- <div>{{ 'header.hello' | translate:{name} }}</div> -->
     </span>
 </header>

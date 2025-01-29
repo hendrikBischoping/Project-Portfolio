@@ -1,0 +1,9 @@
+{
+    "header": {
+        "about-me": "Über mich",
+        "skills":"Fähigkeiten",
+        "projects":"Projekte",
+      "hello": "Guten Tag {{name}}",
+      "title": "Übersetzung Deutsch"
+    }
+  }

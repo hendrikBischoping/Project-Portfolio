@@ -1,0 +1,9 @@
+{
+    "header": {
+        "about-me": "About me",
+        "skills":"Skills",
+        "projects":"Projects",
+      "hello": "hello {{name}}",
+      "title": "Translation Demo"
+    }
+  }
