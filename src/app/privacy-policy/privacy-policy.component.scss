@@ -1,0 +1,19 @@
+@import './../shared/general-style.scss';
+
+main {
+    background-image: url('./../../app/shared/img/general-background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $fontWhite;
+    font-family: 'Karla';
+    padding: 80px 200px;
+    >h1 {
+        font-size: 40px;
+        font-weight: 400;
+    };
+    >p {
+        >a {
+            @include anker();
+        }
+    }
+}

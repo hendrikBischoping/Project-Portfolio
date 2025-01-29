@@ -61,8 +61,8 @@
 
 .checkbox {
     // Styling für die Checkbox selbst (als Wrapper, falls vorhanden)
-    // display: inline-block;
-    // position: relative;
+    display: inline-block;
+    position: relative;
     cursor: pointer;
   
     input[type="checkbox"] {
@@ -79,7 +79,7 @@
     // Checkbox-Ersatz für das visuelle Styling
     &::before {
       content: '';
-      // display: inline-block;
+      display: inline-block;
       width: 20px; // Breite der Checkbox
       height: 20px; // Höhe der Checkbox
       background-color: #f0f0f0; // Hintergrundfarbe der Checkbox

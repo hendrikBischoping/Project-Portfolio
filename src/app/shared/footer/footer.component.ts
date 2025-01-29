@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-// import { Hover } from "./../../interfaces/hover.interface";
 
 @Component({
   selector: 'app-footer',
