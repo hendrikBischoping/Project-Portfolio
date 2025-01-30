@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { AboveTheFoldComponent } from "./main-content/above-the-fold/above-the-fold.component";
-import { MainContentComponent } from "./main-content/main-content.component";
 import {
     TranslateService,
     TranslatePipe,
@@ -21,5 +19,5 @@ export class AppComponent {
     this.translate.addLangs(['de', 'en']);
     this.translate.setDefaultLang('en');
     this.translate.use('de');
-}
+};
 }

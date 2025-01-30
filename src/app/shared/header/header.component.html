@@ -3,13 +3,13 @@
         <nav>
             @if (this.hovers[0].isShown) {
                 @if (!this.hovers[0].isHovered) {
-                <img class="btnPointer" src="./../../../assets/img/header-img/btn-to-de.png" alt="switch to german" (mouseenter)="addHover(0)" (mouseleave)="removeHover(0)">
-                }@else {<img class="btnPointer" src="./../../../assets/img/header-img/btn-to-de-hover.png" alt="switch to german" (mouseenter)="addHover(0)" (mouseleave)="removeHover(0)" (click)="toggleVisible(0, 1)">}
+                <img class="btnPointer" src="./../../../assets/img/header-img/btn-to-en.png" alt="switch to german" (mouseenter)="addHover(0)" (mouseleave)="removeHover(0)">
+                }@else {<img class="btnPointer" src="./../../../assets/img/header-img/btn-to-en-hover.png" alt="switch to german" (mouseenter)="addHover(0)" (mouseleave)="removeHover(0)" (click)="switchLanguage('de')" (click)="toggleVisible(0, 1)">}
             }
             @if (!this.hovers[0].isShown) {
                 @if (!this.hovers[1].isHovered) {
-                <img class="btnPointer" src="./../../../assets/img/header-img/btn-to-en.png" alt="switch to german" (mouseenter)="addHover(1)" (mouseleave)="removeHover(1)">
-                }@else {<img class="btnPointer" src="./../../../assets/img/header-img/btn-to-en-hover.png" alt="switch to german" (mouseenter)="addHover(1)" (mouseleave)="removeHover(1)" (click)="toggleVisible(1, 0)">}
+                <img class="btnPointer" src="./../../../assets/img/header-img/btn-to-de.png" alt="switch to german" (mouseenter)="addHover(1)" (mouseleave)="removeHover(1)">
+                }@else {<img class="btnPointer" src="./../../../assets/img/header-img/btn-to-de-hover.png" alt="switch to german" (mouseenter)="addHover(1)" (mouseleave)="removeHover(1)" (click)="switchLanguage('en')" (click)="toggleVisible(1, 0)">}
             }
             <a href="#about-me"><div>{{ 'header.about-me' | translate }}</div></a>
             <a href="#technologies"><div>{{ 'header.skills' | translate }}</div></a>

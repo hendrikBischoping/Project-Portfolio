@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {TranslatePipe, TranslateDirective} from "@ngx-translate/core";
-
+import { TranslatePipe, TranslateDirective} from "@ngx-translate/core";
+import { TranslateService } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-header',
@@ -50,5 +50,10 @@ removeHover(index: number){
       this.hovers[index2].isShown = true;
       //this.switchLanguage();
     };
-  }  
+  }
+  constructor(private translate: TranslateService) {};
+  
+  switchLanguage(language: string) {
+    this.translate.use(language);
+  }
 }

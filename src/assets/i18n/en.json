@@ -2,8 +2,14 @@
     "header": {
         "about-me": "About me",
         "skills":"Skills",
-        "projects":"Projects",
-      "hello": "hello {{name}}",
-      "title": "Translation Demo"
+        "projects":"Projects"
+    },
+    "a-t-f": {
+        "dev": "Frontend Developer",
+        "work": "Check my work",
+        "contact": "Contact me",
+        "remote": "Available for remote work",
+        "home": "Based in Herdecke by Dortmund"
     }
+
   }

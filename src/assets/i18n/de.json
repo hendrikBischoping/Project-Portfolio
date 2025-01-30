@@ -2,8 +2,13 @@
     "header": {
         "about-me": "Über mich",
         "skills":"Fähigkeiten",
-        "projects":"Projekte",
-      "hello": "Guten Tag {{name}}",
-      "title": "Übersetzung Deutsch"
+        "projects":"Projekte"
+    },
+    "a-t-f": {
+        "dev": "Frontend Entwickler",
+        "work": "Projekte",
+        "contact": "Kontakt",
+        "remote": "Verfügbar auch für remote-Arbeit",
+        "home": "Ich lebe in Herdecke bei Dortmund"
     }
   }
