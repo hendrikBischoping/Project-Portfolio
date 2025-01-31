@@ -10,5 +10,21 @@ import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
   styleUrl: './above-the-fold.component.scss'
 })
 export class AboveTheFoldComponent {
-
+  hovers = [
+    {hovered: false},
+    {hovered: false},
+    {hovered: false},
+  ] 
+  
+  addHover(i: number) {
+    if (this.hovers[i].hovered) {
+      this.hovers[i].hovered = false
+    } else {this.hovers[i].hovered = true}
+  }
+  
+  removeHover(i: number) {
+    if (this.hovers[i].hovered) {
+      this.hovers[i].hovered = false
+    } else {this.hovers[i].hovered = true}
+  }
 }

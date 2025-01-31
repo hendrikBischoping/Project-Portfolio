@@ -37,7 +37,7 @@
             }  @else { <img src="./../../../assets/img/contact-me-img/checked.png" alt="checked" (click)="toggleChecked()">}
             <p>I`ve read the <a href="privacy-policy" class="textLink">privacy policy</a> and agree to the processing of my data as outlined.</p>
         </div>
-        @if (name.valid && email.valid && message.valid) {
+        @if (name.valid && email.valid && message.valid && isChecked) {
             <input type="submit" class="btn" value="Say hi! :D">
         } @else {
             <input type="submit" class="btnOff" value="Say hi! :D" disabled>

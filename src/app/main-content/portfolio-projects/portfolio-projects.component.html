@@ -24,7 +24,7 @@
         @for (project of projects; track $index) {
             @if (project.isHovered) {
                 <img class="{{project.class}}Shadow" src="./../../../assets/img/p-projects-img/imgShadow.png" alt="imageShadow">
-                <img class="{{project.class}}" src="./../../../assets/img/p-projects-img/{{project.class}}.jpg" alt="{{project.class}}.img">
+                <img class="{{project.class}}" src="./../../../assets/img/p-projects-img/{{project.class}}-card.jpg" alt="{{project.class}}.img">
             } @if (project.isOpened) {
                 <div class="overlayBg" (click)="toggleProjektDetails($index)">
                     <div class="projectDetails" (click)="stopBubbling($event)">
@@ -47,9 +47,21 @@
                             </div>
                         </div>
                         <div class="cardRight">
-                                <img class="closeBtn" src="./../../../assets/img/p-projects-img/close.png" alt="close" (click)="toggleProjektDetails($index)">
+                            @if (hovers[0].hovered) {
+                                <img class="closeBtn" src="./../../../assets/img/p-projects-img/close-hover.png" alt="close-hover" (mouseleave)="addHover(0)" (click)="toggleProjektDetails($index)">
+                            } @else {<img class="closeBtn" src="./../../../assets/img/p-projects-img/close.png" alt="close" (mouseenter)="removeHover(0)" (click)="toggleProjektDetails($index)">}
                             <img class="graphic" src="./../../../assets/img/p-projects-img/{{project.class}}-card.jpg" alt="{{project.class}}.img">
-                            <div class="nextBtn" (click)="nextProject($index)"><p>Next Project</p><img src="./../../../assets/img/c-experience-img/right.png" alt="next"></div>
+
+
+
+                            
+                            @if (hovers[1].hovered) {
+                                <div class="nextBtn" (mouseleave)="addHover(1)" (click)="nextProject($index)"><p>Next Project</p><img src="./../../../assets/img/c-experience-img/right-hover.png" alt="next"></div>
+                            } @else {<div class="nextBtn" (mouseenter)="removeHover(1)" (click)="nextProject($index)"><p>Next Project</p><img src="./../../../assets/img/c-experience-img/right.png" alt="next"></div>}
+                            
+
+
+                            
                         </div>
                     </div>
                 </div>

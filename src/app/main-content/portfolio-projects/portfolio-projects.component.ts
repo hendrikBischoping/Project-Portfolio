@@ -45,6 +45,12 @@ export class PortfolioProjectsComponent {
     },
   ]
 
+  hovers = [
+    {hovered: false},
+    {hovered: false},
+    {hovered: false},
+  ] 
+
   showImage(index: number){
     if (this.projects[index].isHovered) {
       this.projects[index].isHovered = false;
@@ -61,6 +67,19 @@ export class PortfolioProjectsComponent {
       console.log(index+1+' is opened');
     }
   }
+
+  addHover(i: number) {
+    if (this.hovers[i].hovered) {
+      this.hovers[i].hovered = false
+    } else {this.hovers[i].hovered = true}
+  }
+  
+  removeHover(i: number) {
+    if (this.hovers[i].hovered) {
+      this.hovers[i].hovered = false
+    } else {this.hovers[i].hovered = true}
+  }
+
   nextProject(index: number){
     let flippedIndex = index + 1;
     if (flippedIndex >= this.projects.length) {

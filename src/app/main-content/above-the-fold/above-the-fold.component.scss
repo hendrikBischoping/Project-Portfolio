@@ -35,9 +35,19 @@
     align-self: flex-end;
     top: 18.75rem;
     left: 85%;
-    >img {
-      height: 2rem;
-      aspect-ratio: 1/1;
+    >.smIcon {
+      >a {
+        >img {
+          height: 2rem;
+          aspect-ratio: 1/1;
+          overflow: hidden;
+        }
+      }
+      >img {
+        height: 2rem;
+        aspect-ratio: 1/1;
+        overflow: hidden;
+      }
     }
     >p {
       >a {

@@ -95,6 +95,14 @@ h3 {
     padding: 0;
 }
 
+.inactiveBtn {
+    text-decoration: line-through !important;
+    &:hover {
+        color: $fontWhite !important;
+        cursor: default !important;
+    }
+}
+
 @mixin greenSquare($squareSide) {
     height: $squareSide;
     width: $squareSide;

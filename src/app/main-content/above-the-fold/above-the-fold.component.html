@@ -3,16 +3,22 @@
         <h2><div>{{ 'a-t-f.dev' | translate }}</div></h2>
         <h1>Hendrik Bischoping</h1>
         <div>
-            <button class="btn"><div>{{ 'a-t-f.work' | translate }}</div></button>
-            <button class="btn"><div>{{ 'a-t-f.contact' | translate }}</div></button>
+            <a href="#projects"><button class="btn"><div>{{ 'a-t-f.work' | translate }}</div></button></a>
+            <a href="#contact"><button class="btn"><div>{{ 'a-t-f.contact' | translate }}</div></button></a>
         </div>
     </div>
     <div class="socialMediaATF">
         <p class="eMail btnPointer"><a href="mailto:hbischoping&#64;googlemail.com">h.bischoping&#64;gmx.de</a></p>
-        <img class="githubIcon btnPointer" src="./../../../assets/img/a-t-f-img/github.png" alt="githubIcon">
-        <img class="githubIcon d_none btnPointer" src="./../../../assets/img/a-t-f-img/github-hover.png" alt="githubIcon">
-        <img class="linkedInIcon btnPointer" src="./../../../assets/img/a-t-f-img/linkedIn.png" alt="linkedInIcon">
-        <img class="linkedInIcon d_none btnPointer" src="./../../../assets/img/a-t-f-img/linkedIn-hover.png" alt="linkedInIcon">
+        @if (!hovers[0].hovered) {
+        <div class="smIcon"><img class="githubIcon btnPointer" src="./../../../assets/img/a-t-f-img/github-hover.png" alt="githubIcon" (mouseenter)="addHover(0)"></div>
+        } @else {
+        <div class="smIcon"><a href="https://github.com/hendrikBischoping"><img class="githubIcon btnPointer" src="./../../../assets/img/a-t-f-img/github.png" alt="githubIcon" (mouseleave)="removeHover(0)"></a></div>
+        }
+        @if (!hovers[1].hovered) {
+        <div class="smIcon"><img class="linkedInIcon btnPointer" src="./../../../assets/img/a-t-f-img/linkedIn-hover.png" alt="linkedInIcon" (mouseenter)="addHover(1)"></div>
+        } @else {
+        <div class="smIcon"><a href=""><img class="linkedInIcon btnPointer" src="./../../../assets/img/a-t-f-img/linkedIn.png" alt="linkedInIcon" (mouseleave)="removeHover(1)"></a></div>
+        }
     </div>
 
     <div class="marqueeContainer">
@@ -22,4 +28,4 @@
             <span> <div>{{ 'a-t-f.remote' | translate }}</div></span><span class="bulletPoint">● </span><span> <div>{{ 'a-t-f.dev' | translate }}</div></span><span class="bulletPoint">● </span><span> <div>{{ 'a-t-f.home' | translate }}</div></span><span class="bulletPoint">● </span>
       </div>
     </div>
-</section>
+</section>projects
