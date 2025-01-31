@@ -1,12 +1,12 @@
 @import './../../shared/general-style.scss';
 
 .footerSection {
-    padding: 40px 160px;
+    padding: 2rem 10rem;
     @include d_general(space-between, center);
     background-color: $backgroundGrey;
     >div {
         >a {
-        margin: 8px;
+        margin: 0.5rem;
         @include anker()
         }
         >span {
@@ -24,17 +24,17 @@ p {
     @include  anker ();
     >div {
         >p {
-            margin-top: 4px;
-            margin-bottom: 4px;
+            margin-top: 0.25rem;
+            margin-bottom: 0.25rem;
             font-family: 'Karla';
-            font-size: 24px;
+            font-size: 1.5rem;
             font-weight: 700;
         }
     }
 }
 
 .myLogo {
-    height: 56px;
+    height: 3.5rem;
     width: auto;
 }
 

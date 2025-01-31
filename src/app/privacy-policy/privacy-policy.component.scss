@@ -1,15 +1,21 @@
 @import './../shared/general-style.scss';
 
-main {
+section {
     background-image: url('./../../app/shared/img/general-background.png');
     background-repeat: no-repeat;
     background-size: cover;
+    max-width: 100%;
+}
+
+main {
+    max-width: 90rem;
+    min-height: 100vh;
     color: $fontWhite;
     font-family: 'Karla';
-    padding: 80px 200px;
+    padding: 5rem 0;
     >h1 {
-        font-size: 40px;
-        font-weight: 400;
+        font-size: 2.5rem;
+        font-weight: 25rem;
     };
     >p {
         >a {

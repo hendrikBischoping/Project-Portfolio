@@ -33,14 +33,16 @@ html {
 }
 
 body {
-    margin: 0px;
+    margin: 0;
     scroll-behavior: smooth;
 }
 
 section {
-    padding: 80px 160px;
+    padding: 5rem 10rem;
+    position: relative;
+    margin: auto;
     color: $fontWhite;
-    max-width: 1920px;
+    max-width: 120rem;
 }
   
 .d_none {
@@ -53,17 +55,17 @@ section {
   
 .btn {
     cursor: pointer;
-    padding: 12px 16px 12px 16px;
+    padding: 0.75rem 1rem;
     font-family: 'Fira Code';
-    font-size: 16px;
-    border: solid 2px $fontWhite;
-    border-radius: 25px;
+    font-size: 1rem;
+    border: solid 0.125rem $fontWhite;
+    border-radius: 1.5rem;
     background-color: rgba(0, 0, 0, 0);
     color: $fontWhite;
     transition: color 0.4s;
     transition: background-color 0.4s;
     &:hover {
-        border: solid 2px $fontGreen;
+        border: solid 0.125rem $fontGreen;
         color: $fontGreen;
         background-color: rgba(217, 217, 217, 0.2);        
     }
@@ -71,7 +73,7 @@ section {
 
 .greenH2 {
     margin: 0;
-    font-size: 64px;
+    font-size: 4rem;
     font-weight: 700;
     color: $fontGreen;
 }
@@ -79,14 +81,14 @@ section {
 
 h3 {
     font-family: 'Karla';
-    font-size: 24px;
+    font-size: 1.5rem;
     color: $fontGreen;
 }
 
 .squareDesign {
-    height: 568px;
-    width: 568px;
-    border-radius: 32px;
+    height: 35.5rem;
+    width: 35.5rem;
+    border-radius: 2rem;
 }
 
 #shadow-host-companion {
@@ -96,8 +98,8 @@ h3 {
 @mixin greenSquare($squareSide) {
     height: $squareSide;
     width: $squareSide;
-    border: solid 1px $fontGreen;
-    padding: 32px;
+    border: solid 0.0625rem $fontGreen;
+    padding: 2rem;
     color: $fontWhite;
     background-color: rgba(61, 207, 182, 0.1);
 }

@@ -16,16 +16,12 @@ h2 {
     @include d_general_column(column, space-between, unset);
     text-align: start;
     background-color: rgba(61, 207, 182, 0.4);
-    min-width: 400px;
-    height: 150px;
-    padding: 32px;
-    margin: 16px;
-    border: solid 1px $fontGreen;
-    border-radius: 32px;
-}
-
-.commentary {
-
+    min-width: 24rem;
+    height: 10rem;
+    padding: 2rem;
+    margin: 1rem;
+    border: solid 0.0625rem $fontGreen;
+    border-radius: 2rem;
 }
 
 .commentator {
@@ -33,13 +29,13 @@ h2 {
 }
 
 .horizontalLine{
-    border: solid 1px $fontWhite;
-    margin: 16px 16px;
+    border: solid 0.0625rem $fontWhite;
+    margin: 1rem;
     flex-grow: 1;
 }
 p {
-    padding: 0 16px;
-    font-size: 12px;
+    padding: 0 1rem;
+    font-size: 0.75rem;
     font-family: 'Karla';
 }
 
@@ -48,12 +44,16 @@ p {
 }
 
 .arrowImg {
-    margin: 0 8px;
+    margin: 0 0.5rem;
+    height: 2.5rem;
+    width: 2.5rem;
     &:hover {
         cursor: pointer;
     }
 } 
 
 .dot {
-    padding: 0 4px;
+    padding: 0 0.25rem;
+    height: 0.5rem;
+    width: 0.5rem;
 }

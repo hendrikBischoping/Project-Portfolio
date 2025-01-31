@@ -2,45 +2,64 @@
 
 .whoIAmSection {
     @include d_general(center, end);
-    gap: 200px;
+    position: relative;
+    gap: 12.5rem;
 }
 
 .profileSection {
     @include d_general(flex-start, start);
-    height: 700px;
+    height: 43.75rem;
 }
 
 .profileBg {
     position: absolute;
-    top: 1025px;
-    left: 285px;
+    top: 5rem;
+    left: 10rem;
     transition: 0.3s ease;
 }
 
 .profile {
     z-index: 1;
+    position: absolute;
+    top: 5rem;
+    left: 10rem;
+    transition: 0.2s ease;
+    &:hover {
+        display: block;
+        top: 4.5rem;
+        left: 9rem;
+    }
     &:hover ~ .profileBg{
         display: block;
-        transition: 0.3s ease;
-        top: 1045px;
-        left: 305px;
+        top: 6rem;
+        left: 11rem;
     }
 }
 
 .whoIAm {
     @include d_general_column(column, flex-end, start);
-}
-
-.aboutMe {
-    @include greenSquare(500px)
+    >.aboutMe {
+        position: absolute;
+        right: 10rem;
+        @include greenSquare(31rem);
+    }
+    >h3 {
+        position: absolute;
+        top: 7.5rem;
+        right: 37rem;
+    }
 }
 
 td {
-    padding-bottom: 8px;
-    font-size: 16px
+    padding-bottom: 0.5rem;
+    font-size: 1rem;
+    >img {
+        height: 2rem;
+        aspect-ratio: 1/1;
+    }
 }
 
 .imgTd {
     @include d_general(center, flex-start);
-    padding: 2px 4px 0 0;
+    padding: 0.125rem 0.25rem 0 0;
 }

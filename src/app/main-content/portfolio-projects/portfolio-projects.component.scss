@@ -1,7 +1,7 @@
 @import './../../shared/general-style.scss';
 
 .portfolioSection {
-    @include d_general(space-between, center)
+    @include d_general(space-between, center);
 }
 
 .devide {
@@ -13,9 +13,9 @@ table {
     border-collapse: collapse;
     >tr {
         @include d_general(space-between, center);
-        border-top: solid 1px $fontGreen;
-        border-bottom: solid 1px $fontGreen;
-        padding: 0 16px 0 16px;
+        border-top: solid 0.0625rem $fontGreen;
+        border-bottom: solid 0.0625rem $fontGreen;
+        padding: 0 1rem;
         transition: 0.4s;
         &:hover {
             cursor: pointer;
@@ -24,69 +24,69 @@ table {
     }
 
     >td, th {
-        padding: 32px 0 32px 0;
+        padding: 2rem;
     }
 }
 
 p {
     width: 40%;
-    padding: 16px 0 16px 0;
+    padding: 1rem 0;
 }
 
 .howerProject {
     position: relative;
     align-self: last baseline;
-    width: 293px;
-    margin-top: 192px;
-    height: 261px;
+    width: 18rem;
+    margin-top: 12rem;
+    height: 16rem;
 }
 
 img {
-    max-width: 293px;
-    height: 192px;
+    max-width: 18rem;
+    height: 12rem;
     object-fit: cover;
-    border-radius: 16px;
+    border-radius: 1rem;
     transition: 0.4s;
 }
 
 .pokédex {
     position: absolute;
-    top: 0px;
+    top: 0;
 }
 
 .sharkie {
     position: absolute;
-    top: 40px;
+    top: 2.5rem;
 }
 
 .hourglass {
     position: absolute;
-    top: 80px;
+    top: 5rem;
 }
 
 .pokédexShadow {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 1.25rem;
+    left: 1.25rem;
 }
 
 .sharkieShadow {
     position: absolute;
-    top: 60px;
-    left: 20px;
+    top: 3.25rem;
+    left: 1.25rem;
 }
 
 .hourglassShadow {
     position: absolute;
-    top: 100px;
-    left: 20px;
+    top: 6.25rem;
+    left: 1.25rem;
 }
 
 .overlayBg {
     @include d_general(center,center);
     position: fixed;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.4);
@@ -98,12 +98,12 @@ img {
     background-repeat: no-repeat;
     background-size: cover;
     @include d_general(space-between, top);
-    padding: 64px;
+    padding: 4rem;
     height: fit-content;
-    width: 1200px;
-    border: solid 1px $fontGreen;
-    border-radius: 32px;
-    gap: 64px;
+    width: 75rem;
+    border: solid 0.0625rem $fontGreen;
+    border-radius: 2rem;
+    gap: 4rem;
 }
 
 .cardLeft {
@@ -111,39 +111,39 @@ img {
     @include d_general_column(column, space-between, start);
     >h2 {
         margin: 0;
-        font-size: 64px;
+        font-size: 4rem;
         font-weight: 700;
         color: $fontWhite;
 
     }
     >.cardIndex {
         margin: 0;
-        font-size: 120px;
+        font-size: 7.5rem;
         font-weight: 700;
         color: $fontGreen;
     }
     >p {
         font-family: 'Karla';
-        font-size: 16px;
+        font-size: 1rem;
         width: 100%;
     }
     >.tecsCard {
         @include d_general(flex-start, center);
         >div {
             @include d_general(flex-start, center);
-            margin: 0 16px;
+            margin: 0 1rem;
             >img {
-                height: 32px;
+                height: 2rem;
                 aspect-ratio: 1/1;
                 border-radius: 0;
-                margin: 4px;
+                margin: 0.25rem;
             }
         }
     }
     .cardButtons {
         @include d_general(center, center);
-        margin: 64px 0 0 0;
-        gap: 64px;
+        margin: 4rem 0 0 0;
+        gap: 4rem;
     }
 }
 
@@ -153,11 +153,11 @@ img {
     >.closeBtn,
     .nextBtn {
         > img {
-        height: 48px;
+        height: 3rem;
         aspect-ratio: 1/1;
         cursor: pointer;
         }
-        height: 48px;
+        height: 3rem;
         aspect-ratio: 1/1;
         cursor: pointer;
         &:hover {
@@ -168,7 +168,7 @@ img {
         @include d_general(center, center);
         >p {
             min-width: fit-content;
-            padding: 0 16px;
+            padding: 0 1rem;
         }
     }
     >.graphic {

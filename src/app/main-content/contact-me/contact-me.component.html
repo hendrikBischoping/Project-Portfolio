@@ -32,13 +32,15 @@
             }
         </div>
         <div class="readPolicy">
-            <input name="checkbox" type="checkbox" class="checkbox">
+            @if (!isChecked) {
+                <img src="./../../../assets/img/contact-me-img/not-checked.png" alt="not-checked" (click)="toggleChecked()">
+            }  @else { <img src="./../../../assets/img/contact-me-img/checked.png" alt="checked" (click)="toggleChecked()">}
             <p>I`ve read the <a href="privacy-policy" class="textLink">privacy policy</a> and agree to the processing of my data as outlined.</p>
         </div>
         @if (name.valid && email.valid && message.valid) {
-            <input type="submit" value="Say hi! :D">
+            <input type="submit" class="btn" value="Say hi! :D">
         } @else {
-            <input type="submit" value="Say hi! :D" disabled>
+            <input type="submit" class="btnOff" value="Say hi! :D" disabled>
         }
 
     </form>

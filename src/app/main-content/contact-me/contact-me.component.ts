@@ -20,6 +20,8 @@ export class ContactMeComponent {
   }
 
   mailTest = true;
+  
+  isChecked = false;
 
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
@@ -49,5 +51,11 @@ export class ContactMeComponent {
 
       ngForm.resetForm();
     }
+  }
+
+  toggleChecked() {
+    if(this.isChecked) {
+      this.isChecked = false
+    } else {this.isChecked = true}
   }
 }

@@ -15,26 +15,30 @@
     @include  d_general_column(column, center, center);
     margin: 20vh 0 0 0;
     >h2 {
-        font-size: 40px;
+        font-size: 2.5rem;
         font-weight: 400;
     }
     >h1 {
-        font-size: 102px;
-        margin: 32px 0 32px 0;
+        font-size: 6.4rem;
+        margin: 2rem 0;
     }
     >div {
         @include d_general(space-between, center);
-        gap: 60px;
+        gap: 3.75rem;
     }
 }
 
 .socialMediaATF {
     @include d_general_column(column, center, center);
     position: absolute;
-    height: 300px;
+    height: 18.75rem;
     align-self: flex-end;
-    top: 300px;
+    top: 18.75rem;
     left: 85%;
+    >img {
+      height: 2rem;
+      aspect-ratio: 1/1;
+    }
     >p {
       >a {
         @include anker();
@@ -45,17 +49,17 @@
 .eMail {
     position: relative;
     transform: rotateZ(270deg);
-    top: 20px;
+    top: 1.25rem;
 }
 
 .githubIcon {
     position: relative;
-    top: 100px;
+    top: 6.25rem;
 }
 
 .linkedInIcon {
     position: relative;
-    top: 120px;
+    top: 7.5rem;
 }
 
 .marqueeContainer {
@@ -64,8 +68,8 @@
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.2);
   color: $fontGreen;
-  margin-top: 256px;
-  height: 50px;
+  margin-top: 16rem;
+  height: 3rem;
   display: flex;
   align-items: center;
 }
@@ -78,8 +82,8 @@
 
 .marquee span {
   white-space: nowrap;
-  padding-right: 80px;
-  font-size: 24px;
+  padding-right: 5rem;
+  font-size: 1.5rem;
 }
 
 @keyframes marquee {
@@ -92,5 +96,5 @@
 }
 
 .bulletPoint {
-  padding: 0 53px 0 16px;
+  padding: 0 3.3rem 0 1rem;
 }

@@ -5,7 +5,7 @@
 }
 
 .skillsetDescription {
-    @include greenSquare(440px);
+    @include greenSquare(27.5rem);
 }
 
 .technologies {
@@ -16,15 +16,19 @@
 
 .technology {
     @include d_general_column (column, flex-start, center);
-    width: 100px;
-    height: 120px;
-    padding: 16px;
+    width: 6.25rem;
+    height: 7.5rem;
+    padding: 1rem;
     text-align: center;
     transition: scale 0.2s;
     >span {
-        margin-top: 8px;
+        margin-top: 0.5rem;
         word-break: normal;
         color: $fontWhite;
+    }
+    >img {
+        height: 3.75rem;
+        width: 3.75rem;
     }
     &:hover {
         scale: 1.1;
