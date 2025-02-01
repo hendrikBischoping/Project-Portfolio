@@ -3,4 +3,6 @@ export interface Commentaries {
     name: string;
     title: string;
     isShown: boolean;
+    isLeft: boolean;
+    isRight: boolean;
 }
