@@ -1,4 +1,5 @@
 @import './../../shared/general-style.scss';
+@import './../../shared/general-responsive-design.scss';
 
 .a-t-f {
     @include d_general_column(column, unset, center);
@@ -19,6 +20,9 @@
         font-weight: 400;
     }
     >h1 {
+        @include d_general(center, center);
+        text-align: center;
+        flex-wrap: nowrap;
         font-size: 6.4rem;
         margin: 2rem 0;
     }
@@ -96,6 +100,10 @@
   font-size: 1.5rem;
 }
 
+.bulletPoint {
+  padding: 0 3.3rem 0 1rem;
+}
+
 @keyframes marquee {
   from {
     transform: translateX(0);
@@ -105,6 +113,3 @@
   }
 }
 
-.bulletPoint {
-  padding: 0 3.3rem 0 1rem;
-}

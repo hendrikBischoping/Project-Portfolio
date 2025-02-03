@@ -1,0 +1,323 @@
+@mixin d_general($jc, $ai){
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin d_general_column($fd, $jc, $ai){
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+}
+@media (max-width: 1500px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1300px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1100px){
+    section {
+        padding: 5rem;
+    }
+
+    .headerContent {
+    margin: 0 4rem;
+    }
+
+    .a-t-f {
+        >.mainHeadlines {
+            >h1 {
+                font-size: 5rem;
+                max-width: 36rem;
+                display: block;
+                white-space: pre-line;
+              }
+            
+              h1::after {
+                content: "\A";
+                white-space: pre;
+              }
+        }
+        >.socialMediaATF {
+            left: unset;
+            right: 8rem;
+        }
+    }
+
+    .whoIAmSection[_ngcontent-ng-c555094839] {
+        @include d_general_column(column, center, center);
+        position: static;
+        gap: 0;
+        >.profileSection {
+            @include d_general_column(column, center, center);
+            position: static;
+            >h3 {
+                display: block;
+                align-self: flex-start;
+            }
+            >.profile {
+                position: static;
+                top: unset;
+                left: unset;
+            }
+            >.profileBg {
+                display: none;
+            }
+        }
+        >.whoIAm {
+            >h3 {
+                display: none;
+            }
+            >.aboutMe {
+                position: static;
+            }
+        }
+    }
+
+    .technologiesSection {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: static;
+        gap: 2rem;
+        >.technologies {
+            justify-content: center;
+            max-width: 80%;
+        }
+    }
+    .portfolioSection {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: static;
+        .portfolioSectionLeft{
+            >.portfolio, h3 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: static;
+                text-align: center;
+            }
+        }
+        >.howerProject {
+            height: 0;
+            margin-top: 0;
+            >.miniGraphic {
+                display: none;
+            }
+            >.overlayBg {
+                >.projectDetails {
+                    >.cardLeft {
+                        >.cardHeadlines{
+                            @include d_general(center, center);
+                            gap: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .contactMeSection {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        >div, form {
+            align-self: center;
+            width: 80%;
+        }
+        >form {
+            >div {
+                >input, textarea {
+                    width: 80%;
+                }
+            }
+        }
+    }
+    .projectDetails {
+        >.cardRight {
+            >.graphic{
+                z-index: 10;
+            }
+        }
+    }
+}
+
+@media (max-width: 900px){
+    .headerContent {
+        margin: 0 4rem;
+    }
+    section {
+        padding: 2rem;
+    }
+    html {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 750px){
+    html {
+        font-size: 10px;
+    }
+    .projectDetails {
+        @include d_general_column(column,center ,center);
+        min-height: fit-content;
+        gap: 0;
+        >.cardLeft {
+            min-width: 90%;
+            >.tecsAndButtons {
+                @include d_general(space-between, flex-end);
+                >.cardButtons {
+                    gap: 1rem;
+                }
+            }
+        }
+        >.cardRight {
+            min-width: 90%;
+            >.graphic {
+                height: fit-content;
+            }
+        }
+    }
+}
+
+@media (max-width: 700px){
+    html {
+        font-size: 10px;
+    }
+    header {
+        .headerContent {
+            margin: 0 3rem;
+            >a {
+                >.myLogo {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+    }
+    .a-t-f {
+        >.mainHeadlines {
+            margin-top: 18rem;
+        }
+        >.socialMediaATF {
+            left: unset;
+            right: 2rem;
+        }
+    }
+
+    header {
+        .headerContent {
+            flex-direction: column-reverse;
+            >nav {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+    .footerSection{
+            flex-direction: column;
+            gap: 3rem;
+    }
+
+    .greenH2 {
+        font-size: 3rem;
+    }
+    h1 {
+        font-size: 3.5rem;
+    }
+    .prPolicySection {
+        padding: 5rem 0;
+        >.prPolicy {
+            padding: 0 5rem;
+            padding-top: 15rem;
+        }
+    }
+}
+
+@media (max-width: 500px){
+    .squareDesign {
+        max-width: 80%;
+        height: fit-content;
+    }
+    .a-t-f {
+        gap: 2rem;
+        >.socialMediaATF {
+            height: fit-content;
+            position: static;
+            right: unset;
+            align-self: center;
+            flex-direction: row;
+            gap: 1rem;
+            >.eMail {
+                position: static;
+                transform: rotateZ(0deg);
+                top: unset;
+            }
+            > div {
+                img {
+                    position: unset;
+                    top: 0rem;
+                }
+            }
+        }
+        >.marqueeContainer {
+            margin-top: 8rem;
+        }
+    }
+
+    .whoIAmSection {
+        >.whoIAm {
+            @include d_general(center, center);
+            max-width: 80%;
+            >.aboutMe {
+                align-self: center;
+                max-width: 80%;
+                height: fit-content;
+            }
+        }
+    }
+
+    .technologiesSection {
+        >.skillSetSection {
+            max-width: 80%;
+            >.skillsetDescription {
+                margin: auto;
+                min-height: fit-content;
+            }
+        }
+    }
+
+    .projectDetails {
+        >.cardLeft {
+
+            >.tecsAndButtons {
+                @include d_general_column(column, space-between, flex-start);
+                align-items: flex-start;
+                justify-content: flex-start;
+                >.tecsCard {
+                    >div {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .a-t-f {
+            .mainHeadlines {
+                >h1 {
+                    font-size: 4.5rem;
+                }
+            }
+        }
+    }
+}

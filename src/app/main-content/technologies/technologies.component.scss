@@ -1,4 +1,5 @@
 @import './../../shared/general-style.scss';
+@import './../../shared/general-responsive-design.scss';
 
 .technologiesSection {
     @include d_general(space-between, center);

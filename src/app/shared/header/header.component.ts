@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { TranslatePipe} from "@ngx-translate/core";
 import { TranslateService } from "@ngx-translate/core";
+import { SwitchlanguagedataService } from '../../services/switchlanguagedata.service';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +11,10 @@ import { TranslateService } from "@ngx-translate/core";
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {  
-  name = "Gast"
+  constructor(private translate: TranslateService) {};
+
+  name = "Gast";
+  switchlanguagedata = inject(SwitchlanguagedataService);
 
   hovers: {
     isHovered: boolean;
@@ -51,9 +55,14 @@ removeHover(index: number){
       //this.switchLanguage();
     };
   }
-  constructor(private translate: TranslateService) {};
   
   switchLanguage(language: string) {
     this.translate.use(language);
+    if (language == 'de') {
+      this.switchlanguagedata.german = true;
+      console.log('true');
+      
+    } else {this.switchlanguagedata.german = false;
+      console.log('false');}
   }
 }

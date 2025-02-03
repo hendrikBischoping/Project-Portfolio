@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { SwitchlanguagedataService } from '../../services/switchlanguagedata.service';
 
 @Component({
   selector: 'app-contact-me',
@@ -12,6 +13,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 export class ContactMeComponent {
 
   http = inject(HttpClient);
+  switchlanguagedata = inject(SwitchlanguagedataService);
 
   contactData = {
     name: "",

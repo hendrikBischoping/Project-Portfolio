@@ -1,4 +1,5 @@
 @import './../../shared/general-style.scss';
+@import './../../shared/general-responsive-design.scss';
 
 .whoIAmSection {
     @include d_general(center, end);
@@ -9,6 +10,9 @@
 .profileSection {
     @include d_general(flex-start, start);
     height: 43.75rem;
+    >h3 {
+        display: none;
+    }
 }
 
 .profileBg {

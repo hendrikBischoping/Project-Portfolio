@@ -1,16 +1,5 @@
+@import './../shared/general-responsive-design.scss';
 /*mixins*/
-@mixin d_general($jc, $ai){
-    display: flex;
-    justify-content: $jc;
-    align-items: $ai;
-}
-
-@mixin d_general_column($fd, $jc, $ai){
-    display: flex;
-    flex-direction: $fd;
-    justify-content: $jc;
-    align-items: $ai;
-}
 
 @mixin anker (){
     color: $fontWhite;

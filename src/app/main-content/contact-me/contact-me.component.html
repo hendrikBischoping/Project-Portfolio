@@ -11,7 +11,7 @@
     </div>
     <form class="contactField" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
         <div class="inputSection">
-            <h3>What`s yout name?</h3>
+            <h3>What`s your name?</h3>
             <input #name="ngModel" [(ngModel)]="contactData.name" name="name" type="text" placeholder="Your name goes here" required>
             @if (!name.valid && name.touched) {
                 <br><span class="invalidInput">Field is empty! Please enter your name!</span>
@@ -35,7 +35,9 @@
             @if (!isChecked) {
                 <img src="./../../../assets/img/contact-me-img/not-checked.png" alt="not-checked" (click)="toggleChecked()">
             }  @else { <img src="./../../../assets/img/contact-me-img/checked.png" alt="checked" (click)="toggleChecked()">}
-            <p>I`ve read the <a href="privacy-policy" class="textLink">privacy policy</a> and agree to the processing of my data as outlined.</p>
+            @if (this.switchlanguagedata.german) {
+                <p>Ich habe die <a href="privacy-policy-de" class="textLink">Datenschutzrichtlinie</a>gelesen und bin mit der beschriebenen Verarbeitung meiner Daten einverstanden.</p>
+            } @else {<p>I`ve read the <a href="privacy-policy-en" class="textLink">privacy policy</a> and agree to the processing of my data as outlined.</p>}
         </div>
         @if (name.valid && email.valid && message.valid && isChecked) {
             <input type="submit" class="btn" value="Say hi! :D">
