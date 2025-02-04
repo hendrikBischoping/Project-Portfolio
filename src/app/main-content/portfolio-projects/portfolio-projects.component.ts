@@ -64,7 +64,6 @@ export class PortfolioProjectsComponent {
       this.projects[index].isOpened = false;
     } else {
       this.projects[index].isOpened = true;
-      console.log(index+1+' is opened');
     }
   }
 

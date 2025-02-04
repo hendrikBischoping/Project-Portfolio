@@ -71,3 +71,36 @@
       }
     }
 }
+
+.confirmationOverlay {
+  @include d_general(center, center);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 3;
+  >.confirmation {
+    @include d_general(center, center);
+    position: relative;
+    height: 10rem;
+    width: fit-content;
+    background-color: rgb(25, 93, 82);
+    padding: 4rem;
+    margin: 1rem;
+    border: solid 2px $fontGreen;
+    border-radius: 2rem;
+    >.closeBtn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    >p {
+      text-align: center;
+    }
+  }
+}

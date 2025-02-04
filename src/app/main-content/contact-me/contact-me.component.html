@@ -36,14 +36,25 @@
                 <img src="./../../../assets/img/contact-me-img/not-checked.png" alt="not-checked" (click)="toggleChecked()">
             }  @else { <img src="./../../../assets/img/contact-me-img/checked.png" alt="checked" (click)="toggleChecked()">}
             @if (this.switchlanguagedata.german) {
-                <p>Ich habe die <a href="privacy-policy-de" class="textLink">Datenschutzrichtlinie</a>gelesen und bin mit der beschriebenen Verarbeitung meiner Daten einverstanden.</p>
+                <p>Ich habe die <a href="privacy-policy-de" class="textLink">Datenschutzrichtlinie</a> gelesen und bin mit der beschriebenen Verarbeitung meiner Daten einverstanden.</p>
             } @else {<p>I`ve read the <a href="privacy-policy-en" class="textLink">privacy policy</a> and agree to the processing of my data as outlined.</p>}
         </div>
         @if (name.valid && email.valid && message.valid && isChecked) {
-            <input type="submit" class="btn" value="Say hi! :D">
+            <input type="submit" class="btn" value="Say hi! :D" (click)="toggleConfirmation()">
         } @else {
             <input type="submit" class="btnOff" value="Say hi! :D" disabled>
         }
-
+        @if (emailSentConfirmation) {
+            <div class="confirmationOverlay" (click)="toggleConfirmation()">
+                <div class="confirmation">
+                    @if (closeHovered) {
+                        <img class="closeBtn" src="./../../../assets/img/p-projects-img/close-hover.png" alt="close-hover"
+                        (mouseleave)="addHover(0)" (click)="toggleConfirmation()" (click)="toggleChecked()">
+                    } @else {<img class="closeBtn" src="./../../../assets/img/p-projects-img/close.png" alt="close"
+                    (mouseenter)="removeHover(0)" (click)="toggleConfirmation()">}
+                    <p>Vielen Dank! Ihre Nachricht wurde verschickt!</p>
+                </div>
+            </div>
+        }
     </form>
 </section>

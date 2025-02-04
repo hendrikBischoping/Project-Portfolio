@@ -169,7 +169,7 @@
         font-size: 10px;
     }
     .projectDetails {
-        @include d_general_column(column,center ,center);
+        @include d_general_column(column-reverse,center ,center);
         min-height: fit-content;
         gap: 0;
         >.cardLeft {

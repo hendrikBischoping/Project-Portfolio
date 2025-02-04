@@ -22,11 +22,11 @@ export class ContactMeComponent {
   }
 
   mailTest = true;
-  
   isChecked = false;
-
+  emailSentConfirmation = false;
+  closeHovered = false;
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://hendrik-bischoping.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -41,7 +41,6 @@ export class ContactMeComponent {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
             ngForm.resetForm();
           },
           error: (error) => {
@@ -53,11 +52,30 @@ export class ContactMeComponent {
 
       ngForm.resetForm();
     }
+    this.toggleChecked()
+  }
+
+  addHover(i: number) {
+    if (this.closeHovered) {
+      this.closeHovered = false
+    } else {this.closeHovered = true}
+  }
+  
+  removeHover(i: number) {
+    if (this.closeHovered) {
+      this.closeHovered = false
+    } else {this.closeHovered = true}
   }
 
   toggleChecked() {
     if(this.isChecked) {
       this.isChecked = false
     } else {this.isChecked = true}
+  }
+
+  toggleConfirmation() {
+    if (!this.emailSentConfirmation) {
+      this.emailSentConfirmation = true;
+    } else {this.emailSentConfirmation = false}
   }
 }

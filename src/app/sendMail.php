@@ -14,8 +14,8 @@ switch ($_SERVER['REQUEST_METHOD']) {
             //parse the Payload from text format to Object
             $params = json_decode($json);
     
-            $email = $params->email;
             $name = $params->name;
+            $email = $params->email;
             $message = $params->message;
     
             $recipient = 'h.bischoping@gmx.de';  
