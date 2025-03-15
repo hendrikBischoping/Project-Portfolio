@@ -28,7 +28,10 @@
     top: 5rem;
     left: 10rem;
     transition: 0.2s ease;
-    &:hover {
+    background-image: url('./../../../assets/img/who-i-am-img/profile.JPG');
+    background-position: center;
+    background-size: cover;
+        &:hover {
         display: block;
         top: 4.5rem;
         left: 9rem;
@@ -45,7 +48,7 @@
     >.aboutMe {
         position: absolute;
         right: 10rem;
-        @include greenSquare(31rem);
+        @include greenSquare(33rem);
     }
     >h3 {
         position: absolute;
