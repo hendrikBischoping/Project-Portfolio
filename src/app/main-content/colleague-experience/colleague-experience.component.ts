@@ -1,197 +1,215 @@
 import { Component } from '@angular/core';
 import { Commentaries } from '../../interfaces/commentaries.interface';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-colleague-experience',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './colleague-experience.component.html',
   styleUrl: './colleague-experience.component.scss'
 })
 export class ColleagueExperienceComponent {
-  arrowHover = false;
-  rightHover = false;
+  slideLeft = false;
+  slideRight = true;
 
   arrows: {
     neutral: string;
     hovered: string;
     isHovered: boolean;
   }[] = [
-    {
-      neutral: 'left',
-      hovered: 'left-hover',
-      isHovered: false,
-    },
-    {
-      neutral: 'right',
-      hovered: 'right-hover',
-      isHovered: false,
-    },
-  ]
+      {
+        neutral: 'left',
+        hovered: 'left-hover',
+        isHovered: false,
+      },
+      {
+        neutral: 'right',
+        hovered: 'right-hover',
+        isHovered: false,
+      },
+    ]
 
   commentaries: Commentaries[] = [
     {
-      commentary: "Kommentartext Nr 1 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi exercitationem provident excepturi dolor amet dolores doloribus repudiandae ducimus, corporis ab obcaecati aliquam pariatur! Maxime, amet!",
-      name: "Name A",
-      title: "Projektpartner",
-      isShown: false,
+      commentary: "Hendrik ist ein äußerst freundlicher und angenehmer Team-Partner, der sich durch seine Fleißbereitschaft und große Wissbegierde auszeichnet. Durch seine Liebe zum Detail und die hohe Genauigkeit in seiner Arbeit ist er ein unschätzbares Mitglied für jedes Team. Zudem ist immer auf ihn Verlass. Es war eine super Zusammenarbeit mit ihm",
+      name: "Marcel Steffen",
+      title: "Projektpartner (DA Bubble)",
+      goesLeft: false,
+      goesRight: true,
+      isFarRight: true,
+      isFarLeft: false,
       isLeft: false,
+      isShown: false,
       isRight: false,
     },
     {
-      commentary: "Kommentartext Nr 2 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi exercitationem provident excepturi dolor amet dolores doloribus repudiandae ducimus, corporis ab obcaecati aliquam pariatur! Maxime, amet!",
-      name: "Name B",
-      title: "Projektpartner",
-      isShown: false,
-      isLeft: false,
-      isRight: false,
-    },
-    {
-      commentary: "Kommentartext Nr 3 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi exercitationem provident excepturi dolor amet dolores doloribus repudiandae ducimus, corporis ab obcaecati aliquam pariatur! Maxime, amet!",
-      name: "Name C",
-      title: "Projektpartner",
-      isShown: false,
+      commentary: "Ich hatte das Vergnügen, mit Hendrik in einem Gruppenprojekt zusammenzuarbeiten, und seine Verlässlichkeit und sein Engagement haben unser Team enorm bereichert. Er arbeitet äußerst strukturiert und effizient und hat einen sehr großen Teil zum Erfolg des Projektes beigetragen. Besonders beeindruckend war seine Eigeninitiative – er hat sich auch um weniger spannende Aufgaben gekümmert, damit unser Team reibungslos Arbeiten konnte. Ich würde jederzeit wieder mit ihm zusammenarbeiten!",
+      name: "Sascha Töpfer",
+      title: "Projektpartner (JOIN)",
+      goesLeft: false,
+      goesRight: true,
+      isFarLeft: false,
       isLeft: true,
+      isShown: false,
       isRight: false,
+      isFarRight: false,
     },
     {
-      commentary: "Kommentartext Nr 4 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi exercitationem provident excepturi dolor amet dolores doloribus repudiandae ducimus, corporis ab obcaecati aliquam pariatur! Maxime, amet!",
-      name: "Name D",
-      title: "Projektpartner",
+      commentary: "An excellent leader who is always ready to help his colleagues.",
+      name: "Mariia Ivanova",
+      title: "Projektpartner (Kochwelt)",
+      goesLeft: false,
+      goesRight: true,
+      isFarLeft: false,
+      isLeft: false,
       isShown: true,
-      isLeft: false,
       isRight: false,
+      isFarRight: false,
     },
     {
-      commentary: "Kommentartext Nr 5 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi exercitationem provident excepturi dolor amet dolores doloribus repudiandae ducimus, corporis ab obcaecati aliquam pariatur! Maxime, amet!",
-      name: "Name E",
-      title: "Projektpartner",
-      isShown: false,
+      commentary: "Durch die Zusammenarbeit mit Hendrik am Projekt hat man sofort bemerkt, dass er dafür brennt und großes Interesse zeigt, damit es mit dem richtigen Inhalt und zur richtigen Deadline  durchgeführt werden kann. Hendrik bot immer wieder seine Unterstützung an und stand für eventuelle Fragen zur Verfügung",
+      name: "Andreas Welker",
+      title: "Projektpartner (JOIN)",
+      goesLeft: false,
+      goesRight: true,
+      isFarLeft: false,
       isLeft: false,
+      isShown: false,
       isRight: true,
-    },
-    {
-      commentary: "Kommentartext Nr 6 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi exercitationem provident excepturi dolor amet dolores doloribus repudiandae ducimus, corporis ab obcaecati aliquam pariatur! Maxime, amet!",
-      name: "Name F",
-      title: "Projektpartner",
-      isShown: false,
-      isLeft: false,
-      isRight: false,
-    },
-    {
-      commentary: "Kommentartext Nr 7 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi exercitationem provident excepturi dolor amet dolores doloribus repudiandae ducimus, corporis ab obcaecati aliquam pariatur! Maxime, amet!",
-      name: "Name G",
-      title: "Projektpartner",
-      isShown: false,
-      isLeft: false,
-      isRight: false,
-    },
-  ]
+      isFarRight: false,
+    }
+  ];
 
-  count = this.commentaries.length-1; //(0-6)
-
-  addHover(index: number){
+  addHover(index: number) {
     if (!this.arrows[index].isHovered) {
-    this.arrows[index].isHovered = true;
-    
-    
+      this.arrows[index].isHovered = true;
+    }
   }
-}
 
-removeHover(index: number){
+  removeHover(index: number) {
     if (this.arrows[index].isHovered) {
       this.arrows[index].isHovered = false;
     }
   }
 
-  //  next = index wird größer (x -> right -> shown -> left -> y)
-  next(i: number){
-    if (i >= 0 && this.commentaries[i].isShown) {
-      this.commentaries[i].isShown = false;
-      this.replaceLeftOnNext(i);
-      this.replaceRightOnNext(i);
-      this.commentaries[i].isLeft = true; //zusletzt weil sonst wir es in nextLeft überschrieben
-    } if (i < 0 && this.commentaries[i].isShown) {
-      i = this.count;
-      this.commentaries[i].isShown = false;
-      this.replaceLeftOnNext(i);
-      this.replaceRightOnNext(i);
-      this.commentaries[i].isLeft = true; //zusletzt weil sonst wir es in nextLeft überschrieben
+  slideToRight() {
+    this.slideRight = true;
+    for (let i = 0; i < this.commentaries.length; i++) {
+      i + 1;
+      this.farRightToFarLeft(i);
+      this.rightToFarRight(i);
+      this.midToRight(i);
+      this.leftToMid(i);
+      this.farLeftToLeft(i);
+    }
+
+    setTimeout(() => {
+      this.slideRight = true;
+    }, 600);
+  }
+
+  farLeftToLeft(i: number) {
+    if (this.commentaries[i].isFarLeft && this.slideRight) {
+      this.commentaries[i].goesLeft = false;
+      this.commentaries[i].goesRight = true;
+      this.commentaries[i].isFarLeft = false;
+      this.commentaries[i].isLeft = true;
     }
   }
 
-  replaceLeftOnNext(i: number){
-    let leftI = i-1;
-    if (leftI >= 0) {
-      this.commentaries[leftI].isLeft = false;
-    } else {
-      leftI = this.count;
-      this.commentaries[leftI].isLeft = false;
+  leftToMid(i: number) {
+    if (this.commentaries[i].isLeft && this.slideRight) {
+      this.commentaries[i].goesLeft = false;
+      this.commentaries[i].goesRight = true;
+      this.commentaries[i].isLeft = false;
+      this.commentaries[i].isShown = true;
     }
   }
 
-  replaceRightOnNext(i: number){ //später noch kürzen!!
-    let rightI = i+1;
-    let farRightI = i+2;  // nötig zum rendern eines neuen Kommentars zur rechten
-    if (farRightI <= this.count) { //neues Kommentar ganz rechts rendern
-      this.commentaries[farRightI].isRight = true;
-    } else {
-      farRightI = 0;
-      this.commentaries[farRightI].isRight = true;
-    }
-    
-    if (rightI <= this.count) {
-      this.commentaries[rightI].isRight = false;
-      this.commentaries[rightI].isShown = true;
-    } else {
-      rightI = 0;
-      this.commentaries[rightI].isRight = false;
-      this.commentaries[rightI].isShown = true; //verschiebt rechtes Kommetar in die Mitte
-    }
-  }
-
-  //  prev = index wird kleiner (x -> left -> main -> right -> y)
-  prev(i: number){
-    if (i <= this.count && this.commentaries[i].isShown) {
+  midToRight(i: number) {
+    if (this.commentaries[i].isShown && this.slideRight) {
+      this.commentaries[i].goesLeft = false;
+      this.commentaries[i].goesRight = true;
       this.commentaries[i].isShown = false;
-      this.replaceLeftOnPrev(i);
-      this.replaceRightOnPrev(i);
-      this.commentaries[i].isRight = true;
-    } if (i > this.count && this.commentaries[i].isShown) {
-      i = 0;
-      this.commentaries[i].isShown = false;
-      this.replaceLeftOnPrev(i);
-      this.replaceRightOnPrev(i);
       this.commentaries[i].isRight = true;
     }
   }
 
-  replaceRightOnPrev(i: number){
-    let rightI = i+1;
-    if (rightI <= this.count) {
-      this.commentaries[rightI].isRight = false;
-    } else {
-      rightI = 0;
-      this.commentaries[rightI].isRight = false;
+  rightToFarRight(i: number) {
+    if (this.commentaries[i].isRight && this.slideRight) {
+      this.commentaries[i].goesLeft = false;
+      this.commentaries[i].goesRight = true;
+      this.commentaries[i].isRight = false;
+      this.commentaries[i].isFarRight = true;
     }
   }
 
-  replaceLeftOnPrev(i: number){    // index-2 => 
-    let leftI = i-1;    // proove im index >=0
-    let farLeftI = i-2;
-    if (farLeftI >=0) {
-      this.commentaries[farLeftI].isLeft = true;
-    } else {
-      farLeftI = this.count;
-      this.commentaries[farLeftI].isLeft = true;
+  farRightToFarLeft(i: number) {
+    if (this.commentaries[i].isFarRight && this.slideRight) {
+      this.commentaries[i].goesLeft = false;
+      this.commentaries[i].goesRight = true;
+      this.commentaries[i].isFarRight = false;
+      this.commentaries[i].isFarLeft = true;
     }
-    if (leftI >=0) {
-        this.commentaries[leftI].isLeft = false;
-        this.commentaries[leftI].isShown = true;
-    } else {
-      leftI = this.count;
-      this.commentaries[leftI].isLeft = false;
-      this.commentaries[leftI].isShown = true;
+  }
+
+  slideToLeft() {
+    this.slideLeft = true;
+    for (let i = 0; i < this.commentaries.length; i++) {
+      this.leftToFarLeft(i);
+      this.midToLeft(i);
+      this.rightToMid(i);
+      this.farRightToRight(i);
+      this.farLeftToFarRight(i);
+    }
+    setTimeout(() => {
+      this.slideLeft = true;
+    }, 600);
+  }
+
+  leftToFarLeft(i: number) {
+    if (this.commentaries[i].isLeft && this.slideLeft) {
+      this.commentaries[i].goesRight = false;
+      this.commentaries[i].goesLeft = true;
+      this.commentaries[i].isLeft = false;
+      this.commentaries[i].isFarLeft = true;
+    }
+  }
+
+  midToLeft(i: number) {
+    if (this.commentaries[i].isShown && this.slideLeft) {
+      this.commentaries[i].goesRight = false;
+      this.commentaries[i].goesLeft = true;
+      this.commentaries[i].isShown = false;
+      this.commentaries[i].isLeft = true;
+    }
+  }
+
+  rightToMid(i: number) {
+    if (this.commentaries[i].isRight && this.slideLeft) {
+      this.commentaries[i].goesRight = false;
+      this.commentaries[i].goesLeft = true;
+      this.commentaries[i].isRight = false;
+      this.commentaries[i].isShown = true;
+    }
+  }
+
+  farRightToRight(i: number) {
+    if (this.commentaries[i].isFarRight && this.slideLeft) {
+      this.commentaries[i].goesRight = false;
+      this.commentaries[i].goesLeft = true;
+      this.commentaries[i].isFarRight = false;
+      this.commentaries[i].isRight = true;
+    }
+  }
+
+  farLeftToFarRight(i: number) {
+    if (this.commentaries[i].isFarLeft && this.slideLeft) {
+      this.commentaries[i].goesLeft = true;
+      this.commentaries[i].goesRight = false;
+      this.commentaries[i].isFarLeft = false;
+      this.commentaries[i].isFarRight = true;
     }
   }
 }

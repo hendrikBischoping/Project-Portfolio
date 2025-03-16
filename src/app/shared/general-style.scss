@@ -17,13 +17,13 @@
         transform: translateX(0px);
     }
     40% {
-        transform: translateX(-256px);
+        transform: translateX(-150px);
     }
     50% {
         transform: translateY(-64px);
     }
     60% {
-        transform: translateX(256px);
+        transform: translateX(150px);
     }
     100% {
         transform: translateY(0px);
@@ -105,14 +105,14 @@ section {
     color: $fontWhite;
     overflow: hidden;
     p, div {
-        animation: slideBtnTextIn 0.8s ease-out 1 forwards;
+        animation: slideBtnTextIn 1s ease-out 1 forwards;
         margin: 0;
     }
     &:hover {
         border: solid 0.125rem $fontGreen;
         color: $fontGreen; 
         p, div {
-            animation: slideBtnTextOut 1.8s infinite;
+            animation: slideBtnTextOut 2s infinite;
         }  
     }
 }

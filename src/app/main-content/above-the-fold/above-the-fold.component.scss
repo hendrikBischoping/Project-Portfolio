@@ -21,10 +21,18 @@
     }
     >h1 {
         @include d_general(center, center);
+        color: $fontWhite;
         text-align: center;
         flex-wrap: nowrap;
         font-size: 6.4rem;
         margin: 2rem 0;
+        >span {
+          transition: color 200ms;
+          &:hover {
+            color: $fontGreen;
+          }
+        }
+        
     }
     >div {
         @include d_general(space-between, center);

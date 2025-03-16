@@ -1,49 +1,41 @@
 <section class="commentaries">
     <h2>What my colleagues say about me</h2>
     <div class="cardSection">
-        @for (commentary of commentaries; track $index) {
-            @if (this.commentaries[$index].isLeft) {
-                <div class="commentLeft">
+        @for (comment of commentaries; track $index) {
+            <div class="singleCard" [ngClass]="{
+            'farRightToFarLeft': comment.isFarLeft && comment.goesRight,
+            'farLeftToLeft': comment.isLeft && comment.goesRight,
+            'leftToMid': comment.isShown && comment.goesRight,
+            'midToRight': comment.isRight && comment.goesRight,
+            'rightToFarRight': comment.isFarRight && comment.goesRight,
+    
+            'farLeftToFarRight': comment.isFarRight && comment.goesLeft,
+            'farRightToRight': comment.isRight && comment.goesLeft,
+            'rightToMid': comment.isShown && comment.goesLeft,
+            'midToLeft': comment.isLeft && comment.goesLeft,
+            'leftToFarLeft': comment.isFarLeft && comment.goesLeft,
+            }">
+             <div class="singleCardInfo">
                     <p class="commentary">{{ this.commentaries[$index].commentary }}</p>
                     <div class="commentator">
                         <div class="horizontalLine"></div>
                         <p>{{ this.commentaries[$index].name }} - {{ this.commentaries[$index].title }}</p>
                     </div>
                 </div>
-            }
-            @if (this.commentaries[$index].isShown) {
-                <div class="mainCard">
-                    <div class="commentCard">
-                        <p class="commentary">{{ this.commentaries[$index].commentary }}</p>
-                        <div class="commentator">
-                            <div class="horizontalLine"></div>
-                            <p>{{ this.commentaries[$index].name }} - {{ this.commentaries[$index].title }}</p>
-                        </div>
-                    </div>
-                    <div class="navigateExperiences">
-                        @if (!this.arrows[0].isHovered) {
-                            <img src="./../../../assets/img/c-experience-img/left.png" class="arrowImg" alt="arrow-left" (mouseenter)="addHover(0)" >
-                        }@else {<img src="./../../../assets/img/c-experience-img/left-hover.png" class="arrowImg" alt="arrow-left" (mouseleave)="removeHover(0)" (click)="prev($index)">} <!--  -->
-                        @for (commentary of commentaries; track $index) {
-                            @if (this.commentaries[$index].isShown) {
-                                <img class="dot" src="./../../../assets/img/c-experience-img/dot-green.png" alt="green">
-                            } @else {<img class="dot" src="./../../../assets/img/c-experience-img/dot-white.png" alt="white">}
-                        }
-                        @if (!this.arrows[1].isHovered) {
-                            <img src="./../../../assets/img/c-experience-img/right.png" class="arrowImg" alt="arrow-right" (mouseenter)="addHover(1)">
-                        }@else {<img src="./../../../assets/img/c-experience-img/right-hover.png" class="arrowImg" alt="arrow-right" (mouseleave)="removeHover(1)" (click)="next($index)">}
-                    </div>
-                </div>
-            }
-            @if (this.commentaries[$index].isRight) {
-                <div class="commentRight">
-                    <p class="commentary">{{ this.commentaries[$index].commentary }}</p>
-                    <div class="commentator">
-                        <div class="horizontalLine"></div>
-                        <p>{{ this.commentaries[$index].name }} - {{ this.commentaries[$index].title }}</p>
-                    </div>
-                </div>
-            }
+          </div>
         }
-    </div>
+        <div class="navBar">
+            @if (!this.arrows[0].isHovered) {
+                <img src="./../../../assets/img/c-experience-img/left.png" class="arrowImg" alt="arrow-left" (mouseenter)="addHover(0)" >
+            }@else {<img src="./../../../assets/img/c-experience-img/left-hover.png" class="arrowImg" alt="arrow-left" (mouseleave)="removeHover(0)" (click)="slideToLeft()">} <!--  -->
+            @for (commentary of commentaries; track $index) {
+                @if (this.commentaries[$index].isShown) {
+                    <img class="dot" src="./../../../assets/img/c-experience-img/dot-green.png" alt="green">
+                } @else {<img class="dot" src="./../../../assets/img/c-experience-img/dot-white.png" alt="white">}
+            }
+            @if (!this.arrows[1].isHovered) {
+                <img src="./../../../assets/img/c-experience-img/right.png" class="arrowImg" alt="arrow-right" (mouseenter)="addHover(1)">
+            }@else {<img src="./../../../assets/img/c-experience-img/right-hover.png" class="arrowImg" alt="arrow-right" (mouseleave)="removeHover(1)" (click)="slideToRight()">}
+        </div>
+        </div> 
 </section>

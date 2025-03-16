@@ -1,5 +1,6 @@
 @import './../../shared/general-style.scss';
 @import './../../shared/general-responsive-design.scss';
+@import './../../shared/general-keyframes.scss';
 
 .commentaries {
     text-align: center;
@@ -12,58 +13,60 @@ h2 {
 .cardSection {
     @include d_general(center, center);
     position: relative;
-}
+    width: 100%;
+    height: 320px;
 
-.mainCard {
-    position: relative;
-}
+    .singleCard {
+        position: absolute;
+        z-index: -1;
+        height: 270px;
+        width: 500px;
+        background-color: rgba(40, 99, 89, 0.9);
+        opacity: 1;
+        border: solid 0.0625rem $fontGreen;
+        border-radius: 2rem;
 
-.commentCard {
-    @include d_general_column(column, space-between, unset);
-    text-align: start;
-    background-color: rgb(40,99,89);
-    width: 24rem;
-    height: 12rem;
-    padding: 2rem;
-    margin: 1rem;
-    border: solid 0.0625rem $fontGreen;
-    border-radius: 2rem;
-    position: relative;
-    z-index: 2;
-}
+        .singleCardInfo {
+            @include d_general_column(column, space-between, center);
+            height: 100%;
 
-.commentLeft, .commentRight { 
-    position: absolute;
-    @include d_general_column(column, space-between, unset);
-    text-align: start;
-    background-color: rgba(40, 99, 89, 0.312);
-    width: 20rem;
-    height: 8rem;
-    padding: 2rem;
-    margin: 1rem;
-    border: solid 0.0625rem $fontGreen;
-    border-radius: 2rem;
-    top: 1.5rem;
-    filter: blur(2px);
-}
+            p {
+                flex: 1;
+                font-size: 1.2rem;
+            }
 
-.commentRight {
-    right: 3rem;
-}
-.commentLeft {
-    left: 3rem;
-}
+            .commentator {
+                width: 90%;
+                p {
+                    white-space: nowrap;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
 
+    .navBar {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+}
 
 .commentator {
     @include d_general_column(row, space-between, center);
 }
 
-.horizontalLine{
+.horizontalLine {
     border: solid 0.0625rem $fontWhite;
     margin: 1rem;
     flex-grow: 1;
 }
+
 p {
     padding: 0 1rem;
     font-size: 0.75rem;
@@ -71,20 +74,61 @@ p {
 }
 
 .navigateExperiences {
- @include d_general(center, center)
+    @include d_general(center, center)
 }
 
 .arrowImg {
     margin: 0 0.5rem;
     height: 2.5rem;
     width: 2.5rem;
+
     &:hover {
         cursor: pointer;
     }
-} 
+}
 
 .dot {
     padding: 0 0.25rem;
     height: 0.5rem;
     width: 0.5rem;
+}
+
+.farLeftToLeft {
+    animation: farLeftToLeft 0.5s forwards;
+}
+
+.leftToMid {
+    animation: leftToMid 0.5s forwards;
+}
+
+.midToRight {
+    animation: midToRight 0.5s forwards;
+}
+
+.rightToFarRight {
+    animation: rightToFarRight 0.5s forwards;
+}
+
+.farRightToRight {
+    animation: farRightToRight 0.5s forwards;
+}
+
+.rightToMid {
+    animation: rightToMid 0.5s forwards;
+}
+
+.midToLeft {
+    animation: midToLeft 0.5s forwards;
+}
+
+.leftToFarLeft {
+    animation: leftToFarLeft 0.5s forwards;
+}
+
+.farRightToFarLeft {
+    animation: farRightToFarLeft 0.5s forwards;
+}
+
+.farLeftToFarRight {
+    animation: farLeftToFarRight 0.5s forwards;
 }
