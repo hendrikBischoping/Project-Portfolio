@@ -2,14 +2,16 @@
 @import './../../shared/general-responsive-design.scss';
 
 .whoIAmSection {
-    @include d_general(center, end);
-    position: relative;
-    gap: 12.5rem;
+    max-width: 1920px
+    // @include d_general(center, end);
+    // position: relative;
+    // gap: 12.5rem;
 }
 
 .profileSection {
     @include d_general(flex-start, start);
     height: 43.75rem;
+    max-width: 100%;
     >h3 {
         display: none;
     }

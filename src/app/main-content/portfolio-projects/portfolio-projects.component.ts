@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component  } from '@angular/core';
 import { Projects } from './../../interfaces/projects.interface';
 
 @Component({
@@ -6,7 +6,7 @@ import { Projects } from './../../interfaces/projects.interface';
   standalone: true,
   imports: [],
   templateUrl: './portfolio-projects.component.html',
-  styleUrl: './portfolio-projects.component.scss'
+  styleUrl: './portfolio-projects.component.scss',
 })
 export class PortfolioProjectsComponent {
   projects: Projects[] = [
@@ -17,7 +17,7 @@ export class PortfolioProjectsComponent {
       isOpened: false,
       github: 'https://github.com/hendrikBischoping/pok-dex',
       lifetest: 'https://hendrik-bischoping.developerakademie.net/project-pok%C3%A9dex/index.html',
-      description: 'This is a Pokédex. The project fetches data from an API to render it into the code!  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores recusandae sequi numquam molestiae iste. Deserunt aspernatur odio incidunt natus maxime!',
+      description: 'This is a Pokédex. The project fetches data from an API to render it into the code!',
       technologies: ['HTML', 'CSS', 'JavaScript'],
 
     },
@@ -28,19 +28,19 @@ export class PortfolioProjectsComponent {
       isOpened: false,
       github: 'https://github.com/hendrikBischoping/sharky-game',
       lifetest: 'https://hendrik-bischoping.developerakademie.net/project%20sharky-game/index.html',
-      description: 'This is a "swim-and-shoot"-game based on object-orinted coding.  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores recusandae sequi numquam molestiae iste. Deserunt aspernatur odio incidunt natus maxime!',
+      description: 'This is a "swim-and-shoot"-game based on object-orinted coding.',
       technologies: ['HTML', 'CSS', 'JavaScript'],
 
     },
     {
-      name: 'Next Project',
-      class: 'hourglass',
+      name: 'JOIN',
+      class: 'join',
       isHovered: false,
       isOpened: false,
-      github: '',
+      github: 'https://github.com/hendrikBischoping/Join',
       lifetest: '',
-      description: 'My next project will apear soon!',
-      technologies: ['not finished jet'],
+      description: 'JOIN is a simple Kanban-Board clone that was created in a group work with <a class="colleague" target="_blank" href="https://sascha-toepfer-dev.de/">Sascha Töpfer</a> and Andreas Welker',
+      technologies: ['HTML', 'Angular', 'TypeScript', 'Firebase'],
 
     },
   ]
