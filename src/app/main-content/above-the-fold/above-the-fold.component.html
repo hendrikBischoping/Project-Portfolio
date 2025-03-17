@@ -8,7 +8,9 @@
         </div>
     </div>
     <div class="socialMediaATF">
-        <p class="eMail btnPointer"><a href="mailto:hbischoping&#64;googlemail.com">h.bischoping&#64;gmx.de</a></p>
+        <div class="eMail btnPointer">
+            <a class="mailNormal" href="mailto:hbischoping&#64;googlemail.com">h.bischoping&#64;gmx.de</a>
+        </div>
         @if (!hovers[0].hovered) {
         <div class="smIcon"><img class="githubIcon btnPointer" src="./../../../assets/img/a-t-f-img/github-hover.png" alt="githubIcon" (mouseenter)="addHover(0)"></div>
         } @else {
@@ -19,6 +21,23 @@
         } @else {
         <div class="smIcon"><a href="https://www.linkedin.com/in/hendrik-bischoping-174813356/"><img class="linkedInIcon btnPointer" src="./../../../assets/img/a-t-f-img/linkedIn.png" alt="linkedInIcon" (mouseleave)="removeHover(1)"></a></div>
         }
+    </div>
+    <div class="socialMediaMobile">
+        <div class="smIcon mailMobile">
+            <a href="mailto:hbischoping&#64;googlemail.com">
+                <img class="mailIcon btnPointer" src="./../../../assets/img/a-t-f-img/eMail.png" alt="mailIcon">
+            </a>
+        </div>
+        <div class="smIcon">
+            <a href="https://github.com/hendrikBischoping">
+                <img class="githubIcon btnPointer" src="./../../../assets/img/a-t-f-img/github.png" alt="githubIcon">
+            </a>
+        </div>
+        <div class="smIcon">
+            <a href="https://www.linkedin.com/in/hendrik-bischoping-174813356/">
+                <img class="linkedInIcon btnPointer" src="./../../../assets/img/a-t-f-img/linkedIn.png" alt="linkedInIcon">
+            </a>
+        </div>
     </div>
 
     <div class="marqueeContainer">

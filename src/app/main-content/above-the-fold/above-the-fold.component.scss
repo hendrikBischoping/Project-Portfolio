@@ -14,7 +14,8 @@
 
 .mainHeadlines {
     @include  d_general_column(column, center, center);
-    margin: 20vh 0 0 0;
+    margin: 16vh 0 0 0;
+    height: 60vh;
     >h2 {
         font-size: 2.5rem;
         font-weight: 400;
@@ -45,7 +46,7 @@
     position: absolute;
     height: 18.75rem;
     align-self: flex-end;
-    top: 18.75rem;
+    top: 30vh;
     left: 85%;
     >.smIcon {
       >a {
@@ -61,17 +62,26 @@
         overflow: hidden;
       }
     }
-    >p {
+    >div {
       >a {
         @include anker();
       }
     }
 }
 
+.socialMediaMobile {
+  display: none;
+}
+
 .eMail {
     position: relative;
     transform: rotateZ(270deg);
     top: 1.25rem;
+}
+
+.mailIcon {
+    position: relative;
+    top: 5.25rem;
 }
 
 .githubIcon {
@@ -85,12 +95,12 @@
 }
 
 .marqueeContainer {
-  position: relative;
+  position: absolute;
   width: 100%;
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.2);
   color: $fontGreen;
-  margin-top: 16rem;
+  bottom: 16vh;
   height: 3rem;
   display: flex;
   align-items: center;

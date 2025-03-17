@@ -27,9 +27,6 @@
 }
 
 @media (max-width: 1300px) {
-    // html {
-    //     font-size: 16px;
-    // }
 
     section {
         padding: 5rem;
@@ -154,6 +151,7 @@
         >.profileSection {
             @include d_general_column(column, center, center);
             position: static;
+            height: fit-content;
 
             >h3 {
                 display: block;
@@ -214,6 +212,13 @@
     }
 
     .a-t-f {
+        div div {
+            gap: 5rem;
+            a button {
+                margin-top: 8vh;
+                scale: 1.4;
+            }
+        }
         .socialMediaATF .eMail {
             top: -1rem;
         }
@@ -275,12 +280,28 @@
 
     .a-t-f {
         >.mainHeadlines {
-            margin-top: 18rem;
+            margin-top: 10rem;
         }
 
         >.socialMediaATF {
-            left: unset;
-            right: 2rem;
+            display: none;
+            // left: unset;
+            // right: 2rem;
+        }
+        >.socialMediaMobile {
+            @include d_general_column(column, center, center);
+            position: absolute;
+            bottom: 32vh;
+            right: 4rem;
+            >.smIcon {
+              >a {
+                >img {
+                  height: 4rem;
+                  aspect-ratio: 1/1;
+                  overflow: hidden;
+                }
+              }
+            }
         }
     }
 
@@ -352,10 +373,6 @@
                     top: 0rem;
                 }
             }
-        }
-
-        >.marqueeContainer {
-            margin-top: 8rem;
         }
     }
 
