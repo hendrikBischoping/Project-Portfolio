@@ -17,6 +17,15 @@
         word-break: normal;
         color: $fontWhite;
     }
+    >button a {
+        text-decoration: none;
+        p {
+            color: $fontWhite;
+            &:hover {
+                color: $fontGreen;
+            }
+        }        
+    }
 }
 
 .technologies {
