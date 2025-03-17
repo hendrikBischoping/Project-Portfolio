@@ -150,9 +150,10 @@ img {
 
     >.closeBtn,
     .nextBtn {
+        white-space: nowrap;
         >img {
             height: 3rem;
-            aspect-ratio: 1/1;
+            // aspect-ratio: 1/1;
             cursor: pointer;
         }
 
@@ -176,6 +177,6 @@ img {
 
     >.graphic {
         min-width: 100%;
-        height: auto;
+        aspect-ratio: 2 / 1;
     }
 }
