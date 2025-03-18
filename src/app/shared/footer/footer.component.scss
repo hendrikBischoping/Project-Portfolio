@@ -40,5 +40,5 @@ p {
 
 
 .businesMedia {
-    @include d_general_column(column, flex-start, start)
+    @include d_general_column(column, flex-start, end)
 }

@@ -90,7 +90,9 @@
                 text-align: center;
                 margin: 0 4rem;
             }
-            p, table {
+
+            p,
+            table {
                 width: 100%;
             }
         }
@@ -218,25 +220,58 @@
     .a-t-f {
         div div {
             gap: 5rem;
+
             a button {
                 margin-top: 8vh;
                 scale: 1.4;
             }
         }
+
         .socialMediaATF .eMail {
             top: -1rem;
         }
     }
+
     .portfolioSection {
         .portfolioSectionLeft {
             .portfolio {
                 margin: 0 8rem;
-                p, table {
+
+                p,
+                table {
                     width: 100%;
                 }
             }
         }
     }
+
+    .commentaries {
+        .cardSection {
+            .singleCard {
+                .singleCardInfo {
+                    .commentary {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .navBar {
+        .arrowImg {
+        margin: 0 0.5rem;
+        height: 4.5rem;
+        width: 4.5rem;
+        }
+        .dot {
+            padding: 0 0.25rem;
+            height: 1rem;
+            width: 1rem;
+        }
+    }
+    .footerSection .businesMedia a {
+            font-size: 1.4rem;
+        }
 }
 
 @media (max-width: 750px) {
@@ -269,6 +304,23 @@
             // }
         }
     }
+
+    .commentaries {
+        .cardSection {
+            .singleCard {
+                .singleCardInfo {
+                    .commentary {
+                        font-size: 1.5rem;
+                        padding: 0 1.5rem;
+                    }
+
+                    .commentator p {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 700px) {
@@ -289,7 +341,7 @@
     }
 
     .headerContentMobile {
-        display: flex!important;
+        display: flex !important;
     }
 
     .a-t-f {
@@ -302,19 +354,21 @@
             // left: unset;
             // right: 2rem;
         }
+
         >.socialMediaMobile {
             @include d_general_column(column, center, center);
             position: absolute;
             bottom: 32vh;
             right: 4rem;
+
             >.smIcon {
-              >a {
-                >img {
-                  height: 4rem;
-                  aspect-ratio: 1/1;
-                  overflow: hidden;
+                >a {
+                    >img {
+                        height: 4rem;
+                        aspect-ratio: 1/1;
+                        overflow: hidden;
+                    }
                 }
-              }
             }
         }
     }
@@ -330,8 +384,16 @@
     }
 
     .footerSection {
-        flex-direction: column;
-        gap: 3rem;
+        padding: 2rem 6rem 4rem 6rem!important;
+        position: relative;
+        .copyright {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5rem;
+            white-space: nowrap;
+        }
     }
 
     .greenH2 {
@@ -350,16 +412,54 @@
             padding-top: 15rem;
         }
     }
-}
 
-@media (max-width: 550px) {
-.portfolioSection {
-    .portfolioSectionLeft {
-        .portfolio {
-            margin: 0 3rem;
+    .commentaries {
+        .cardSection {
+            .singleCard {
+                background-color: rgba(40, 99, 89);
+
+                .singleCardInfo {
+                    .commentary {
+                        font-size: 1.5rem;
+                        padding: 0 1.5rem;
+                    }
+
+                    .commentator p {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
         }
     }
 }
+
+@media (max-width: 550px) {
+    .portfolioSection {
+        .portfolioSectionLeft {
+            .portfolio {
+                margin: 0 3rem;
+            }
+        }
+    }
+
+    .commentaries {
+        .cardSection {
+            .singleCard {
+                width: 300px;
+
+                .singleCardInfo {
+                    .commentary {
+                        font-size: 1.2rem;
+                        padding: 0 1.5rem;
+                    }
+
+                    .commentator p {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 500px) {
@@ -447,19 +547,37 @@
 @media (max-width: 450px) {
     .portfolioSection {
         padding: 0;
+
         .portfolioSectionLeft {
             .portfolio {
                 margin: 0;
-                h2, p {
+
+                h2,
+                p {
                     max-width: 80%;
                 }
+
                 table th {
                     padding: 2rem 0;
                 }
+
                 table td .devide {
                     width: 0;
                 }
             }
+        }
+    }
+    .footerSection {
+        padding: 2rem 3rem 5rem!important;
+        position: relative;
+        .copyright {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .businesMedia a {
+            font-size: 1.2rem;
         }
     }
 }
