@@ -10,6 +10,13 @@
         "contact": "Contact me",
         "remote": "Available for remote work",
         "home": "Based in Herdecke by Dortmund"
+    },
+    "who-i-am": {
+        "who-i-am": "Who I am",
+        "about-me": "About me",
+        "paragraph": "Hey, I'm Hendrik! As a teenager, I discovered my passion for programming and developed my first modifications for video games. Since then, I have been the go-to person in my social circle for technical challenges",
+        "td1": "What fascinates me most about programming is the combination of creativity and logic, which allows for the creation of new things. For me, it's an exciting world where there's always something new to learn!",
+        "td2": "I like to see problems more as logic puzzles that are meant to be solved. And I enjoy training my analytical and abstract thinking to better understand the world we live in every day.",
+        "td3": "I currently live in Herdecke near Dortmund. I have a strong interest in working together in an office but am also open to working from home."
     }
-
   }
