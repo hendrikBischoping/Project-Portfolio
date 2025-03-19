@@ -3,6 +3,7 @@ import { TranslatePipe } from "@ngx-translate/core";
 import { TranslateService } from "@ngx-translate/core";
 import { SwitchlanguagedataService } from '../../services/switchlanguagedata.service';
 import { CommonModule } from '@angular/common';
+import { PreventScrollingService } from '../../services/prevent-scrolling.service';
 
 @Component({
   selector: 'app-header',
@@ -16,6 +17,7 @@ export class HeaderComponent {
   menuIsClosed = true;
   name = "Gast";
   switchlanguagedata = inject(SwitchlanguagedataService);
+  preventScrolling = inject(PreventScrollingService);
 
   hovers: {
     isHovered: boolean;
@@ -66,6 +68,7 @@ export class HeaderComponent {
 
   toggleBurgerMenu() {
     this.menuIsClosed = !this.menuIsClosed;
-    console.log(this.menuIsClosed);
+    this.preventScrolling.overlayIsShown = !this.preventScrolling.overlayIsShown;
+    console.log(this.preventScrolling.overlayIsShown);
   }
 }

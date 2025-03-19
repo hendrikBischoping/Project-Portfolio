@@ -152,6 +152,10 @@ h3 {
     }
 }
 
+.preventScrolling {
+    overflow: hidden!important;
+}
+
 @mixin greenSquare($squareSide) {
     height: $squareSide;
     width: $squareSide;

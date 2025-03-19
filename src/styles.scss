@@ -67,4 +67,8 @@
         color: $fontWhite;
         text-decoration: underline;
     }
+
+    .preventScrolling {
+        overflow: hidden!important;
+    }
 }

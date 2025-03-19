@@ -127,6 +127,9 @@
         form {
             align-self: center;
             width: 80%;
+            div p {
+                font-size: 1vw;
+            }
         }
 
         >form {
@@ -166,6 +169,7 @@
 
             >.profile {
                 position: static;
+                max-width: 100%;
                 top: unset;
                 left: unset;
             }
@@ -246,6 +250,7 @@
     }
 
     .commentaries {
+        overflow: hidden;
         .cardSection {
             .singleCard {
                 .singleCardInfo {
@@ -464,7 +469,8 @@
 
 @media (max-width: 500px) {
     .squareDesign {
-        max-width: 80%;
+        min-width: 100%;
+        box-sizing: border-box;
         height: fit-content;
     }
 
@@ -501,13 +507,19 @@
     }
 
     .whoIAmSection {
+        >.profileSection {
+            width: 100%;
+            .profile {
+                aspect-ratio: 1 / 1;
+            }
+        }
         >.whoIAm {
             @include d_general(center, center);
-            max-width: 80%;
-
+            max-width: 100%;
+            width: 100%;
             >.aboutMe {
                 align-self: center;
-                max-width: 80%;
+                max-width: 100%;
                 height: fit-content;
             }
         }
@@ -515,11 +527,13 @@
 
     .technologiesSection {
         >.skillSetSection {
-            max-width: 80%;
+            max-width: 100%;
 
             >.skillsetDescription {
-                margin: auto;
+                margin: 0;
                 min-height: fit-content;
+                width: 100%;
+                min-width: 100%;
             }
         }
     }

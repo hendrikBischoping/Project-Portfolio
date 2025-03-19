@@ -56,9 +56,9 @@ export class ColleagueExperienceComponent {
       isFarRight: false,
     },
     {
-      commentary: "An excellent leader who is always ready to help his colleagues.",
-      name: "Mariia Ivanova",
-      title: "Projektpartner (Kochwelt)",
+      commentary: "Hendrik ist ein äußerst zielstrebiger und vorausschauender Teamplayer, der stets den Überblick behielt und Fehler souverän beheben konnte. Er arbeitete sehr selbstständig, zeigte aber gleichzeitig eine starke Kommunikationsfähigkeit innerhalb der Gruppe. Durch sein offenes und konstruktives Miteinander trug er maßgeblich dazu bei, dass wir als Team schnell zusammenwuchsen, was die Zusammenarbeit noch angenehmer und effizienter machte. Sein Engagement und seine Zuverlässigkeit waren eine große Bereicherung für die Gruppe",
+      name: "Osahon Schmolze",
+      title: "Teampartner (Kochwelt)",
       goesLeft: false,
       goesRight: true,
       isFarLeft: false,

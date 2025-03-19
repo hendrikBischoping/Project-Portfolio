@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {
     TranslateService,
     TranslatePipe,
     TranslateDirective
 } from "@ngx-translate/core";
+import { PreventScrollingService } from './services/prevent-scrolling.service';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +16,7 @@ import {
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  preventScrolling = inject(PreventScrollingService);
   title = 'my-portfolio';
   constructor(private translate: TranslateService) {
     this.translate.addLangs(['de', 'en']);
