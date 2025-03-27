@@ -11,12 +11,50 @@
         "remote": "Available for remote work",
         "home": "Based in Herdecke by Dortmund"
     },
-    "who-i-am": {
-        "who-i-am": "Who I am",
-        "about-me": "About me",
-        "paragraph": "Hey, I'm Hendrik! As a teenager, I discovered my passion for programming and developed my first modifications for video games. Since then, I have been the go-to person in my social circle for technical challenges",
-        "td1": "What fascinates me most about programming is the combination of creativity and logic, which allows for the creation of new things. For me, it's an exciting world where there's always something new to learn!",
-        "td2": "I like to see problems more as logic puzzles that are meant to be solved. And I enjoy training my analytical and abstract thinking to better understand the world we live in every day.",
-        "td3": "I currently live in Herdecke near Dortmund. I have a strong interest in working together in an office but am also open to working from home."
+    "technologies": {
+        "headline": "Technologies",
+        "subheadline": "Fähigkeiten",
+        "firstParagraph": "For over six months, I have been actively using HTML, CSS, JavaScript, and TypeScript in projects. I have developed my first interactive web applications with Angular and gained initial experience in backend integration using Firebase. Agile methodologies like Scrum help me work in a structured and efficient manner.",
+        "youNeed": "You need",
+        "anotherSkill": "another skill?",
+        "secondParagraph": "Web technologies are evolving rapidly – and that’s exactly what excites me! I continuously learn, test new approaches, and optimize my code to create not only functional but also modern and high-performance solutions.",
+        "button": "Let`s talk!"
+    },
+    "myProjects": {
+        "subheadline": "Featured Projects",
+        "paragraph": "Explore a Section of all my work here - interact with the projects to see my skills in action!",
+        "singleProjectHeadline": "What is this project about?",
+        "singleProjectDescription": "",
+        "button": "Next project"
+    },
+    "colleagueExperience": {
+        "headline": "What my colleagues say about me"
+    },
+    "contactMe": {
+        "contactMe": "Contact me!",
+        "headline": "Let`S work together!",
+        "subheadline": "Got a problem to solve?",
+        "paragraph": "Contact me through this form, I am inderested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+        "question": "Need a frontend developer?",
+        "button": "Let`s talk!",
+        "inputName": "What`s your name?",
+        "invalidName": "Field is empty! Please enter your name!",
+        "inputMail": "What`s your email?",
+        "invalidMail": "Please enter a correct email-adress!",
+        "inputMessage": "How can I help you?",
+        "invalidMessage": "Field is empty! Please enter a message!",
+        "mailSent": "Thank you! Your message has been sent!"
+    },
+    "footer": {
+        "title": "Frontend Developer",
+        "location": "Herdecke Germany",
+        "legalNotice": "Legal Notice",
+        "imprint": "Imprint"
+    },
+    "imprint": {
+        "title": "Imprint",
+        "contact": "Contact",
+        "phone": "Phone",
+        "source": "Source"
     }
   }

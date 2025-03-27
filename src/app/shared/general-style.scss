@@ -89,7 +89,7 @@ section {
 }
   
 .d_none {
-    display: none;
+    display: none!important;
 }
 
 .btnPointer {
@@ -136,6 +136,7 @@ h3 {
 .squareDesign {
     height: 35.5rem;
     min-height: fit-content;
+    // aspect-ratio: 1 / 1;
     width: 35.5rem;
     border-radius: 2rem;
 }

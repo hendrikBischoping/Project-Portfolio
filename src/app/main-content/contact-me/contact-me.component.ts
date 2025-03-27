@@ -1,17 +1,19 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { TranslatePipe } from "@ngx-translate/core";
+import { TranslateService } from "@ngx-translate/core";
 import { SwitchlanguagedataService } from '../../services/switchlanguagedata.service';
 
 @Component({
   selector: 'app-contact-me',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, TranslatePipe],
   templateUrl: './contact-me.component.html',
   styleUrl: './contact-me.component.scss'
 })
 export class ContactMeComponent {
-
+  constructor(private translate: TranslateService) { };
   http = inject(HttpClient);
   switchlanguagedata = inject(SwitchlanguagedataService);
 

@@ -2,8 +2,8 @@
     <div class="portfolioSectionLeft">
         <h3>Portfolio</h3>
         <div class="portfolio">
-            <h2 class="greenH2">Featured Projects</h2>
-            <p>Explore a Section of all my work here - interact with the projects to see my skills in action!</p>
+            <h2 class="greenH2">{{ 'myProjects.subheadline' | translate }}</h2>
+            <p>{{ 'myProjects.paragraph' | translate }}</p>
             <table>
                 @for (project of projects; track $index) {
                 <tr (mouseenter)="showImage($index)" (mouseleave)="showImage($index)"
@@ -39,9 +39,9 @@
                         <h2 class="cardIndex">{{ $index+1 }}</h2>
                         <h2>{{ project.name }}</h2>
                     </div>
-                    <h3>What is this project about?</h3>
-                    <!-- <p>{{ project.description }}</p> -->
-                    <p class="description" [innerHTML]="project.description"></p>
+                    <h3>{{ 'myProjects.singleProjectHeadline' | translate }}</h3>
+                    <p class="description" [ngClass]="{'d_none': !switchlanguagedata.german}" [innerHTML]="project.descriptionDe"></p>
+                    <p class="description" [ngClass]="{'d_none': switchlanguagedata.german}" [innerHTML]="project.descriptionEn"></p>
                     <div class="tecsAndButtons">
                         <div class="tecsCard">
                             @for (tec of project.technologies; track $index) {
@@ -71,10 +71,10 @@
 
                     @if (hovers[1].hovered) {
                     <div class="nextBtn" (mouseleave)="addHover(1)" (click)="nextProject($index)">
-                        <p>Next Project</p><img src="./../../../assets/img/c-experience-img/right-hover.png" alt="next">
+                        <p>{{ 'myProjects.button' | translate }}</p><img src="./../../../assets/img/c-experience-img/right-hover.png" alt="next">
                     </div>
                     } @else {<div class="nextBtn" (mouseenter)="removeHover(1)" (click)="nextProject($index)">
-                        <p>Next Project</p><img src="./../../../assets/img/c-experience-img/right.png" alt="next">
+                        <p>{{ 'myProjects.button' | translate }}</p><img src="./../../../assets/img/c-experience-img/right.png" alt="next">
                     </div>}
                 </div>
             </div>

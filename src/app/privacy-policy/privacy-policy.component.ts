@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { HeaderComponent } from '../shared/header/header.component';
 import { FooterComponent } from '../shared/footer/footer.component';
+import { SwitchlanguagedataService } from '../services/switchlanguagedata.service';
 
 @Component({
   selector: 'app-privacy-policy',
@@ -10,5 +11,5 @@ import { FooterComponent } from '../shared/footer/footer.component';
   styleUrl: './privacy-policy.component.scss'
 })
 export class PrivacyPolicyComponent {
-
+  switchlanguagedata = inject(SwitchlanguagedataService);
 }

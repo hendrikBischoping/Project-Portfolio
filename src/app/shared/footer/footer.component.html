@@ -5,8 +5,8 @@
                 <img src="./../../../assets/img/footer-img/logo.png" class="myLogo" alt="myLogo" (mouseenter)="addHover()" (mouseleave)="removeHover()">
                 }@else {<img src="./../../../assets/img/footer-img/logo-hover.png" class="myLogo" alt="myLogo" (mouseenter)="addHover()" (mouseleave)="removeHover()">}
             </a>
-            <p>Web Developer</p><br>
-            <p>Herdecke Germany</p>
+            <p>{{ 'footer.title' | translate }}</p><br>
+            <p>{{ 'footer.location' | translate }}</p>
         </div>
         <div class="copyright">
             <span>© Hendrik Bischoping 2025</span>
@@ -15,7 +15,7 @@
             <a href="https://github.com/hendrikBischoping">Github</a>
             <a href="https://www.linkedin.com/in/hendrik-bischoping-174813356/">LinkedIn</a>
             <a href="mailto:hbischoping&#64;googlemail.com">Email</a>
-            <a href="privacy-policy-de">Legal Notice</a>
-            <a href="imprint">Imprint</a>
+            <a href="privacy-policy">{{ 'footer.legalNotice' | translate }}</a>
+            <a href="imprint">{{ 'footer.imprint' | translate }}</a>
         </div>
 </section>

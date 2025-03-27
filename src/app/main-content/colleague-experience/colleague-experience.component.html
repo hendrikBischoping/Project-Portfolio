@@ -1,5 +1,5 @@
 <section class="commentaries">
-    <h2>What my colleagues say about me</h2>
+    <h2>{{ 'colleagueExperience.headline' | translate }}</h2>
     <div class="cardSection">
         @for (comment of commentaries; track $index) {
             <div class="singleCard" [ngClass]="{
@@ -16,7 +16,8 @@
             'leftToFarLeft': comment.isFarLeft && comment.goesLeft,
             }">
              <div class="singleCardInfo">
-                    <p class="commentary">{{ this.commentaries[$index].commentary }}</p>
+                    <p class="commentary" [ngClass]="{'d_none': !switchlanguagedata.german}">{{ this.commentaries[$index].commentaryDe }}</p>
+                    <p class="commentary" [ngClass]="{'d_none': switchlanguagedata.german}">{{ this.commentaries[$index].commentaryEn }}</p>
                     <div class="commentator">
                         <div class="horizontalLine"></div>
                         <p>{{ this.commentaries[$index].name }} - {{ this.commentaries[$index].title }}</p>

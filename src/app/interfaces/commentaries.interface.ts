@@ -1,5 +1,6 @@
 export interface Commentaries {
-    commentary: string;
+    commentaryDe: string;
+    commentaryEn: string;
     name: string;
     title: string;
     goesLeft: boolean;

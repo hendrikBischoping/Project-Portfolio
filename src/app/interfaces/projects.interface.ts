@@ -5,6 +5,7 @@ export interface Projects {
     isOpened: boolean;
     github: string;
     lifetest: string;
-    description: string;
+    descriptionDe: string;
+    descriptionEn: string;
     technologies: string[];
 }

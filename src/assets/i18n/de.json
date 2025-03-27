@@ -11,12 +11,50 @@
         "remote": "Verfügbar auch für remote-Arbeit",
         "home": "Ich lebe in Herdecke bei Dortmund"
     },
-    "who-i-am": {
-        "who-i-am": "Wer ich bin",
-        "about-me": "Über mich",
-        "paragraph": "Hey, ich bin Hendrik! Schon als Jugendlicher entdeckte ich meine Leidenschaft für das Programmieren und entwickelte erste Modifikationen für Videospiele. Seitdem bin ich in meinem Umfeld der erste Ansprechpartner, bei technischen Herausforderungen.",
-        "td1": "Am Programmieren fasziniert mich besonders die Kombination aus Kreativität und Logik, mit der sich immer neue Dinge erschaffen lassen. Es ist für mich eine spannende Welt, in der es ständig etwas Neues zu lernen gibt!",
-        "td2": "Ich sehe Probleme gerne eher als Logikrätsel, die gelöst werden wollen. Und es gefällt mir sehr, mein analytisches und abstraktes Denken zu schulen, um die Welt in der wir leben täglich etwas besser zu verstehen.",
-        "td3": "Derzeit lebe ich in Herdecke bei Dortmund. Ich habe besonderes Interessean der gemeinsamen Arbeit im Büro, bin aber auch offen für die Arbeit aus dem Homeoffice."
+    "technologies": {
+        "headline": "Technologien",
+        "subheadline": "Skillset",
+        "firstParagraph": "Seit gut einem halben Jahr setze ich HTML, CSS, JavaScript und TypeScript aktiv in Projekten um. Mit Angular habe ich erste interaktive Webanwendungen entwickelt, während ich mit Firebase erste Erfahrungen in der Backend-Integration gesammelt habe. Agile Methoden wie Scrum helfen mir, strukturiert und effizient zu arbeiten.",
+        "youNeed": "Ihr braucht noch",
+        "anotherSkill": "eine weitere Fähigkeit?",
+        "secondParagraph": "Web-Technologien entwickeln sich rasant – und genau das begeistert mich! Ich lerne kontinuierlich dazu, teste neue Ansätze und optimiere meinen Code, um nicht nur funktionale, sondern auch moderne und performante Lösungen zu schaffen.",
+        "button": "Reden wir!"
+    },
+    "myProjects": {
+        "subheadline": "Ausgewählte Projekte",
+        "paragraph": "Entdecken Sie hier einen Teil meiner Arbeit – interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu sehen!",
+        "singleProjectHeadline": "Worum geht es in diesem Projekt?",
+        "singleProjectDescription": "",
+        "button": "Nächstes Projekt"
+    },
+    "colleagueExperience": {
+        "headline": "Was meine Kollegen über mich sagen"
+    },
+    "contactMe": {
+        "contactMe": "Kontaktiere mich!",
+        "headline": "Lass uns zusammen arbeiten!",
+        "subheadline": "Hast du ein Problem zu lösen?",
+        "paragraph": "Kontaktiere mich über dieses Formular! Ich freue mich darauf, von dir zu hören, deine Ideen kennenzulernen und mit meiner Arbeit zu deinen Projekten beizutragen",
+        "question": "Brauchst du einen Frontend-Entwickler?",
+        "button": "Reden wir!",
+        "inputName": "Wie ist dein Name?",
+        "invalidName": "Das Feld ist leer! Bitte gib deinen Namen ein",
+        "inputMail": "Deine Mailadresse",
+        "invalidMail": "Bitte gib eine korrekte Mailadresse ein",
+        "inputMessage": "Wie kann ich dir helfen?",
+        "invalidMessage": "Das Feld ist leer! Bitte gib eine Nachricht ein",
+        "mailSent": "Vielen Dank! Ihre Nachricht wurde verschickt!"
+    },
+    "footer": {
+        "title": "Frontend Entwickler",
+        "location": "Herdecke Deutschland",
+        "legalNotice": "Datenschutz",
+        "imprint": "Impressum"
+    },
+    "imprint": {
+        "title": "Impressum",
+        "contact": "Kontakt",
+        "phone": "Telefon",
+        "source": "Quelle"
     }
   }

@@ -151,10 +151,10 @@
         }
     }
 
-    .whoIAmSection[_ngcontent-ng-c1262028918] {
+    .whoIAmSection {
         flex-direction: column;
         @include d_general(center, center);
-        position: static !important;
+        // position: static !important;
         gap: 2rem;
 
         >.profileSection {

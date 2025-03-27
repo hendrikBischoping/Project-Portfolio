@@ -1,34 +1,34 @@
 <section class="contactMeSection">
     <div class="contactMe">
-        <h3>Contact me</h3>
-        <h2 class="greenH2">Let`S work together</h2>
+        <h3>{{ 'contactMe.contactMe' | translate }}</h3>
+        <h2 class="greenH2">{{ 'contactMe.headline' | translate }}</h2>
         <div>
-            <h3>Got a problem to solve?</h3>
-            <p>Contact me through this form, I am inderested in hearing from you, knowing your ideas and contributing to your projects with my work. <br>
+            <h3>{{ 'contactMe.subheadline' | translate }}</h3>
+            <p>{{ 'contactMe.paragraph' | translate }}<br>
             <br>
-            Need a frontend developer? <a href="tel:015780847980" class="textLink">Let`s talk!</a></p>
+            {{ 'contactMe.question' | translate }} <a href="tel:015780847980" class="textLink">{{ 'contactMe.button' | translate }}</a></p>
         </div>
     </div>
     <form class="contactField" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
         <div class="inputSection">
-            <h3>What`s your name?</h3>
-            <input #name="ngModel" [(ngModel)]="contactData.name" name="name" type="text" placeholder="Your name goes here" required>
+            <h3>{{ 'contactMe.inputName' | translate }}</h3>
+            <input #name="ngModel" [(ngModel)]="contactData.name" name="name" type="text" [placeholder]="switchlanguagedata.german ? 'Gib deinen Namen an' : 'Your name goes here'" required>
             @if (!name.valid && name.touched) {
-                <br><span class="invalidInput">Field is empty! Please enter your name!</span>
+                <br><span class="invalidInput">{{ 'contactMe.invalidName' | translate }}</span>
             }
         </div>
         <div class="inputSection">
-            <h3>What`s your email?</h3>
-            <input #email="ngModel" [(ngModel)]="contactData.email" name="email" type="email" placeholder="youremail@email.com" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+            <h3>{{ 'contactMe.inputMail' | translate }}</h3>
+            <input #email="ngModel" [(ngModel)]="contactData.email" name="email" type="email" [placeholder]="switchlanguagedata.german ? 'deine@email.com' : 'your@email.com'" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
             @if (!email.valid && email.touched) {
-                <br><span class="invalidInput">Please enter a correct email-adress!</span>
+                <br><span class="invalidInput">{{ 'contactMe.invalidMail' | translate }}</span>
             }
         </div>
         <div class="inputSection">
-            <h3>How can I help you?</h3>
-            <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" type="text" placeholder="Hello Hendrik, I am interested in..." required></textarea>
+            <h3>{{ 'contactMe.inputMessage' | translate }}</h3>
+            <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" type="text" [placeholder]="switchlanguagedata.german ? 'Hallo Hendrik, ich habe Interesse an...' : 'Hello Hendrik, I am interested in...'" required></textarea>
             @if (!message.valid && message.touched) {
-                <br><span class="invalidInput">Field is empty! Please enter a message!</span>
+                <br><span class="invalidInput">{{ 'contactMe.invalidMessage' | translate }}</span>
             }
         </div>
         <div class="readPolicy">
@@ -40,9 +40,9 @@
             } @else {<p>I`ve read the <a href="privacy-policy-en" class="textLink">privacy policy</a> and agree to the processing of my data as outlined.</p>}
         </div>
         @if (name.valid && email.valid && message.valid && isChecked) {
-            <input type="submit" class="btn" value="Say hi! :D" (click)="toggleConfirmation()">
+            <input type="submit" class="btn" [value]="switchlanguagedata.german ? 'Sag Hallo! :D' : 'Say hi! :D'" (click)="toggleConfirmation()">
         } @else {
-            <input type="submit" class="btnOff" value="Say hi! :D" disabled>
+            <input type="submit" class="btnOff" [value]="switchlanguagedata.german ? 'Sag Hallo! :D' : 'Say hi! :D'" disabled>
         }
         @if (emailSentConfirmation) {
             <div class="confirmationOverlay" (click)="toggleConfirmation()">
@@ -52,7 +52,7 @@
                         (mouseleave)="addHover(0)" (click)="toggleConfirmation()" (click)="toggleChecked()">
                     } @else {<img class="closeBtn" src="./../../../assets/img/p-projects-img/close.png" alt="close"
                     (mouseenter)="removeHover(0)" (click)="toggleConfirmation()">}
-                    <p>Vielen Dank! Ihre Nachricht wurde verschickt!</p>
+                    <p>{{ 'contactMe.mailSent' | translate }}</p>
                 </div>
             </div>
         }

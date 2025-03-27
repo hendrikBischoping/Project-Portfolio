@@ -2,10 +2,10 @@
 @import './../../shared/general-responsive-design.scss';
 
 .whoIAmSection {
-    max-width: 1920px
-    // @include d_general(center, end);
+    max-width: 1920px;
+    @include d_general(space-around, center);
     // position: relative;
-    // gap: 12.5rem;
+    // gap: 10%;
 }
 
 .profileSection {
@@ -19,41 +19,44 @@
 
 .profileBg {
     position: absolute;
-    top: 5rem;
-    left: 10rem;
+    // top: 5rem;
+    // left: 10rem;
     transition: 0.3s ease;
 }
 
 .profile {
     z-index: 1;
-    position: absolute;
-    top: 5rem;
-    left: 10rem;
+    // position: absolute;
+    // top: 5rem;
+    // left: 10rem;
+    margin: 0;
     transition: 0.2s ease;
     background-image: url('./../../../assets/img/who-i-am-img/profile.JPG');
     background-position: center;
     background-size: cover;
         &:hover {
         display: block;
-        top: 4.5rem;
-        left: 9rem;
+        margin: 2rem 0 0 2rem;
+        // top: 4.5rem;
+        // left: 9rem;
     }
     &:hover ~ .profileBg{
         display: block;
-        top: 6rem;
-        left: 11rem;
+        // top: 6rem;
+        // left: 11rem;
     }
 }
 
 .whoIAm {
     @include d_general_column(column, flex-end, start);
+    margin-left: 2rem;
     >.aboutMe {
-        position: absolute;
+        // position: absolute;
         right: 10rem;
         @include greenSquare(33rem);
     }
     >h3 {
-        position: absolute;
+        // position: absolute;
         top: 7.5rem;
         right: 37rem;
     }

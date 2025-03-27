@@ -13,7 +13,6 @@ import { PreventScrollingService } from '../../services/prevent-scrolling.servic
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  constructor(private translate: TranslateService) { };
   menuIsClosed = true;
   name = "Gast";
   switchlanguagedata = inject(SwitchlanguagedataService);
@@ -35,6 +34,22 @@ export class HeaderComponent {
         isHovered: false,
       },
     ];
+    
+  constructor(private translate: TranslateService) { 
+    this.checkGerman()
+  };
+
+  checkGerman() {
+    let storedGerman = localStorage.getItem('german');
+    let isGerman = storedGerman !== null ? JSON.parse(storedGerman) : true;
+    if (isGerman) {
+      this.hovers[0].isShown = false;
+      this.hovers[1].isShown = true;
+    } else if (!isGerman) {
+      this.hovers[0].isShown = true;
+      this.hovers[1].isShown = false;
+    }
+  }
 
   addHover(index: number) {
     if (!this.hovers[index].isHovered) {
@@ -63,7 +78,9 @@ export class HeaderComponent {
     this.translate.use(language);
     if (language == 'de') {
       this.switchlanguagedata.german = true;
-    } else { this.switchlanguagedata.german = false; }
+    } else if (language == 'en') { this.switchlanguagedata.german = false; }
+    localStorage.setItem('german', JSON.stringify(this.switchlanguagedata.german));
+    this.checkGerman()
   }
 
   toggleBurgerMenu() {

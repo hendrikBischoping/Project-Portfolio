@@ -17,6 +17,8 @@ export class AppComponent {
   constructor(private translate: TranslateService) {
     this.translate.addLangs(['de', 'en']);
     this.translate.setDefaultLang('en');
-    this.translate.use('de');
+    const storedGerman = localStorage.getItem('german');
+    const isGerman = storedGerman !== null ? JSON.parse(storedGerman) : true;
+    this.translate.use(isGerman ? 'de' : 'en');
 };
 }

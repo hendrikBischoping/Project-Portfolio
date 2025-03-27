@@ -1,28 +1,33 @@
 <section class="whoIAmSection">
     <div class="profileSection">
-        <h3>{{ 'who-i-am.who-i-am' | translate }}</h3>
-        <h3>Who am I</h3>
+        <h3 [ngClass]="{'d_none': switchlanguagedata.german}">Who I am</h3>
+        <h3 [ngClass]="{'d_none': !switchlanguagedata.german}">Wer bin ich</h3>
         <div class="squareDesign profile"></div>
-        <!-- <img class="squareDesign profile" src="./../../../assets/img/who-i-am-img/profile.JPG" alt="profile"> -->
         <img class="squareDesign profileBg" src="./../../../assets/img/who-i-am-img/Capa_1.png" alt="profile-bg">
     </div>
     <div class="whoIAm">
-        <h3>Who am I</h3>
+        <h3 [ngClass]="{'d_none': switchlanguagedata.german}">Who I am</h3>
+        <h3 [ngClass]="{'d_none': !switchlanguagedata.german}">Wer bin ich</h3>
         <div class="squareDesign aboutMe">
-            <h2 class="greenH2">About me</h2>
-            <p>Hey, ich bin Hendrik! Schon als Jugendlicher entdeckte ich meine Leidenschaft für das Programmieren und entwickelte erste Modifikationen für Videospiele. Seitdem bin ich in meinem Umfeld der erste Ansprechpartner, bei technischen Herausforderungen.</p>
+            <h2 class="greenH2" [ngClass]="{'d_none': switchlanguagedata.german}">About me</h2>
+            <h2 class="greenH2" [ngClass]="{'d_none': !switchlanguagedata.german}">Über mich</h2>
+            <p [ngClass]="{'d_none': !switchlanguagedata.german}">Hey, ich bin Hendrik! Schon als Jugendlicher entdeckte ich meine Leidenschaft für das Programmieren und entwickelte erste Modifikationen für Videospiele. Seitdem bin ich in meinem Umfeld der erste Ansprechpartner, bei technischen Herausforderungen.</p>
+            <p [ngClass]="{'d_none': switchlanguagedata.german}">Hey, I'm Hendrik! As a teenager, I discovered my passion for programming and developed my first modifications for video games. Since then, I have been the go-to person in my environment for technical challenges.</p>
             <table>
                 <tr>
                     <td class="imgTd"><img src="./../../../assets/img/who-i-am-img/mindset-icon.png" alt=""></td>
-                    <td>Am Programmieren fasziniert mich besonders die Kombination aus Kreativität und Logik, mit der sich immer neue Dinge erschaffen lassen. Es ist für mich eine spannende Welt, in der es ständig etwas Neues zu lernen gibt!</td>
+                    <td [ngClass]="{'d_none': !switchlanguagedata.german}">Am Programmieren fasziniert mich besonders die Kombination aus Kreativität und Logik, mit der sich immer neue Dinge erschaffen lassen. Es ist für mich eine spannende Welt, in der es ständig etwas Neues zu lernen gibt!</td>
+                    <td [ngClass]="{'d_none': switchlanguagedata.german}">What fascinates me most about programming is the combination of creativity and logic, which allows for the creation of new things. For me, it's an exciting world where there's always something new to learn!</td>
                 </tr>
                 <tr>
                     <td class="imgTd"><img src="./../../../assets/img/who-i-am-img/tic-icon.png" alt=""></td>
-                    <td>Ich sehe Probleme gerne eher als Logikrätsel, die gelöst werden wollen. Und es gefällt mir sehr, mein analytisches und abstraktes Denken zu schulen, um die Welt in der wir leben täglich etwas besser zu verstehen.</td>
+                    <td [ngClass]="{'d_none': !switchlanguagedata.german}">Ich sehe Probleme gerne eher als Logikrätsel, die gelöst werden wollen. Und es gefällt mir sehr, mein analytisches und abstraktes Denken zu schulen, um die Welt in der wir leben täglich etwas besser zu verstehen.</td>
+                    <td [ngClass]="{'d_none': switchlanguagedata.german}">I like to see problems more as logic puzzles that are meant to be solved. And I enjoy training my analytical and abstract thinking to better understand the world we live in every day.</td>
                 </tr>
                 <tr>
                     <td class="imgTd"><img src="./../../../assets/img/who-i-am-img/location-icon.png" alt=""></td>
-                    <td>Derzeit lebe ich in Herdecke bei Dortmund. Ich habe besonderes Interessean der gemeinsamen Arbeit im Büro, bin aber auch offen für die Arbeit aus dem Homeoffice.</td>
+                    <td [ngClass]="{'d_none': !switchlanguagedata.german}">Derzeit lebe ich in Herdecke bei Dortmund. Ich habe besonderes Interessean der gemeinsamen Arbeit im Büro, bin aber auch offen für die Arbeit aus dem Homeoffice.</td>
+                    <td [ngClass]="{'d_none': switchlanguagedata.german}">I currently live in Herdecke near Dortmund. I have a strong interest in working together in an office but am also open to working from home.</td>
                 </tr>
             </table>
         </div>

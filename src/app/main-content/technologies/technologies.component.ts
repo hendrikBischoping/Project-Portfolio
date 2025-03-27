@@ -1,13 +1,20 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { TranslatePipe } from "@ngx-translate/core";
+import { TranslateService } from "@ngx-translate/core";
+import { SwitchlanguagedataService } from '../../services/switchlanguagedata.service';
 
 @Component({
   selector: 'app-technologies',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './technologies.component.html',
   styleUrl: './technologies.component.scss',
 })
 export class TechnologiesComponent {
+  constructor(private translate: TranslateService) { };
+  switchlanguagedata = inject(SwitchlanguagedataService);
+
   technologies: {
     name: string; // needs to fit the exact name of image (png)!
   }[] = [
