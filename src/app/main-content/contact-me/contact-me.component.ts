@@ -38,43 +38,54 @@ export class ContactMeComponent {
     },
   };
 
+  /**
+   * checks if all inputs are valid than sends a mail with the content to deposited mail address that resets the whole form
+   * @param ngForm - object
+   */
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
-          next: (response) => {
-            ngForm.resetForm();
-          },
-          error: (error) => {
-            console.error(error);
-          },
+          next: (response) => {ngForm.resetForm();},
+          error: (error) => {console.error(error);},
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
       ngForm.resetForm();
     }
     this.toggleChecked()
   }
 
+  /**
+   * toggles the closeHovered-boolean to true to add style on hovered close button
+   */
   addHover(i: number) {
     if (this.closeHovered) {
       this.closeHovered = false
     } else {this.closeHovered = true}
   }
   
+  /**
+   * toggles the closeHovered-boolean to false to remove style on no longer hovered close button
+   */
   removeHover(i: number) {
     if (this.closeHovered) {
       this.closeHovered = false
     } else {this.closeHovered = true}
   }
 
+  /**
+   * toggles the isChecked-boolean to check / uncheck the form checkbox
+   */
   toggleChecked() {
     if(this.isChecked) {
       this.isChecked = false
     } else {this.isChecked = true}
   }
 
+  /**
+   * checks if an email was send to show a confirmation message for a short time
+   */
   toggleConfirmation() {
     if (!this.emailSentConfirmation) {
       this.emailSentConfirmation = true;

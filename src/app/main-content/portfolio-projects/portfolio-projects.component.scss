@@ -53,12 +53,17 @@ img {
     transition: 0.4s;
 }
 
-.pokédex, .sharkie, .join {
+.pokédex,
+.sharkie,
+.join {
     position: absolute;
     top: 0;
     right: 2rem;
 }
-.pokédexShadow, .sharkieShadow, .joinShadow {
+
+.pokédexShadow,
+.sharkieShadow,
+.joinShadow {
     width: 28rem;
     height: 16rem;
     position: absolute;
@@ -151,9 +156,9 @@ img {
     >.closeBtn,
     .nextBtn {
         white-space: nowrap;
+
         >img {
             height: 3rem;
-            // aspect-ratio: 1/1;
             cursor: pointer;
         }
 

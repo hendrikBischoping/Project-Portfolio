@@ -1,5 +1,7 @@
+/**
+ * The atf-component represents the content of the project landing page
+ */
 import { Component } from '@angular/core';
-import { HeaderComponent } from '../../shared/header/header.component';
 import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
@@ -16,12 +18,20 @@ export class AboveTheFoldComponent {
     {hovered: false},
   ] 
   
+  /**
+   * toggles the hovered-boolean to true to add style on hovered elements
+   * @param i - contains an index, to always toggle the correct element
+   */
   addHover(i: number) {
     if (this.hovers[i].hovered) {
       this.hovers[i].hovered = false
     } else {this.hovers[i].hovered = true}
   }
   
+  /**
+   * toggles the hovered-boolean to false to remove style on hovered elements
+   * @param i - contains an index, to always toggle the correct element
+   */
   removeHover(i: number) {
     if (this.hovers[i].hovered) {
       this.hovers[i].hovered = false

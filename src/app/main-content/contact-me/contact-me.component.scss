@@ -2,14 +2,14 @@
 @import './../../shared/general-responsive-design.scss';
 
 .contactMeSection {
-     @include d_general(space-between, start);
-     max-width: 120rem;
-     gap: 5rem;
+  @include d_general(space-between, start);
+  max-width: 120rem;
+  gap: 5rem;
 }
 
-.contactMe, 
+.contactMe,
 .contactField {
-    width: 45%;
+  width: 45%;
 }
 
 .btnOff {
@@ -24,11 +24,12 @@
 }
 
 .textLink {
-    color: $fontGreen;
-    text-decoration: none;
-    &:hover {
-        color: $fontWhite;
-    }
+  color: $fontGreen;
+  text-decoration: none;
+
+  &:hover {
+    color: $fontWhite;
+  }
 }
 
 .inputSection {
@@ -37,39 +38,49 @@
   border-bottom: solid 0.0625rem $fontGreen;
   border-collapse: collapse;
   transition: background-color 0.4s;
+
   ::placeholder {
-      color: $fontWhite;
-      font-size: 1rem;
+    color: $fontWhite;
+    font-size: 1rem;
   }
-  &:hover{
+
+  &:hover {
     background-color: rgba(61, 207, 182, 0.2);
   }
-  >input[type=text], [type=email], select, textarea {
-      color: $fontWhite;
-      padding: 1rem;
-      width: 25rem;
-      background-color: rgba(255, 255, 255, 0);
-      border: none; 
-      &::placeholder {
-        color: rgba(217, 217, 217, 0.5);
-      }
+
+  >input[type=text],
+  [type=email],
+  select,
+  textarea {
+    color: $fontWhite;
+    padding: 1rem;
+    width: 25rem;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+
+    &::placeholder {
+      color: rgba(217, 217, 217, 0.5);
+    }
   }
+
   >.invalidInput {
     color: red;
   }
 }
 
 .readPolicy {
-    @include d_general(flex-start, center);
-    font-size: 0.75rem;
-    >img {
-      margin: 0.25rem;
-      height: 1.5rem;
-      width: 1.5rem;
-      &:hover {
-        cursor: pointer;
-      }
+  @include d_general(flex-start, center);
+  font-size: 0.75rem;
+
+  >img {
+    margin: 0.25rem;
+    height: 1.5rem;
+    width: 1.5rem;
+
+    &:hover {
+      cursor: pointer;
     }
+  }
 }
 
 .confirmationOverlay {
@@ -81,6 +92,7 @@
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 3;
+
   >.confirmation {
     @include d_general(center, center);
     position: relative;
@@ -91,14 +103,17 @@
     margin: 1rem;
     border: solid 2px $fontGreen;
     border-radius: 2rem;
+
     >.closeBtn {
       position: absolute;
       top: 1rem;
       right: 1rem;
+
       &:hover {
         cursor: pointer;
       }
     }
+
     >p {
       text-align: center;
     }

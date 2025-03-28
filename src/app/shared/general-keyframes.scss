@@ -1,176 +1,186 @@
 @keyframes leftToFarLeft {
-    from {
-      filter: blur(2px);
-      left: 0%;
-      opacity: 1;
-      scale: 0.8;
-      z-index: 1;
-    }
-    to {
-      left: -100%;
-      opacity: 0;
-      z-index: 1;
-    }
+  from {
+    filter: blur(2px);
+    left: 0%;
+    opacity: 1;
+    scale: 0.8;
+    z-index: 1;
   }
 
-  @keyframes midToLeft {
-    from {
-      filter: blur(0px);
-      left: 50%;
-      scale: 1;
-      transform: translateX(-50%);
-      z-index: 2;
-    }
-    to {
-      filter: blur(2px);
-      left: 0%;
-      opacity: 1;
-      scale: 0.8;
-      transform: translateX(0%);
-      z-index: 1;
-    }
+  to {
+    left: -100%;
+    opacity: 0;
+    z-index: 1;
+  }
+}
+
+@keyframes midToLeft {
+  from {
+    filter: blur(0px);
+    left: 50%;
+    scale: 1;
+    transform: translateX(-50%);
+    z-index: 2;
   }
 
-  @keyframes rightToMid {
-    from {
-      filter: blur(2px);
-      right: 0%;
-      opacity: 1;
-      scale: 0.8;
-      transform: translateX(0%);
-      z-index: 1;
-    }
-    to {
-      filter: blur(0px);
-      left: none;
-      right: 50%;
-      transform: translateX(50%);
-      scale: 1;
-      z-index: 2;
-    }
+  to {
+    filter: blur(2px);
+    left: 0%;
+    opacity: 1;
+    scale: 0.8;
+    transform: translateX(0%);
+    z-index: 1;
+  }
+}
+
+@keyframes rightToMid {
+  from {
+    filter: blur(2px);
+    right: 0%;
+    opacity: 1;
+    scale: 0.8;
+    transform: translateX(0%);
+    z-index: 1;
   }
 
-  @keyframes farRightToRight {
-    from {
-      opacity: 0;
-      right: -100%;
-      scale: 0.8;
-      transform: translateX(0%);
-      z-index: 1;
-    }
-    to {
-      filter: blur(2px);
-      opacity: 1;
-      right: 0%;
-      scale: 0.8;
-      transform: translateX(0%);
-      z-index: 1;
-    }
+  to {
+    filter: blur(0px);
+    left: none;
+    right: 50%;
+    transform: translateX(50%);
+    scale: 1;
+    z-index: 2;
+  }
+}
+
+@keyframes farRightToRight {
+  from {
+    opacity: 0;
+    right: -100%;
+    scale: 0.8;
+    transform: translateX(0%);
+    z-index: 1;
   }
 
-  @keyframes rightToFarRight {
-    from {
-      filter: blur(2px);
-      transform: translateX(0%);
-      opacity: 1;
-      right: 0%;
-      scale: 0.8;
-      z-index: 1;
-    }
-    to {
-      opacity: 0;
-      transform: translateX(0%);
-      right: -100%;
-      scale: 0.8;
-      z-index: 1;
-    }
+  to {
+    filter: blur(2px);
+    opacity: 1;
+    right: 0%;
+    scale: 0.8;
+    transform: translateX(0%);
+    z-index: 1;
+  }
+}
+
+@keyframes rightToFarRight {
+  from {
+    filter: blur(2px);
+    transform: translateX(0%);
+    opacity: 1;
+    right: 0%;
+    scale: 0.8;
+    z-index: 1;
   }
 
-  @keyframes midToRight {
-    from {
-      filter: blur(0px);
-      left: none;
-      right: 50%;
-      transform: translateX(50%);
-      scale: 1;
-      z-index: 2;
-    }
-    to {
-      filter: blur(2px);
-      right: 0%;
-      opacity: 1;
-      scale: 0.8;
-      transform: translateX(0%);
-      z-index: 1;
-    }
+  to {
+    opacity: 0;
+    transform: translateX(0%);
+    right: -100%;
+    scale: 0.8;
+    z-index: 1;
+  }
+}
+
+@keyframes midToRight {
+  from {
+    filter: blur(0px);
+    left: none;
+    right: 50%;
+    transform: translateX(50%);
+    scale: 1;
+    z-index: 2;
   }
 
-  @keyframes leftToMid{
-    from {
-      filter: blur(2px);
-      left: 0%;
-      opacity: 1;
-      scale: 0.8;
-      transform: translateX(0%);
-      z-index: 1;
-    }
-    to {
-      filter: blur(0px);
-      scale: 1;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 2;
-    }
+  to {
+    filter: blur(2px);
+    right: 0%;
+    opacity: 1;
+    scale: 0.8;
+    transform: translateX(0%);
+    z-index: 1;
   }
-  
-  @keyframes farLeftToLeft{
-    from {
-      left: -100%;
-      transform: translateX(0%);
-      opacity: 0;
-      scale: 0.8;
-      z-index: 1;
-    }
-    to {
-      filter: blur(2px);
-      left: 0%;
-      opacity: 1;
-      transform: translateX(0%);
-      scale: 0.8;
-      z-index: 1;
-    }
+}
+
+@keyframes leftToMid {
+  from {
+    filter: blur(2px);
+    left: 0%;
+    opacity: 1;
+    scale: 0.8;
+    transform: translateX(0%);
+    z-index: 1;
   }
-  
-  @keyframes farLeftToFarRight{
-    from {
-      left: -100%;
-      transform: translateX(0%);
-      opacity: 0;
-      scale: 0.8;
-      z-index: 1;
-    }
-    to {
-      opacity: 0;
-      transform: translateX(0%);
-      right: -100%;
-      scale: 0.8;
-      z-index: 1;
-    }
+
+  to {
+    filter: blur(0px);
+    scale: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
   }
-  
-  @keyframes farRightToFarLeft{
-    from {
-      opacity: 0;
-      transform: translateX(0%);
-      right: -100%;
-      scale: 0.8;
-      z-index: 1;
-    }
-    to {
-      left: -100%;
-      transform: translateX(0%);
-      opacity: 0;
-      scale: 0.8;
-      z-index: 1;
-    }
+}
+
+@keyframes farLeftToLeft {
+  from {
+    left: -100%;
+    transform: translateX(0%);
+    opacity: 0;
+    scale: 0.8;
+    z-index: 1;
   }
+
+  to {
+    filter: blur(2px);
+    left: 0%;
+    opacity: 1;
+    transform: translateX(0%);
+    scale: 0.8;
+    z-index: 1;
+  }
+}
+
+@keyframes farLeftToFarRight {
+  from {
+    left: -100%;
+    transform: translateX(0%);
+    opacity: 0;
+    scale: 0.8;
+    z-index: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(0%);
+    right: -100%;
+    scale: 0.8;
+    z-index: 1;
+  }
+}
+
+@keyframes farRightToFarLeft {
+  from {
+    opacity: 0;
+    transform: translateX(0%);
+    right: -100%;
+    scale: 0.8;
+    z-index: 1;
+  }
+
+  to {
+    left: -100%;
+    transform: translateX(0%);
+    opacity: 0;
+    scale: 0.8;
+    z-index: 1;
+  }
+}

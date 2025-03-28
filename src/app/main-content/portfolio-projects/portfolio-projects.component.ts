@@ -15,6 +15,10 @@ import { SwitchlanguagedataService } from '../../services/switchlanguagedata.ser
 export class PortfolioProjectsComponent {
   constructor(private translate: TranslateService) { };
   switchlanguagedata = inject(SwitchlanguagedataService);
+
+  /**
+   * This array contains all data that gets rendered into the project card overlay when opened
+   */
   projects: Projects[] = [
     {
       name: 'Pokédex',
@@ -60,6 +64,10 @@ export class PortfolioProjectsComponent {
     {hovered: false},
   ] 
 
+  /**
+   * toggles the visibility of the example image of a project when project title is hovered (before opening)
+   * @param index - individual index to always toggle the right image depending on title
+   */
   showImage(index: number){
     if (this.projects[index].isHovered) {
       this.projects[index].isHovered = false;
@@ -68,6 +76,10 @@ export class PortfolioProjectsComponent {
     }
   }
   
+  /**
+   * opend overlay with project information after clicking on project title
+   * @param index individual index to always open the right project depending on title
+   */
   toggleProjektDetails(index: number){
     if (this.projects[index].isOpened) {
       this.projects[index].isOpened = false;
@@ -76,18 +88,30 @@ export class PortfolioProjectsComponent {
     }
   }
 
+  /**
+   * checks if an element is hovered, to change its style
+   * @param i - individual index to always toggle the right element 
+   */
   addHover(i: number) {
     if (this.hovers[i].hovered) {
       this.hovers[i].hovered = false
     } else {this.hovers[i].hovered = true}
   }
   
+  /**
+   * checks if an element is no longer hovered, to change its style to default
+   * @param i - individual index to always toggle the right element 
+   */
   removeHover(i: number) {
     if (this.hovers[i].hovered) {
       this.hovers[i].hovered = false
     } else {this.hovers[i].hovered = true}
   }
 
+  /**
+   * renders the next project onformation into the overlay depending on index of 'projects'-array
+   * @param index - individual index to always render the next project depending on the opened one
+   */
   nextProject(index: number){
     let flippedIndex = index + 1;
     if (flippedIndex >= this.projects.length) {
@@ -96,6 +120,11 @@ export class PortfolioProjectsComponent {
     this.toggleProjektDetails(index)
     this.toggleProjektDetails(flippedIndex)
   }
+
+  /**
+   * event bubbling to prevent clicking elements underneath an overlay
+   * @param event - any event such as onclick or scroll
+   */
   stopBubbling(event: any) {
     event.stopPropagation();
   }

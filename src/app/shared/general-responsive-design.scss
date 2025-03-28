@@ -127,6 +127,7 @@
         form {
             align-self: center;
             width: 80%;
+
             div p {
                 font-size: 1vw;
             }
@@ -154,7 +155,6 @@
     .whoIAmSection {
         flex-direction: column;
         @include d_general(center, center);
-        // position: static !important;
         gap: 2rem;
 
         >.profileSection {
@@ -168,10 +168,14 @@
             }
 
             >.profile {
-                position: static;
+                position: static!important;
                 max-width: 100%;
                 top: unset;
                 left: unset;
+                &:hover {
+                display: block;
+                margin: 0;
+                }
             }
 
             >.profileBg {
@@ -251,6 +255,7 @@
 
     .commentaries {
         overflow: hidden;
+
         .cardSection {
             .singleCard {
                 .singleCardInfo {
@@ -264,19 +269,21 @@
 
     .navBar {
         .arrowImg {
-        margin: 0 0.5rem;
-        height: 4.5rem;
-        width: 4.5rem;
+            margin: 0 0.5rem;
+            height: 4.5rem;
+            width: 4.5rem;
         }
+
         .dot {
             padding: 0 0.25rem;
             height: 1rem;
             width: 1rem;
         }
     }
+
     .footerSection .businesMedia a {
-            font-size: 1.4rem;
-        }
+        font-size: 1.4rem;
+    }
 }
 
 @media (max-width: 750px) {
@@ -303,10 +310,6 @@
 
         >.cardRight {
             min-width: 90%;
-
-            // >.graphic {
-            //     height: fit-content;
-            // }
         }
     }
 
@@ -335,13 +338,13 @@
 
     header {
         .headerContent {
-            display: none;
-            // margin: 0 3rem;
-            // >a {
-            //     >.myLogo {
-            //         margin-bottom: 2rem;
-            //     }
-            // }
+            margin: 0 3rem;
+
+            >a {
+                >.myLogo {
+                    margin-bottom: 2rem;
+                }
+            }
         }
     }
 
@@ -356,8 +359,6 @@
 
         >.socialMediaATF {
             display: none;
-            // left: unset;
-            // right: 2rem;
         }
 
         >.socialMediaMobile {
@@ -389,8 +390,9 @@
     }
 
     .footerSection {
-        padding: 2rem 6rem 4rem 6rem!important;
+        padding: 2rem 6rem 4rem 6rem !important;
         position: relative;
+
         .copyright {
             position: absolute;
             bottom: 1rem;
@@ -509,14 +511,17 @@
     .whoIAmSection {
         >.profileSection {
             width: 100%;
+
             .profile {
                 aspect-ratio: 1 / 1;
             }
         }
+
         >.whoIAm {
             @include d_general(center, center);
             max-width: 100%;
             width: 100%;
+
             >.aboutMe {
                 align-self: center;
                 max-width: 100%;
@@ -581,15 +586,18 @@
             }
         }
     }
+
     .footerSection {
-        padding: 2rem 3rem 5rem!important;
+        padding: 2rem 3rem 5rem !important;
         position: relative;
+
         .copyright {
             position: absolute;
             bottom: 1.5rem;
             left: 50%;
             transform: translateX(-50%);
         }
+
         .businesMedia a {
             font-size: 1.2rem;
         }

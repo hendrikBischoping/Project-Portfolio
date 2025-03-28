@@ -15,6 +15,9 @@ export class TechnologiesComponent {
   constructor(private translate: TranslateService) { };
   switchlanguagedata = inject(SwitchlanguagedataService);
 
+  /**
+   * contains the names of all technologies udes in several projects
+   */
   technologies: {
     name: string; // needs to fit the exact name of image (png)!
   }[] = [

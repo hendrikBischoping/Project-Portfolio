@@ -18,6 +18,10 @@ export class ColleagueExperienceComponent {
   slideLeft = false;
   slideRight = true;
 
+/**
+ * An array of arrow objects, each representing the state of an arrow (neutral, hovered, and hover state).
+ * This array is used to track the states of arrows (e.g., left and right) and their hover behavior.
+ */
   arrows: {
     neutral: string;
     hovered: string;
@@ -35,6 +39,9 @@ export class ColleagueExperienceComponent {
       },
     ]
 
+    /**
+     * this array containes all commentaries of colleagues that can be browsed in the page
+     */
   commentaries: Commentaries[] = [
     {
       commentaryDe: "Hendrik ist ein äußerst freundlicher und angenehmer Team-Partner, der sich durch seine Fleißbereitschaft und große Wissbegierde auszeichnet. Durch seine Liebe zum Detail und die hohe Genauigkeit in seiner Arbeit ist er ein unschätzbares Mitglied für jedes Team. Zudem ist immer auf ihn Verlass. Es war eine super Zusammenarbeit mit ihm.",
@@ -90,18 +97,29 @@ export class ColleagueExperienceComponent {
     }
   ];
 
+  /**
+   * toggles the hovered-boolean to true to add style on hovered navigation-arrows
+   * @param index - contains an index, to always toggle the correct arrow
+   */
   addHover(index: number) {
     if (!this.arrows[index].isHovered) {
       this.arrows[index].isHovered = true;
     }
   }
 
+  /**
+   * toggles the hovered-boolean to false to remove style on hovered navigation-arrows
+   * @param index - contains an index, to always toggle the correct arrow
+   */
   removeHover(index: number) {
     if (this.arrows[index].isHovered) {
       this.arrows[index].isHovered = false;
     }
   }
 
+  /**
+   * itterates through the array of all commentaries to toggle their stats and slide their positions to right simultaneously
+   */
   slideToRight() {
     this.slideRight = true;
     for (let i = 0; i < this.commentaries.length; i++) {
@@ -118,6 +136,10 @@ export class ColleagueExperienceComponent {
     }, 600);
   }
 
+  /**
+   * changes the stats of the far left commentary to let it slide to theleft  (becomes visible)
+   * @param i - the individual index of each commentary to slide alrways the correct one
+   */
   farLeftToLeft(i: number) {
     if (this.commentaries[i].isFarLeft && this.slideRight) {
       this.commentaries[i].goesLeft = false;
@@ -127,6 +149,10 @@ export class ColleagueExperienceComponent {
     }
   }
 
+  /**
+   * changes the stats of the left commentary to let it slide to the middle
+   * @param i - the individual index of each commentary to slide alrways the correct one
+   */
   leftToMid(i: number) {
     if (this.commentaries[i].isLeft && this.slideRight) {
       this.commentaries[i].goesLeft = false;
@@ -136,6 +162,10 @@ export class ColleagueExperienceComponent {
     }
   }
 
+  /**
+   * changes the stats of the centered commentary to let it slide to the right
+   * @param i - the individual index of each commentary to slide alrways the correct one
+   */
   midToRight(i: number) {
     if (this.commentaries[i].isShown && this.slideRight) {
       this.commentaries[i].goesLeft = false;
@@ -145,6 +175,10 @@ export class ColleagueExperienceComponent {
     }
   }
 
+  /**
+   * changes the stats of the right commentary to let it slide to the far right (commentary disappears)
+   * @param i - the individual index of each commentary to slide alrways the correct one
+   */
   rightToFarRight(i: number) {
     if (this.commentaries[i].isRight && this.slideRight) {
       this.commentaries[i].goesLeft = false;
@@ -154,6 +188,10 @@ export class ColleagueExperienceComponent {
     }
   }
 
+  /**
+   * changes the stats of the far right commentary to let it slide to the far left (stays invisible)
+   * @param i - the individual index of each commentary to slide alrways the correct one
+   */
   farRightToFarLeft(i: number) {
     if (this.commentaries[i].isFarRight && this.slideRight) {
       this.commentaries[i].goesLeft = false;
@@ -163,6 +201,9 @@ export class ColleagueExperienceComponent {
     }
   }
 
+  /**
+   * itterates through the array of all commentaries to toggle their stats and slide their positions to left simultaneously
+   */
   slideToLeft() {
     this.slideLeft = true;
     for (let i = 0; i < this.commentaries.length; i++) {
@@ -177,6 +218,10 @@ export class ColleagueExperienceComponent {
     }, 600);
   }
 
+  /**
+   * changes the stats of the left commentary to let it slide to the far left (commentary disappears)
+   * @param i - the individual index of each commentary to slide alrways the correct one
+   */
   leftToFarLeft(i: number) {
     if (this.commentaries[i].isLeft && this.slideLeft) {
       this.commentaries[i].goesRight = false;
@@ -186,6 +231,10 @@ export class ColleagueExperienceComponent {
     }
   }
 
+  /**
+   * changes the stats of the centered commentary to let it slide to the left
+   * @param i - the individual index of each commentary to slide alrways the correct one
+   */
   midToLeft(i: number) {
     if (this.commentaries[i].isShown && this.slideLeft) {
       this.commentaries[i].goesRight = false;
@@ -195,6 +244,10 @@ export class ColleagueExperienceComponent {
     }
   }
 
+  /**
+   * changes the stats of the right commentary to let it slide to the middle
+   * @param i - the individual index of each commentary to slide alrways the correct one
+   */
   rightToMid(i: number) {
     if (this.commentaries[i].isRight && this.slideLeft) {
       this.commentaries[i].goesRight = false;
@@ -204,6 +257,10 @@ export class ColleagueExperienceComponent {
     }
   }
 
+  /**
+   * changes the stats of the far right commentary to let it slide to the right (becomes visible)
+   * @param i - the individual index of each commentary to slide alrways the correct one
+   */
   farRightToRight(i: number) {
     if (this.commentaries[i].isFarRight && this.slideLeft) {
       this.commentaries[i].goesRight = false;
@@ -213,6 +270,10 @@ export class ColleagueExperienceComponent {
     }
   }
 
+  /**
+   * changes the stats of the far left commentary to let it slide to the far right (stays invisible)
+   * @param i - the individual index of each commentary to slide alrways the correct one
+   */
   farLeftToFarRight(i: number) {
     if (this.commentaries[i].isFarLeft && this.slideLeft) {
       this.commentaries[i].goesLeft = true;

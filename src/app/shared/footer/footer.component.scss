@@ -4,11 +4,13 @@
     padding: 2rem 10rem;
     @include d_general(space-between, center);
     background-color: $backgroundGrey;
+
     >div {
         >a {
-        margin: 0.5rem;
-        @include anker()
+            margin: 0.5rem;
+            @include anker()
         }
+
         >span {
             color: $fontGreen;
         }
@@ -21,7 +23,8 @@ p {
 
 .logoSection {
     @include d_general(center, center);
-    @include  anker ();
+    @include anker ();
+
     >div {
         >p {
             margin-top: 0.25rem;

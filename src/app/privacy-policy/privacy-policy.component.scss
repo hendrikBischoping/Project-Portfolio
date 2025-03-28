@@ -13,10 +13,14 @@ main {
     color: $fontWhite;
     font-family: 'Karla';
     padding: 5rem 0;
+
     >h1 {
         font-size: 2.5rem;
         font-weight: 25rem;
-    };
+    }
+
+    ;
+
     >p {
         >a {
             @include anker();
