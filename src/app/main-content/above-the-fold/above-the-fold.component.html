@@ -1,7 +1,7 @@
 <section class="a-t-f">
     <div class="mainHeadlines">
         <h2>{{ 'a-t-f.dev' | translate }}</h2>
-        <h1><span>H</span><span>e</span><span>n</span><span>d</span><span>r</span><span>i</span><span>k </span><span>&nbsp;</span><span>B</span><span>i</span><span>s</span><span>c</span><span>h</span><span>o</span><span>p</span><span>i</span><span>n</span><span>g</span></h1>
+        <h1><span>H</span><span>e</span><span>n</span><span>d</span><span>r</span><span>i</span><span>k </span><span class="space">&nbsp;</span><span>B</span><span>i</span><span>s</span><span>c</span><span>h</span><span>o</span><span>p</span><span>i</span><span>n</span><span>g</span></h1>
         <div>
             <a href="#projects"><button class="btn">{{ 'a-t-f.work' | translate }}</button></a>
             <a href="#contact"><button class="btn">{{ 'a-t-f.contact' | translate }}</button></a>
@@ -9,32 +9,32 @@
     </div>
     <div class="socialMediaATF">
         <div class="eMail btnPointer">
-            <a class="mailNormal" href="mailto:hbischoping&#64;googlemail.com">h.bischoping&#64;gmx.de</a>
+            <a class="mailNormal" href="mailto:hbischoping&#64;googlemail.com" target="_blank">h.bischoping&#64;gmx.de</a>
         </div>
         @if (!hovers[0].hovered) {
         <div class="smIcon"><img class="githubIcon btnPointer" src="./../../../assets/img/a-t-f-img/github-hover.png" alt="githubIcon" (mouseenter)="addHover(0)"></div>
         } @else {
-        <div class="smIcon"><a href="https://github.com/hendrikBischoping"><img class="githubIcon btnPointer" src="./../../../assets/img/a-t-f-img/github.png" alt="githubIcon" (mouseleave)="removeHover(0)"></a></div>
+        <div class="smIcon"><a href="https://github.com/hendrikBischoping" target="_blank"><img class="githubIcon btnPointer" src="./../../../assets/img/a-t-f-img/github.png" alt="githubIcon" (mouseleave)="removeHover(0)"></a></div>
         }
         @if (!hovers[1].hovered) {
         <div class="smIcon"><img class="linkedInIcon btnPointer" src="./../../../assets/img/a-t-f-img/linkedIn-hover.png" alt="linkedInIcon" (mouseenter)="addHover(1)"></div>
         } @else {
-        <div class="smIcon"><a href="https://www.linkedin.com/in/hendrik-bischoping-174813356/"><img class="linkedInIcon btnPointer" src="./../../../assets/img/a-t-f-img/linkedIn.png" alt="linkedInIcon" (mouseleave)="removeHover(1)"></a></div>
+        <div class="smIcon"><a href="https://www.linkedin.com/in/hendrik-bischoping-174813356/" target="_blank"><img class="linkedInIcon btnPointer" src="./../../../assets/img/a-t-f-img/linkedIn.png" alt="linkedInIcon" (mouseleave)="removeHover(1)"></a></div>
         }
     </div>
     <div class="socialMediaMobile">
         <div class="smIcon mailMobile">
-            <a href="mailto:hbischoping&#64;googlemail.com">
+            <a href="mailto:hbischoping&#64;googlemail.com" target="_blank">
                 <img class="mailIcon btnPointer" src="./../../../assets/img/a-t-f-img/eMail.png" alt="mailIcon">
             </a>
         </div>
         <div class="smIcon">
-            <a href="https://github.com/hendrikBischoping">
+            <a href="https://github.com/hendrikBischoping" target="_blank">
                 <img class="githubIcon btnPointer" src="./../../../assets/img/a-t-f-img/github.png" alt="githubIcon">
             </a>
         </div>
         <div class="smIcon">
-            <a href="https://www.linkedin.com/in/hendrik-bischoping-174813356/">
+            <a href="https://www.linkedin.com/in/hendrik-bischoping-174813356/" target="_blank">
                 <img class="linkedInIcon btnPointer" src="./../../../assets/img/a-t-f-img/linkedIn.png" alt="linkedInIcon">
             </a>
         </div>

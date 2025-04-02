@@ -6,7 +6,9 @@
 }
 
 .skillsetDescription {
-    @include greenSquare(31rem);
+    @include greenSquare(33rem);
+    width: fit-content;
+    max-width: 33rem;
 
     >h2 {
         color: $fontGreen;

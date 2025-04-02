@@ -1,8 +1,18 @@
 @import './../../shared/general-style.scss';
 
+.footerBg {
+    min-width: 100%;
+    padding: 0;
+    background-color: $backgroundGrey;
+    @include d_general(center, center);
+}
+
 .footerSection {
+    width: 1920px;
+    max-width: 1920px;
     padding: 2rem 10rem;
     @include d_general(space-between, center);
+    font-family: "Fira Code";
     background-color: $backgroundGrey;
 
     >div {

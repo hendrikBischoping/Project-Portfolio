@@ -41,7 +41,8 @@
     margin-left: 2rem;
     >.aboutMe {
         right: 10rem;
-        @include greenSquare(33rem);
+        @include greenSquare(fit-content);
+        max-width: 33rem;
     }
     >h3 {
         top: 7.5rem;

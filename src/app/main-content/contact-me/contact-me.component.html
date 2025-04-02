@@ -36,8 +36,8 @@
                 <img src="./../../../assets/img/contact-me-img/not-checked.png" alt="not-checked" (click)="toggleChecked()">
             }  @else { <img src="./../../../assets/img/contact-me-img/checked.png" alt="checked" (click)="toggleChecked()">}
             @if (this.switchlanguagedata.german) {
-                <p>Ich habe die <a href="privacy-policy-de" class="textLink">Datenschutzrichtlinie</a> gelesen und bin mit der beschriebenen Verarbeitung meiner Daten einverstanden.</p>
-            } @else {<p>I`ve read the <a href="privacy-policy-en" class="textLink">privacy policy</a> and agree to the processing of my data as outlined.</p>}
+                <p>Ich habe die <a href="privacy-policy" class="textLink">Datenschutzrichtlinie</a> gelesen und bin mit der beschriebenen Verarbeitung meiner Daten einverstanden.</p>
+            } @else {<p>I`ve read the <a href="privacy-policy" class="textLink">privacy policy</a> and agree to the processing of my data as outlined.</p>}
         </div>
         @if (name.valid && email.valid && message.valid && isChecked) {
             <input type="submit" class="btn" [value]="switchlanguagedata.german ? 'Sag Hallo! :D' : 'Say hi! :D'" (click)="toggleConfirmation()">

@@ -47,7 +47,7 @@ p {
 
 img {
     max-width: 28rem;
-    height: 16rem;
+    // height: 16rem;
     object-fit: cover;
     border-radius: 1rem;
     transition: 0.4s;
@@ -93,7 +93,6 @@ img {
     width: 75rem;
     border: solid 0.0625rem $fontGreen;
     border-radius: 2rem;
-    gap: 4rem;
 }
 
 .cardLeft {
@@ -181,7 +180,7 @@ img {
     }
 
     >.graphic {
-        min-width: 100%;
-        aspect-ratio: 2 / 1;
+        width: 100%;
+        aspect-ratio: 1.75 / 1;
     }
 }
