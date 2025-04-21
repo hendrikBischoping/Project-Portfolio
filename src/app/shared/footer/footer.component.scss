@@ -11,6 +11,7 @@
     width: 1920px;
     max-width: 1920px;
     padding: 2rem 10rem;
+    margin: auto;
     @include d_general(space-between, center);
     font-family: "Fira Code";
     background-color: $backgroundGrey;

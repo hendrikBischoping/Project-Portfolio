@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslatePipe } from "@ngx-translate/core";
@@ -23,7 +23,6 @@ export class ContactMeComponent {
     message: "",
   }
 
-  mailTest = true;
   isChecked = false;
   emailSentConfirmation = false;
   closeHovered = false;
@@ -31,10 +30,10 @@ export class ContactMeComponent {
     endPoint: 'https://hendrik-bischoping.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
-      headers: {
-        'Content-Type': 'text/plain',
-        responseType: 'text',
-      },
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      }),
+      responseType: 'text' as const,
     },
   };
 
@@ -43,14 +42,18 @@ export class ContactMeComponent {
    * @param ngForm - object
    */
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
-          next: (response) => {ngForm.resetForm();},
-          error: (error) => {console.error(error);},
-          complete: () => console.info('send post complete'),
-        });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid) {
+      this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
+      .subscribe({
+        next: (response) => {
+          ngForm.resetForm();
+        },
+        error: (error) => {
+          console.error(error);
+        },
+        complete: () => console.info('send post complete'),
+      });
+    } else if (ngForm.submitted && ngForm.form.valid) {
       ngForm.resetForm();
     }
     this.toggleChecked()
