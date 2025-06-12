@@ -1,0 +1,143 @@
+@media (min-width: 1920px) {
+    .a-t-f .socialMediaATF {
+        left: calc(50% + 45rem);
+    }
+}
+
+@media (max-width: 1300px) {
+    
+    .a-t-f {
+        >.mainHeadlines {
+            >h1 {
+                font-size: 5rem;
+                max-width: 36rem;
+                display: block !important;
+                white-space: pre-line;
+                
+                .space {
+                    display: none;
+                }
+            }
+            
+            h1::after {
+                content: "\A";
+                white-space: pre;
+            }
+        }
+        
+        >.socialMediaATF {
+            left: unset;
+            right: 8rem;
+        }
+    }
+    
+}
+@media (max-width: 900px) {
+
+    .a-t-f {
+        div div {
+            gap: 4rem;
+
+            a button {
+                margin-top: 4vh;
+                // scale: 1.4;
+            }
+        }
+
+        .socialMediaATF {
+            right: 1.5rem;
+
+            .eMail {
+                top: -1rem;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .a-t-f {
+        >.mainHeadlines {
+            margin-top: 6rem;
+
+            h1 {
+                font-size: 4rem;
+            }
+        }
+
+        >.socialMediaATF {
+            display: none;
+        }
+
+        >.socialMediaMobile {
+            // @include d_general_column(column, center, center);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: absolute;
+            bottom: 28vh;
+            right: 4rem;
+
+            >.smIcon {
+                >a {
+                    >img {
+                        height: 2.5rem;
+                        aspect-ratio: 1/1;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+
+        .marqueeContainer {
+            bottom: 8vh;
+        }
+    }
+    
+}
+
+
+@media (max-width: 500px) {
+
+    .a-t-f {
+        gap: 2rem;
+
+        // >.mainHeadlines {
+        //     >h1 {
+        //         font-size: 4.5rem;
+        //     }
+        // }
+
+        >.socialMediaATF {
+            height: fit-content;
+            position: static;
+            right: unset;
+            align-self: center;
+            flex-direction: row;
+            gap: 1rem;
+
+            >.eMail {
+                position: static;
+                transform: rotateZ(0deg);
+                top: unset;
+            }
+
+            >div {
+                img {
+                    position: unset;
+                    top: 0rem;
+                }
+            }
+        }
+    }
+
+}
+
+
+@media (max-width: 450px) {
+    .a-t-f .mainHeadlines h2 {
+        font-size: 2rem;
+    }
+}

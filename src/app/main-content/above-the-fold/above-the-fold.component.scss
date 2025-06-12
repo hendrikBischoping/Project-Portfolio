@@ -1,5 +1,6 @@
 @import './../../shared/general-style.scss';
 @import './../../shared/general-responsive-design.scss';
+@import '../above-the-fold/atf-resp.scss';
 
 .a-t-f {
   @include d_general_column(column, unset, center);
@@ -84,7 +85,8 @@
 .eMail {
   position: relative;
   transform: rotateZ(270deg);
-  top: 1.25rem;
+  top: -1.75rem;
+  font-size: 0.8rem;
 }
 
 .mailIcon {

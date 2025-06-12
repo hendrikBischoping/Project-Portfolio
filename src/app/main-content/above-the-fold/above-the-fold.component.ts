@@ -3,11 +3,12 @@
  */
 import { Component } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
+import { HeaderComponent } from '../../shared/header/header.component';
 
 @Component({
   selector: 'app-above-the-fold',
   standalone: true,
-  imports: [ TranslatePipe],
+  imports: [ TranslatePipe, HeaderComponent],
   templateUrl: './above-the-fold.component.html',
   styleUrl: './above-the-fold.component.scss'
 })
@@ -17,6 +18,7 @@ export class AboveTheFoldComponent {
     {hovered: false},
     {hovered: false},
   ] 
+  fullName = ['H', 'e', 'n', 'd', 'r', 'i', 'k ', 'B', 'i', 's', 'c', 'h', 'o', 'p', 'i', 'n', 'g', ]
   
   /**
    * toggles the hovered-boolean to true to add style on hovered elements

@@ -1,25 +1,45 @@
+<app-header id="header"></app-header>
 <section class="a-t-f">
     <div class="mainHeadlines">
         <h2>{{ 'a-t-f.dev' | translate }}</h2>
-        <h1><span>H</span><span>e</span><span>n</span><span>d</span><span>r</span><span>i</span><span>k </span><span class="space">&nbsp;</span><span>B</span><span>i</span><span>s</span><span>c</span><span>h</span><span>o</span><span>p</span><span>i</span><span>n</span><span>g</span></h1>
+        <h1>
+            @for (letter of fullName; track $index) {
+            <span>{{ letter }}</span>
+            @if ($index === 6) {
+            <span class="space">&nbsp;</span>
+            }
+            }
+        </h1>
         <div>
-            <a href="#projects"><button class="btn"><p>{{ 'a-t-f.work' | translate }}</p></button></a>
-            <a href="#contact"><button class="btn"><p>{{ 'a-t-f.contact' | translate }}</p></button></a>
+            <a href="#projects"><button class="btn">
+                    <p>{{ 'a-t-f.work' | translate }}</p>
+                </button></a>
+            <a href="#contact"><button class="btn">
+                    <p>{{ 'a-t-f.contact' | translate }}</p>
+                </button></a>
         </div>
     </div>
     <div class="socialMediaATF">
         <div class="eMail btnPointer">
-            <a class="mailNormal" href="mailto:kontakt&#64;hendrik-bischoping.de" target="_blank">kontakt&#64;hendrik-bischoping.de</a>
+            <a class="mailNormal" href="mailto:kontakt&#64;hendrik-bischoping.de"
+                target="_blank">kontakt&#64;hendrik-bischoping.de</a>
         </div>
         @if (!hovers[0].hovered) {
-        <div class="smIcon"><img class="githubIcon btnPointer" src="./../../../assets/img/a-t-f-img/github-hover.png" alt="githubIcon" (mouseenter)="addHover(0)"></div>
+        <div class="smIcon"><img class="githubIcon btnPointer" src="./../../../assets/img/a-t-f-img/github-hover.png"
+                alt="githubIcon" (mouseenter)="addHover(0)"></div>
         } @else {
-        <div class="smIcon"><a href="https://github.com/hendrikBischoping" target="_blank"><img class="githubIcon btnPointer" src="./../../../assets/img/a-t-f-img/github.png" alt="githubIcon" (mouseleave)="removeHover(0)"></a></div>
+        <div class="smIcon"><a href="https://github.com/hendrikBischoping" target="_blank"><img
+                    class="githubIcon btnPointer" src="./../../../assets/img/a-t-f-img/github.png" alt="githubIcon"
+                    (mouseleave)="removeHover(0)"></a></div>
         }
         @if (!hovers[1].hovered) {
-        <div class="smIcon"><img class="linkedInIcon btnPointer" src="./../../../assets/img/a-t-f-img/linkedIn-hover.png" alt="linkedInIcon" (mouseenter)="addHover(1)"></div>
+        <div class="smIcon"><img class="linkedInIcon btnPointer"
+                src="./../../../assets/img/a-t-f-img/linkedIn-hover.png" alt="linkedInIcon" (mouseenter)="addHover(1)">
+        </div>
         } @else {
-        <div class="smIcon"><a href="https://www.linkedin.com/in/hendrik-bischoping-174813356/" target="_blank"><img class="linkedInIcon btnPointer" src="./../../../assets/img/a-t-f-img/linkedIn.png" alt="linkedInIcon" (mouseleave)="removeHover(1)"></a></div>
+        <div class="smIcon"><a href="https://www.linkedin.com/in/hendrik-bischoping-174813356/" target="_blank"><img
+                    class="linkedInIcon btnPointer" src="./../../../assets/img/a-t-f-img/linkedIn.png"
+                    alt="linkedInIcon" (mouseleave)="removeHover(1)"></a></div>
         }
     </div>
     <div class="socialMediaMobile">
@@ -35,16 +55,35 @@
         </div>
         <div class="smIcon">
             <a href="https://www.linkedin.com/in/hendrik-bischoping-174813356/" target="_blank">
-                <img class="linkedInIcon btnPointer" src="./../../../assets/img/a-t-f-img/linkedIn.png" alt="linkedInIcon">
+                <img class="linkedInIcon btnPointer" src="./../../../assets/img/a-t-f-img/linkedIn.png"
+                    alt="linkedInIcon">
             </a>
         </div>
     </div>
 
     <div class="marqueeContainer">
         <div class="marquee">
-            <span> <div>{{ 'a-t-f.remote' | translate }}</div></span><span class="bulletPoint">● </span><span> <div>{{ 'a-t-f.dev' | translate }}</div></span><span class="bulletPoint">● </span><span> <div>{{ 'a-t-f.home' | translate }}</div></span><span class="bulletPoint">● </span>
-            <span> <div>{{ 'a-t-f.remote' | translate }}</div></span><span class="bulletPoint">● </span><span> <div>{{ 'a-t-f.dev' | translate }}</div></span><span class="bulletPoint">● </span><span> <div>{{ 'a-t-f.home' | translate }}</div></span><span class="bulletPoint">● </span>
-            <span> <div>{{ 'a-t-f.remote' | translate }}</div></span><span class="bulletPoint">● </span><span> <div>{{ 'a-t-f.dev' | translate }}</div></span><span class="bulletPoint">● </span><span> <div>{{ 'a-t-f.home' | translate }}</div></span><span class="bulletPoint">● </span>
-      </div>
+            <span>
+                <div>{{ 'a-t-f.remote' | translate }}</div>
+            </span><span class="bulletPoint">● </span><span>
+                <div>{{ 'a-t-f.dev' | translate }}</div>
+            </span><span class="bulletPoint">● </span><span>
+                <div>{{ 'a-t-f.home' | translate }}</div>
+            </span><span class="bulletPoint">● </span>
+            <span>
+                <div>{{ 'a-t-f.remote' | translate }}</div>
+            </span><span class="bulletPoint">● </span><span>
+                <div>{{ 'a-t-f.dev' | translate }}</div>
+            </span><span class="bulletPoint">● </span><span>
+                <div>{{ 'a-t-f.home' | translate }}</div>
+            </span><span class="bulletPoint">● </span>
+            <span>
+                <div>{{ 'a-t-f.remote' | translate }}</div>
+            </span><span class="bulletPoint">● </span><span>
+                <div>{{ 'a-t-f.dev' | translate }}</div>
+            </span><span class="bulletPoint">● </span><span>
+                <div>{{ 'a-t-f.home' | translate }}</div>
+            </span><span class="bulletPoint">● </span>
+        </div>
     </div>
 </section>

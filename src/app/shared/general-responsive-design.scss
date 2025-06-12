@@ -11,12 +11,6 @@
     align-items: $ai;
 }
 
-@media (min-width: 1920px) {
-    .a-t-f .socialMediaATF {
-        left: calc(50% + 45rem);
-    }
-}
-
 @media (max-width: 1500px) {
     html {
         font-size: 14px;
@@ -40,31 +34,6 @@
 
     .headerContent {
         margin: 0 4rem;
-    }
-
-    .a-t-f {
-        >.mainHeadlines {
-            >h1 {
-                font-size: 5rem;
-                max-width: 36rem;
-                display: block !important;
-                white-space: pre-line;
-
-                .space {
-                    display: none;
-                }
-            }
-
-            h1::after {
-                content: "\A";
-                white-space: pre;
-            }
-        }
-
-        >.socialMediaATF {
-            left: unset;
-            right: 8rem;
-        }
     }
 
     .technologiesSection {
@@ -240,25 +209,6 @@
         padding: 2rem;
     }
 
-    .a-t-f {
-        div div {
-            gap: 4rem;
-
-            a button {
-                margin-top: 4vh;
-                scale: 1.4;
-            }
-        }
-
-        .socialMediaATF {
-            right: 1.5rem;
-
-            .eMail {
-                top: -1rem;
-            }
-        }
-    }
-
     .portfolioSection {
         .portfolioSectionLeft {
             .portfolio {
@@ -383,7 +333,8 @@
 @media (max-width: 800px) {
     .portfolio table {
 
-        th, td {
+        th,
+        td {
             padding: 0;
         }
 
@@ -414,41 +365,6 @@
 
         .headerContentMobile {
             display: flex !important;
-        }
-    }
-
-    .a-t-f {
-        >.mainHeadlines {
-            margin-top: 6rem;
-
-            h1 {
-                font-size: 4rem;
-            }
-        }
-
-        >.socialMediaATF {
-            display: none;
-        }
-
-        >.socialMediaMobile {
-            @include d_general_column(column, center, center);
-            position: absolute;
-            bottom: 28vh;
-            right: 4rem;
-
-            >.smIcon {
-                >a {
-                    >img {
-                        height: 2.5rem;
-                        aspect-ratio: 1/1;
-                        overflow: hidden;
-                    }
-                }
-            }
-        }
-
-        .marqueeContainer {
-            bottom: 8vh;
         }
     }
 
@@ -556,38 +472,6 @@
         height: fit-content;
     }
 
-    .a-t-f {
-        gap: 2rem;
-
-        // >.mainHeadlines {
-        //     >h1 {
-        //         font-size: 4.5rem;
-        //     }
-        // }
-
-        >.socialMediaATF {
-            height: fit-content;
-            position: static;
-            right: unset;
-            align-self: center;
-            flex-direction: row;
-            gap: 1rem;
-
-            >.eMail {
-                position: static;
-                transform: rotateZ(0deg);
-                top: unset;
-            }
-
-            >div {
-                img {
-                    position: unset;
-                    top: 0rem;
-                }
-            }
-        }
-    }
-
     .whoIAmSection {
         >.profileSection {
             width: 100%;
@@ -669,10 +553,6 @@
 }
 
 @media (max-width: 450px) {
-    .a-t-f .mainHeadlines h2 {
-        font-size: 2rem;
-    }
-
     .portfolioSection .portfolioSectionLeft .portfolio {
         margin: 0 4.5rem;
     }
@@ -737,32 +617,32 @@
         padding: 0 3rem;
         padding-top: 5rem;
     }
+}
 
 
-    @media (max-width: 400px) {
+@media (max-width: 400px) {
 
-        .footerSection {
-            padding: 1.8rem 1.8rem 5rem !important;
-            font-size: 1rem;
-        }
+    .footerSection {
+        padding: 1.8rem 1.8rem 5rem !important;
+        font-size: 1rem;
     }
+}
+
+.commentaries {
+    .cardSection {
+        height: 350px;
+    }
+}
+
+@media (max-width: 360px) {
 
     .commentaries {
         .cardSection {
-            height: 350px;
+            height: 400px;
         }
     }
 
-    @media (max-width: 360px) {
-
-        .commentaries {
-            .cardSection {
-                height: 400px;
-            }
-        }
-
-        .footerSection {
-            padding: 1.8rem 1.5rem 5rem !important;
-        }
+    .footerSection {
+        padding: 1.8rem 1.5rem 5rem !important;
     }
 }

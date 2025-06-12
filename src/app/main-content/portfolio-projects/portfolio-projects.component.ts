@@ -21,6 +21,30 @@ export class PortfolioProjectsComponent {
    */
   projects: Projects[] = [
     {
+      name: 'JOIN',
+      class: 'join',
+      isHovered: false,
+      isOpened: false,
+      github: 'https://github.com/hendrikBischoping/Join',
+      lifetest: 'https://join.hendrik-bischoping.de/',
+      descriptionDe: 'JOIN ist ein einfacher Kanban-Board-Klon, der in einer Gruppenarbeit mit <a class="colleague" target="_blank" href="https://sascha-toepfer-dev.de/">Sascha Töpfer</a> und Andreas Welker erstellt wurde.',
+      descriptionEn: 'JOIN is a simple Kanban-Board clone that was created in a group work with <a class="colleague" target="_blank" href="https://sascha-toepfer-dev.de/">Sascha Töpfer</a> and Andreas Welker',
+      technologies: ['HTML', 'Angular', 'TypeScript', 'Firebase'],
+
+    },
+    {
+      name: 'DA-Bubble',
+      class: 'da-bubble',
+      isHovered: false,
+      isOpened: false,
+      github: 'https://github.com/hendrikBischoping/dabubble',
+      lifetest: 'https://da-bubble.hendrik-bischoping.de/',
+      descriptionDe: 'Die "DA-Bubble" ist ein Busines-Chat-Client, der in einer Gruppenarbeit mit <a class="colleague" target="_blank" href="https://sascha-toepfer-dev.de/">Sascha Töpfer</a>, <a class="colleague" target="_blank" href="https://maiermichael.com/">Michael Maier</a>, <a class="colleague" target="_blank" href="https://developerdemir.com/">Sinan Demir</a>, <a class="colleague" target="_blank" href="https://osahonschmolze.com/">Osahon Schmolze</a>  und <a class="colleague" target="_blank" href="https://marcel-steffen.de/">Marcel Steffen</a> erstellt wurde.',
+      descriptionEn: 'DA-Bubble is a busines-media-client created in an group work with <a class="colleague" target="_blank" href="https://sascha-toepfer-dev.de/">Sascha Töpfer</a>, <a class="colleague" target="_blank" href="https://maiermichael.com/">Michael Maier</a>, <a class="colleague" target="_blank" href="https://developerdemir.com/">Sinan Demir</a>, <a class="colleague" target="_blank" href="https://osahonschmolze.com/">Osahon Schmolze</a>  and <a class="colleague" target="_blank" href="https://marcel-steffen.de/">Marcel Steffen</a>',
+      technologies: ['Angular', 'TypeScript', 'Firebase', 'HTML'],
+
+    },
+    {
       name: 'Pokédex',
       class: 'pokédex',
       isHovered: false,
@@ -42,18 +66,6 @@ export class PortfolioProjectsComponent {
       descriptionDe: 'Dies ist ein "Swim-and-Shoot"-Spiel, das auf objektorientierter Programmierung basiert.',
       descriptionEn: 'This is a "swim-and-shoot"-game based on object-orinted coding.',
       technologies: ['HTML', 'CSS', 'JavaScript'],
-
-    },
-    {
-      name: 'JOIN',
-      class: 'join',
-      isHovered: false,
-      isOpened: false,
-      github: 'https://github.com/hendrikBischoping/Join',
-      lifetest: 'https://join.hendrik-bischoping.de/',
-      descriptionDe: 'JOIN ist ein einfacher Kanban-Board-Klon, der in einer Gruppenarbeit mit <a class="colleague" target="_blank" href="https://sascha-toepfer-dev.de/">Sascha Töpfer</a> und Andreas Welker erstellt wurde.',
-      descriptionEn: 'JOIN is a simple Kanban-Board clone that was created in a group work with <a class="colleague" target="_blank" href="https://sascha-toepfer-dev.de/">Sascha Töpfer</a> and Andreas Welker',
-      technologies: ['HTML', 'Angular', 'TypeScript', 'Firebase'],
 
     },
   ]
