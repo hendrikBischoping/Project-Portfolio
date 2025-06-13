@@ -16,7 +16,8 @@
 .mainHeadlines {
   @include d_general_column(column, center, center);
   margin: 16vh 0 0 0;
-  height: 60vh;
+  border: solid 2px red;
+  // height: 60vh;
 
   >h2 {
     font-size: 2.5rem;
@@ -70,7 +71,7 @@
       overflow: hidden;
     }
   }
-
+  
   >div {
     >a {
       @include anker();
@@ -81,39 +82,41 @@
 .socialMediaMobile {
   display: none;
 }
-
-.eMail {
-  position: relative;
-  transform: rotateZ(270deg);
-  top: -1.75rem;
-  font-size: 0.8rem;
-}
-
-.mailIcon {
-  position: relative;
-  top: 5.25rem;
-}
-
-.githubIcon {
-  position: relative;
-  top: 6.25rem;
-}
-
-.linkedInIcon {
-  position: relative;
-  top: 7.5rem;
-}
-
-.marqueeContainer {
-  position: absolute;
-  width: 100%;
-  max-width: 1920px;
-  overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.2);
-  color: $fontGreen;
-  bottom: 16vh;
-  height: 3rem;
-  display: flex;
+  
+  .eMail {
+    position: relative;
+    transform: rotateZ(270deg);
+    top: -1.75rem;
+    font-size: 0.8rem;
+  }
+  
+  .mailIcon {
+    position: relative;
+    top: 5.25rem;
+  }
+  
+  .githubIcon {
+    position: relative;
+    top: 6.25rem;
+  }
+  
+  .linkedInIcon {
+    position: relative;
+    top: 7.5rem;
+  }
+  
+  .marqueeContainer {
+    border: solid 3px red;
+    // position: absolute;
+    position: static!important;
+    width: 100%;
+    max-width: 1920px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: $fontGreen;
+    // bottom: 16vh;
+    height: 3rem;
+    display: flex;
   align-items: center;
   box-shadow: 18px 0 10px $fontGreen, -18px 0 10px $fontGreen;
 }
