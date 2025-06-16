@@ -42,7 +42,7 @@
     100% {
         transform: translateY(0px);
     }
-    
+
 }
 
 @keyframes flipImage {
@@ -71,7 +71,7 @@ $fontGreen: rgba(61, 207, 182, 1);
 $backgroundGrey: rgb(27, 27, 27);
 
 /*general style*/
-html {    
+html {
     scroll-behavior: smooth;
 }
 
@@ -87,7 +87,7 @@ section {
     color: $fontWhite;
     max-width: 120rem;
 }
-  
+
 .d_none {
     display: none!important;
 }
@@ -95,14 +95,14 @@ section {
 .btnPointer {
     cursor: pointer;
 }
-  
+
 .btn {
     cursor: pointer;
     padding: 0.75rem 1rem;
     font-family: 'Fira Code';
     font-size: 1rem;
     border: solid 0.125rem $fontWhite;
-    border-radius: 1.5rem;
+    border-radius: 2rem;
     background-color: rgba(0, 0, 0, 0);
     color: $fontWhite;
     overflow: hidden;
@@ -112,10 +112,10 @@ section {
     }
     &:hover {
         border: solid 0.125rem $fontGreen;
-        color: $fontGreen; 
+        color: $fontGreen;
         p, div {
             animation: slideBtnTextOut 2s infinite;
-        }  
+        }
     }
 }
 
