@@ -311,23 +311,6 @@
             white-space: nowrap;
         }
     }
-
-    // .commentaries {
-    //     .cardSection {
-    //         .singleCard {
-    //             .singleCardInfo {
-    //                 .commentary {
-    //                     font-size: 1.5rem;
-    //                     padding: 0 1.5rem;
-    //                 }
-
-    //                 .commentator p {
-    //                     font-size: 1.2rem;
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
 }
 
 @media (max-width: 800px) {
@@ -347,10 +330,6 @@
 }
 
 @media (max-width: 700px) {
-    // html {
-    //     font-size: 10px;
-    // }
-
     header {
         .headerContent {
             margin: 0 3rem;
@@ -407,17 +386,6 @@
         .cardSection {
             .singleCard {
                 background-color: rgba(40, 99, 89);
-
-                // .singleCardInfo {
-                //     .commentary {
-                //         font-size: 1.5rem;
-                //         padding: 0 1.5rem;
-                //     }
-
-                //     .commentator p {
-                //         font-size: 1.2rem;
-                //     }
-                // }
             }
         }
     }
@@ -445,17 +413,6 @@
             .singleCard {
                 width: 370px;
                 height: 280px;
-
-                // .singleCardInfo {
-                //     .commentary {
-                //         font-size: 1.2rem;
-                //         padding: 0 1.5rem;
-                //     }
-
-                //     .commentator p {
-                //         font-size: 1.2rem;
-                //     }
-                // }
             }
         }
     }

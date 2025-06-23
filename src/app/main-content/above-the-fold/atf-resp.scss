@@ -1,35 +1,3 @@
-@media (min-width: 1920px) {
-  .a-t-f .socialMediaATF {
-    left: calc(50% + 45rem);
-  }
-}
-
-@media (max-width: 1300px) {
-  .a-t-f {
-    > .mainHeadlines {
-      > h1 {
-        font-size: 5rem;
-        max-width: 36rem;
-        display: block !important;
-        white-space: pre-line;
-
-        .space {
-          display: none;
-        }
-      }
-
-      h1::after {
-        content: "\A";
-        white-space: pre;
-      }
-    }
-
-    > .socialMediaATF {
-      left: unset;
-      right: 8rem;
-    }
-  }
-}
 @media (max-width: 900px) {
   .a-t-f {
     div div {
@@ -37,7 +5,6 @@
 
       a button {
         margin-top: 4vh;
-        // scale: 1.4;
       }
     }
 
@@ -51,9 +18,9 @@
   }
 }
 
-@media (max-width: 700px){
+@media (max-width: 700px) {
   .a-t-f {
-    > .mainHeadlines {
+    .mainHeadlines {
       margin-top: 6rem;
 
       h1 {
@@ -61,24 +28,19 @@
       }
     }
 
-    > .socialMediaATF {
+    .socialMediaATF {
       display: none;
     }
 
-    > .socialMediaMobile {
-      // @include d_general_column(column, center, center);
+    .socialMediaMobile {
       display: flex;
       justify-content: center;
       align-items: center;
-      // flex-direction: column;
-      // position: absolute;
-      // bottom: 28vh;
-      // right: 4rem;
       gap: 4rem;
 
-      > .smIcon {
-        > a {
-          > img {
+      >.smIcon {
+        >a {
+          >img {
             height: 3.5rem;
             aspect-ratio: 1/1;
             overflow: hidden;
@@ -86,7 +48,8 @@
         }
       }
 
-      .githubIcon, .linkedInIcon {
+      .githubIcon,
+      .linkedInIcon {
         position: unset;
         top: unset;
       }
@@ -98,13 +61,7 @@
   .a-t-f {
     gap: 2rem;
 
-    // >.mainHeadlines {
-    //     >h1 {
-    //         font-size: 4.5rem;
-    //     }
-    // }
-
-    > .socialMediaATF {
+    >.socialMediaATF {
       height: fit-content;
       position: static;
       right: unset;
@@ -112,13 +69,13 @@
       flex-direction: row;
       gap: 1rem;
 
-      > .eMail {
+      >.eMail {
         position: static;
         transform: rotateZ(0deg);
         top: unset;
       }
 
-      > div {
+      >div {
         img {
           position: unset;
           top: 0rem;

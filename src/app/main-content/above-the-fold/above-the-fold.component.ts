@@ -19,7 +19,7 @@ export class AboveTheFoldComponent {
     {hovered: false},
   ] 
   fullName = ['H', 'e', 'n', 'd', 'r', 'i', 'k ', 'B', 'i', 's', 'c', 'h', 'o', 'p', 'i', 'n', 'g', ]
-  
+
   /**
    * toggles the hovered-boolean to true to add style on hovered elements
    * @param i - contains an index, to always toggle the correct element

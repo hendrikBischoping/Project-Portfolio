@@ -1,6 +1,6 @@
 @import './../../shared/general-style.scss';
 @import './../../shared/general-responsive-design.scss';
-@import '../above-the-fold/atf-resp.scss';
+// @import '../above-the-fold/atf-resp.scss';
 
 .a-t-f {
   @include d_general_column(column, center, center);
@@ -11,107 +11,130 @@
   min-width: 100%;
   color: $fontWhite;
   padding: 0;
-  gap: 4rem;
+  gap: 5vh;
+
+  @media (min-width: 1920px) {
+    .socialMediaATF {
+      left: calc(50% + 45rem);
+    }
+  }
+}
+
+.mainContent {
+  @include d_general_column(row, center, center);
+
+  .atfLeft,
+  .socialMediaRight {
+    width: 10vh;
+  }
 }
 
 .mainHeadlines {
   @include d_general_column(column, center, center);
+  gap: 5vh;
 
-  >h2 {
-    font-size: 2.5rem;
-    font-weight: 400;
+  h1 {
+    font-size: 5rem;
+    margin: 2vh;
+    text-align: center;
   }
 
-  >h1 {
-    @include d_general(center, center);
-    color: $fontWhite;
+  h2 {
+    font-size: 4rem;
+    margin: 1vh;
     text-align: center;
-    flex-wrap: nowrap;
-    font-size: 6.4rem;
-    margin: 2rem 0;
 
-    >span {
-      transition: color 200ms;
+    span {
+      color: $fontGreen;
+      transition: color 75ms ease-in-out;
+      transition: text-shadow 75ms ease-in-out;
+      text-shadow: 2px 2px 2px $fontWhite;
+
+      &:hover {
+        color: $fontWhite;
+        text-shadow: 2px 2px 2px $fontGreen;
+      }
+    }
+  }
+
+  div {
+    @include d_general(center, center);
+    gap: 4rem;
+  }
+
+  @media (max-width: 560px) and (orientation: portrait) {
+    h1 {
+      font-size: 4rem;
+    }
+
+    h2 {
+      font-size: 3.5rem
+    }
+  }
+
+  @media (max-width: 700px) and (orientation: landscape) {
+    margin-top: 16vh;
+    gap: 3vh
+11.25px
+;
+    h1 {
+      font-size: 10vh;
+    }
+
+    h2 {
+      font-size: 2rem
+    }
+  }
+}
+
+.socialMediaRight {
+  @include d_general_column(column, center, center);
+  min-height: auto;
+
+  .eMail {
+    transform: rotate(270deg);
+    margin: 9rem 0;
+
+    .mailNormal {
+      white-space: nowrap;
+      color: $fontWhite;
+      transition: color 75ms ease-in-out;
 
       &:hover {
         color: $fontGreen;
       }
     }
-
   }
 
-  >div {
-    @include d_general(space-between, center);
-    gap: 3.75rem;
+  .smIcon {
+    margin: 0.5rem;
   }
 }
 
-.socialMediaATF {
-  @include d_general_column(column, center, center);
-  position: absolute;
-  height: 18.75rem;
-  align-self: flex-end;
-  top: 30vh;
-  left: 85%;
-
-  >.smIcon {
-    >a {
-      >img {
-        height: 2rem;
-        aspect-ratio: 1/1;
-        overflow: hidden;
-      }
-    }
-
-    >img {
-      height: 2rem;
-      aspect-ratio: 1/1;
-      overflow: hidden;
+  @media (max-width: 670px) {
+    .socialMediaRight, .atfLeft {
+    display: none;
     }
   }
-
-  >div {
-    >a {
-      @include anker();
-    }
-  }
-}
 
 .socialMediaMobile {
   display: none;
+
+  @media (max-width: 670px) {
+    @include d_general(center, center);
+    gap: 10vw;
+  }
 }
 
-  .eMail {
-    position: relative;
-    transform: rotateZ(270deg);
-    top: -1.75rem;
-    font-size: 0.8rem;
-  }
-
-  // .mailIcon {
-  //   position: relative;
-  //   top: 5.25rem;
-  // }
-
-  .githubIcon {
-    position: relative;
-    top: 6.25rem;
-  }
-
-  .linkedInIcon {
-    position: relative;
-    top: 7.5rem;
-  }
-
-  .marqueeContainer {
-    position: static!important;
-    width: 100%;
-    max-width: 1920px;
-    overflow: hidden;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: $fontGreen;
-    height: 3rem;
-    display: flex;
+.marqueeContainer {
+  position: static !important;
+  width: 100%;
+  max-width: 1920px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: $fontGreen;
+  height: 3rem;
+  display: flex;
   align-items: center;
   box-shadow: 18px 0 10px $fontGreen, -18px 0 10px $fontGreen;
 }
