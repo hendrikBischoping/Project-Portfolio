@@ -1,6 +1,5 @@
 @import './../../shared/general-style.scss';
 @import './../../shared/general-responsive-design.scss';
-// @import '../above-the-fold/atf-resp.scss';
 
 .a-t-f {
   @include d_general_column(column, center, center);
@@ -62,6 +61,16 @@
     gap: 4rem;
   }
 
+  @media (max-width: 1100px) and (orientation: landscape) {
+    h1 {
+      font-size: 11vh;
+    }
+
+    h2 {
+      font-size: 8vh;
+    }
+  }
+
   @media (max-width: 560px) and (orientation: portrait) {
     h1 {
       font-size: 4rem;
@@ -72,18 +81,9 @@
     }
   }
 
-  @media (max-width: 700px) and (orientation: landscape) {
+  @media (max-width: 1000px) and (orientation: landscape) {
     margin-top: 16vh;
-    gap: 3vh
-11.25px
-;
-    h1 {
-      font-size: 10vh;
-    }
-
-    h2 {
-      font-size: 2rem
-    }
+    gap: 3vh;
   }
 }
 
@@ -111,16 +111,18 @@
   }
 }
 
-  @media (max-width: 670px) {
-    .socialMediaRight, .atfLeft {
+@media (max-width: 1000px) {
+
+  .socialMediaRight,
+  .atfLeft {
     display: none;
-    }
   }
+}
 
 .socialMediaMobile {
   display: none;
 
-  @media (max-width: 670px) {
+  @media (max-width: 1000px) {
     @include d_general(center, center);
     gap: 10vw;
   }

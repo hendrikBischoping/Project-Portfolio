@@ -330,32 +330,6 @@
 }
 
 @media (max-width: 700px) {
-    header {
-        .headerContent {
-            margin: 0 3rem;
-            display: none !important;
-
-            >a {
-                >.myLogo {
-                    margin-bottom: 2rem;
-                }
-            }
-        }
-
-        .headerContentMobile {
-            display: flex !important;
-        }
-    }
-
-    header {
-        .headerContent {
-            flex-direction: column-reverse;
-
-            >nav {
-                flex-direction: column-reverse;
-            }
-        }
-    }
 
     .greenH2 {
         font-size: 3rem;

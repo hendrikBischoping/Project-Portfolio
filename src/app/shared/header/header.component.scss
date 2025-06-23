@@ -10,6 +10,34 @@ header {
     z-index: 1;
     margin: 0 auto;
     font-family: "Fira Code";
+
+    @media (max-width: 1000px) {
+        .headerContent {
+            margin: 0 3rem;
+            display: none !important;
+
+            >a {
+                >.myLogo {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+
+        .headerContentMobile {
+            display: flex !important;
+        }
+
+    // header {
+    //     .headerContent {
+    //         flex-direction: column-reverse;
+
+    //         >nav {
+    //             flex-direction: column-reverse;
+    //         }
+    //     }
+    // }
+        
+    }
 }
 
 .headerContent {
@@ -56,7 +84,6 @@ header {
 
 .headerContentMobile {
     @include d_general(space-between, center);
-    // display: none;
     position: relative;
     width: 100%;
     margin: 2rem 4rem;
@@ -123,6 +150,11 @@ header {
             align-self: center;
             padding: 1rem;
         }
+    }
+
+    @media (orientation: landscape) {
+        top: 1rem;
+        padding: 3rem;
     }
 }
 
